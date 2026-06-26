@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bedek Dental — Premium-Zahnmedizin in Zagreb</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal-deep:#0b1f24;
+  --teal-charcoal:#0e2a2a;
+  --teal-night:#08171b;
+  --accent:#2ee6c5;
+  --accent-soft:#5cf0d6;
+  --gold:#d4af6a;
+  --gold-soft:#e6c98f;
+  --light:#f4f8f7;
+  --light-2:#eaf2f0;
+  --ink:#0b1f24;
+  --muted:#5a716f;
+  --white:#ffffff;
+  --card-dark:#10282c;
+  --radius:22px;
+  --radius-sm:14px;
+  --shadow:0 30px 60px -25px rgba(0,0,0,.5);
+  --glow:0 0 60px -10px rgba(46,230,197,.45);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',system-ui,sans-serif;
+  color:var(--ink);
+  background:var(--light);
+  line-height:1.6;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4,.wm{font-family:'Sora',sans-serif;letter-spacing:-.02em;line-height:1.05}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{width:100%;max-width:1200px;margin:0 auto;padding:0 22px}
+.accent{color:var(--accent)}
+.gold{color:var(--gold)}
+
+/* ---------- Reveal animations ---------- */
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.reveal.d1{transition-delay:.08s}
+.reveal.d2{transition-delay:.16s}
+.reveal.d3{transition-delay:.24s}
+.reveal.d4{transition-delay:.32s}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;gap:.55rem;
+  font-family:'Sora',sans-serif;font-weight:600;font-size:.98rem;
+  padding:.95rem 1.7rem;border-radius:100px;cursor:pointer;border:none;
+  transition:transform .25s ease,box-shadow .25s ease,background .25s ease;
+  white-space:nowrap;
+}
+.btn-primary{background:linear-gradient(135deg,var(--accent),#19c9a8);color:#062019;box-shadow:0 14px 34px -12px rgba(46,230,197,.7)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 22px 44px -12px rgba(46,230,197,.85)}
+.btn-ghost{background:rgba(255,255,255,.06);color:#fff;border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(8px)}
+.btn-ghost:hover{transform:translateY(-3px);background:rgba(255,255,255,.12)}
+.btn-gold{background:linear-gradient(135deg,var(--gold-soft),var(--gold));color:#241a06;box-shadow:0 14px 34px -12px rgba(212,175,106,.6)}
+.btn-gold:hover{transform:translateY(-3px)}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+
+/* ---------- Header ---------- */
+header{
+  position:sticky;top:0;z-index:100;
+  background:rgba(8,23,27,.72);
+  backdrop-filter:blur(16px) saturate(160%);
+  border-bottom:1px solid rgba(46,230,197,.14);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:72px}
+.wm{color:#fff;font-weight:800;font-size:1.35rem;display:flex;align-items:center;gap:.5rem}
+.wm .dot{width:11px;height:11px;border-radius:50%;background:var(--accent);box-shadow:0 0 14px var(--accent)}
+.nav-links{display:flex;gap:1.6rem;list-style:none}
+.nav-links a{color:rgba(255,255,255,.82);font-size:.92rem;font-weight:500;position:relative;transition:color .2s}
+.nav-links a::after{content:'';position:absolute;left:0;bottom:-6px;height:2px;width:0;background:var(--accent);transition:width .3s}
+.nav-links a:hover{color:#fff}
+.nav-links a:hover::after{width:100%}
+.nav-right{display:flex;align-items:center;gap:1rem}
+.flags{display:flex;gap:.35rem;align-items:center;font-size:.82rem}
+.flags span{padding:.2rem .35rem;border-radius:8px;cursor:pointer;color:rgba(255,255,255,.6);transition:.2s}
+.flags span:hover{color:#fff}
+.flags span.active{color:#fff;background:rgba(46,230,197,.16);font-weight:600}
+.icon-btn{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.08);color:#fff;transition:.25s;font-size:1rem}
+.icon-btn:hover{background:var(--accent);color:#062019;transform:translateY(-2px)}
+.icon-btn.wa:hover{background:#25d366}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:.4rem}
+.burger span{width:24px;height:2px;background:#fff;border-radius:2px}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;background:var(--teal-night);color:#fff;overflow:hidden;padding:clamp(3.5rem,8vw,6rem) 0 clamp(4rem,8vw,7rem)}
+.hero::before{content:'';position:absolute;top:-20%;right:-10%;width:720px;height:720px;border-radius:50%;
+  background:radial-gradient(circle,rgba(46,230,197,.28),transparent 62%);filter:blur(20px);animation:float 9s ease-in-out infinite}
+.hero::after{content:'';position:absolute;bottom:-25%;left:-12%;width:560px;height:560px;border-radius:50%;
+  background:radial-gradient(circle,rgba(212,175,106,.18),transparent 60%);filter:blur(20px);animation:float 11s ease-in-out infinite reverse}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-26px)}}
+.hero .container{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+.pill{display:inline-flex;align-items:center;gap:.5rem;padding:.45rem .9rem;border-radius:100px;background:rgba(46,230,197,.12);
+  border:1px solid rgba(46,230,197,.3);font-size:.8rem;font-weight:600;color:var(--accent-soft);margin-bottom:1.4rem}
+.hero h1{font-size:clamp(2.5rem,5.6vw,4.3rem);font-weight:800}
+.hero h1 .accent{display:inline-block;background:linear-gradient(120deg,var(--accent),var(--accent-soft));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero p.sub{margin:1.5rem 0 2rem;color:rgba(255,255,255,.78);font-size:clamp(1rem,1.5vw,1.15rem);max-width:33rem}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.9rem}
+.trust-badge{display:inline-flex;align-items:center;gap:.6rem;margin-top:1.8rem;font-size:.9rem;color:rgba(255,255,255,.85)}
+.stars{color:var(--gold);letter-spacing:2px}
+.hero-visual{position:relative}
+.hero-visual img{border-radius:28px;box-shadow:var(--shadow);width:100%;height:clamp(360px,46vw,520px);object-fit:cover}
+.hero-visual .glass-card{position:absolute;bottom:-26px;left:-26px;background:rgba(12,33,37,.78);backdrop-filter:blur(14px);
+  border:1px solid rgba(46,230,197,.25);border-radius:18px;padding:1rem 1.3rem;box-shadow:var(--shadow)}
+.glass-card .big{font-family:'Sora';font-weight:800;font-size:1.7rem;color:var(--accent)}
+.glass-card .lbl{font-size:.78rem;color:rgba(255,255,255,.7)}
+
+/* ---------- Trust bar ---------- */
+.trustbar{background:var(--teal-deep);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+.trustbar .container{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.2rem;padding-top:1.5rem;padding-bottom:1.5rem}
+.trust-item{display:flex;align-items:center;gap:.6rem;color:rgba(255,255,255,.84);font-size:.92rem;font-weight:500}
+.trust-item .ic{color:var(--accent);font-size:1.15rem}
+
+/* ---------- Section base ---------- */
+section{padding:clamp(3.8rem,8vw,6.5rem) 0}
+.eyebrow{font-family:'Sora';font-weight:600;font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:.8rem}
+.eyebrow.on-dark{color:var(--accent-soft)}
+.sec-head{max-width:42rem;margin-bottom:3rem}
+.sec-head h2{font-size:clamp(2rem,4vw,3rem);font-weight:800;color:var(--ink)}
+.sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.sec-head p{margin-top:1rem;color:var(--muted);font-size:1.08rem}
+.on-dark h2,.on-dark h3,.on-dark .sec-head h2{color:#fff}
+.on-dark .sec-head p{color:rgba(255,255,255,.74)}
+
+/* ---------- Services ---------- */
+.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.3rem}
+.svc-card{background:#fff;border:1px solid var(--light-2);border-radius:var(--radius);padding:1.9rem 1.6rem;
+  position:relative;overflow:hidden;transition:transform .35s ease,box-shadow .35s ease,border-color .35s}
+.svc-card::before{content:'';position:absolute;inset:0;background:linear-gradient(160deg,rgba(46,230,197,.08),transparent 55%);opacity:0;transition:opacity .35s}
+.svc-card:hover{transform:translateY(-8px);box-shadow:0 30px 55px -28px rgba(11,31,36,.4);border-color:rgba(46,230,197,.5)}
+.svc-card:hover::before{opacity:1}
+.svc-icon{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;font-size:1.5rem;
+  background:linear-gradient(135deg,rgba(46,230,197,.18),rgba(46,230,197,.06));color:var(--teal-charcoal);margin-bottom:1.2rem}
+.svc-q{font-size:.82rem;color:var(--muted);font-style:italic;margin-bottom:.35rem}
+.svc-card h3{font-size:1.25rem;font-weight:700;margin-bottom:.6rem}
+.svc-card p{font-size:.92rem;color:var(--muted)}
+.svc-card .more{margin-top:1.1rem;font-family:'Sora';font-weight:600;font-size:.86rem;color:var(--teal-charcoal);display:inline-flex;gap:.4rem;align-items:center;transition:gap .25s}
+.svc-card:hover .more{gap:.75rem}
+
+/* ---------- Insurance dark section ---------- */
+.insurance{background:linear-gradient(160deg,var(--teal-charcoal),var(--teal-night));color:#fff;position:relative;overflow:hidden}
+.insurance::before{content:'';position:absolute;top:-10%;left:50%;transform:translateX(-50%);width:780px;height:520px;
+  background:radial-gradient(ellipse,rgba(46,230,197,.16),transparent 65%);filter:blur(10px)}
+.insurance .container{position:relative;z-index:2}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:2.6rem}
+.step{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius-sm);padding:1.6rem 1.3rem;transition:.35s;position:relative}
+.step:hover{border-color:rgba(46,230,197,.5);background:rgba(46,230,197,.06);transform:translateY(-6px)}
+.step .num{font-family:'Sora';font-weight:800;font-size:1rem;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--accent),#19c9a8);color:#062019;margin-bottom:1rem}
+.step .ic{font-size:1.5rem;margin-bottom:.6rem;display:block}
+.step h4{font-size:1.02rem;font-weight:700;margin-bottom:.4rem;color:#fff}
+.step p{font-size:.86rem;color:rgba(255,255,255,.7)}
+.disclaimer{margin-top:2rem;font-size:.82rem;color:rgba(255,255,255,.5);display:flex;align-items:center;gap:.5rem}
+
+/* ---------- Price table ---------- */
+.prices{background:var(--light)}
+.price-wrap{background:#fff;border:1px solid var(--light-2);border-radius:var(--radius);overflow:hidden;box-shadow:0 24px 60px -40px rgba(11,31,36,.5)}
+.price-row{display:grid;grid-template-columns:2.2fr 1.3fr 1.3fr 1fr;align-items:center;padding:1.2rem 1.6rem;border-bottom:1px solid var(--light-2);gap:1rem}
+.price-row:last-child{border-bottom:none}
+.price-head{background:var(--teal-charcoal);color:#fff;font-family:'Sora';font-weight:600;font-size:.86rem;letter-spacing:.04em;text-transform:uppercase}
+.price-head div{color:rgba(255,255,255,.85)}
+.price-row .treat{font-family:'Sora';font-weight:700;font-size:1.02rem;color:var(--ink)}
+.price-row .treat small{display:block;font-family:'Inter';font-weight:400;font-size:.8rem;color:var(--muted);margin-top:.2rem}
+.price-row .hr{color:var(--teal-charcoal);font-weight:700}
+.price-row .de{color:var(--muted);text-decoration:line-through;text-decoration-color:rgba(0,0,0,.25)}
+.save-tag{display:inline-block;background:linear-gradient(135deg,rgba(46,230,197,.2),rgba(46,230,197,.08));color:#0c7a64;
+  font-family:'Sora';font-weight:700;font-size:.86rem;padding:.3rem .7rem;border-radius:100px}
+.price-row:nth-child(even):not(.price-head){background:#fbfdfc}
+.price-note{margin-top:1.2rem;font-size:.85rem;color:var(--muted);text-align:center}
+
+/* ---------- Reviews ---------- */
+.reviews{background:linear-gradient(160deg,var(--teal-night),var(--teal-charcoal));color:#fff;text-align:center;position:relative;overflow:hidden}
+.reviews::after{content:'';position:absolute;bottom:-30%;right:-10%;width:560px;height:560px;background:radial-gradient(circle,rgba(212,175,106,.14),transparent 62%);filter:blur(14px)}
+.reviews .container{position:relative;z-index:2}
+.google-line{font-family:'Sora';font-weight:700;font-size:clamp(1.8rem,3.6vw,2.6rem);margin-bottom:.6rem}
+.reviews .big-stars{color:var(--gold);font-size:1.7rem;letter-spacing:5px;margin-bottom:.5rem}
+.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem;margin:2.8rem 0 2.2rem;text-align:left}
+.review-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:1.8rem;
+  backdrop-filter:blur(8px);transition:.35s}
+.review-card:hover{transform:translateY(-6px);border-color:rgba(212,175,106,.5)}
+.review-card .stars{font-size:1rem;letter-spacing:2px;margin-bottom:.9rem}
+.review-card .quote{font-family:'Sora';font-weight:600;font-size:1.15rem;color:#fff;margin-bottom:.6rem;line-height:1.3}
+.review-card .trans{font-size:.88rem;color:rgba(255,255,255,.62);font-style:italic}
+.review-card .author{margin-top:1.1rem;font-size:.84rem;color:var(--accent-soft);font-weight:600}
+
+/* ---------- Team ---------- */
+.team{background:var(--light)}
+.team-story{max-width:46rem;color:var(--muted);font-size:1.08rem;margin-bottom:3rem}
+.team-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.6rem}
+.member{display:grid;grid-template-columns:160px 1fr;background:#fff;border:1px solid var(--light-2);border-radius:var(--radius);
+  overflow:hidden;transition:.35s}
+.member:hover{transform:translateY(-6px);box-shadow:0 30px 55px -30px rgba(11,31,36,.4)}
+.member img{width:100%;height:100%;min-height:210px;object-fit:cover}
+.member .body{padding:1.6rem}
+.member h3{font-size:1.3rem;font-weight:700}
+.member .role{color:var(--accent);font-family:'Sora';font-weight:600;font-size:.85rem;margin:.3rem 0 .8rem}
+.member p{font-size:.92rem;color:var(--muted)}
+.member .tags{margin-top:1rem;display:flex;flex-wrap:wrap;gap:.5rem}
+.member .tags span{font-size:.76rem;padding:.3rem .7rem;border-radius:100px;background:var(--light-2);color:var(--teal-charcoal);font-weight:600}
+
+/* ---------- Contact ---------- */
+.contact{background:linear-gradient(160deg,var(--teal-charcoal),var(--teal-night));color:#fff}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.4rem}
+.info-block{margin-bottom:1.5rem}
+.info-block .lbl{font-family:'Sora';font-weight:600;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-soft);margin-bottom:.3rem}
+.info-block .val{font-size:1.1rem;color:#fff}
+.info-block .val a{color:#fff}
+.map-box{height:200px;border-radius:var(--radius-sm);background:
+  linear-gradient(135deg,rgba(46,230,197,.12),rgba(212,175,106,.08)),var(--teal-deep);
+  border:1px solid rgba(255,255,255,.12);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;margin-bottom:1.4rem;position:relative;overflow:hidden}
+.map-box::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:34px 34px}
+.map-box .mtxt{font-family:'Sora';font-weight:600;color:rgba(255,255,255,.75);z-index:2}
+.parking{display:flex;align-items:center;gap:.6rem;font-size:.9rem;color:rgba(255,255,255,.78);margin-bottom:1.4rem}
+.parking .ic{color:var(--accent)}
+.contact-actions{display:flex;gap:.8rem;flex-wrap:wrap}
+form.cform{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:2rem}
+.cform label{display:block;font-size:.84rem;color:rgba(255,255,255,.75);margin:0 0 .4rem;font-weight:500}
+.cform .field{margin-bottom:1.1rem}
+.cform input,.cform textarea{width:100%;padding:.85rem 1rem;border-radius:12px;border:1px solid rgba(255,255,255,.16);
+  background:rgba(255,255,255,.06);color:#fff;font-family:inherit;font-size:.95rem;transition:.25s}
+.cform input::placeholder,.cform textarea::placeholder{color:rgba(255,255,255,.4)}
+.cform input:focus,.cform textarea:focus{outline:none;border-color:var(--accent);background:rgba(46,230,197,.07)}
+.cform .row2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.upload{border:1.5px dashed rgba(255,255,255,.22);border-radius:12px;padding:1rem;text-align:center;font-size:.85rem;color:rgba(255,255,255,.6);cursor:pointer;transition:.25s}
+.upload:hover{border-color:var(--accent);color:#fff}
+.cform .btn{width:100%;justify-content:center;margin-top:.4rem}
+
+/* ---------- Footer ---------- */
+footer{background:var(--teal-night);color:rgba(255,255,255,.7);padding:3.5rem 0 2rem;border-top:1px solid rgba(255,255,255,.08)}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:2rem;margin-bottom:2.4rem}
+.foot-grid .wm{font-size:1.25rem;margin-bottom:.8rem}
+.foot-grid p{font-size:.9rem;max-width:24rem}
+.foot-col h5{font-family:'Sora';font-weight:600;color:#fff;font-size:.95rem;margin-bottom:.9rem}
+.foot-col a{display:block;font-size:.9rem;margin-bottom:.5rem;transition:.2s}
+.foot-col a:hover{color:var(--accent)}
+.foot-flags{display:flex;gap:.6rem;font-size:.9rem;margin-top:.4rem}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:1.6rem;display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;font-size:.8rem;color:rgba(255,255,255,.5)}
+
+/* ---------- Responsive ---------- */
+@media(max-width:980px){
+  .nav-links,.flags{display:none}
+  .burger{display:flex}
+  .hero .container{grid-template-columns:1fr}
+  .hero-visual{order:-1}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .review-grid{grid-template-columns:1fr}
+  .team-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .services-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .price-row{grid-template-columns:1.6fr 1fr 1fr;font-size:.85rem;padding:1rem}
+  .price-row .de{display:none}
+  .price-head div:nth-child(3){display:none}
+  .member{grid-template-columns:1fr}
+  .member img{height:220px}
+  .cform .row2{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+  .nav-right .icon-btn{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header>
+  <div class="container nav">
+    <a href="#start" class="wm"><span class="dot"></span>Bedek Dental</a>
+    <ul class="nav-links">
+      <li><a href="#start">Start</a></li>
+      <li><a href="#leistungen">Leistungen</a></li>
+      <li><a href="#zahntourismus">Zahntourismus</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="flags">
+        <span class="active">🇩🇪 DE</span>
+        <span>🇬🇧 EN</span>
+        <span>🇭🇷 HR</span>
+        <span>🇮🇹 IT</span>
+      </div>
+      <a href="tel:+385957299112" class="icon-btn" title="Anrufen">✆</a>
+      <a href="https://wa.me/385957299112" class="icon-btn wa" title="WhatsApp">✆</a>
+      <a href="#kontakt" class="btn btn-primary">Termin anfragen</a>
+      <button class="burger" aria-label="Menü"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="start">
+  <div class="container">
+    <div class="reveal">
+      <span class="pill">★ Weltklasse-Zahnmedizin · Zagreb</span>
+      <h1>Premium-Zahnmedizin.<br>Zagreb. Bis zu <span class="accent">80% günstiger</span>.</h1>
+      <p class="sub">Dieselben Premium-Marken wie in Deutschland — <strong>Straumann &amp; Nobel Biocare</strong> — von einem promovierten Zahnarzt. Ihre gesetzliche Krankenkasse erstattet den Festzuschuss mit.</p>
+      <div class="hero-cta">
+        <a href="#kontakt" class="btn btn-primary">Kostenlose Erstberatung →</a>
+        <a href="#leistungen" class="btn btn-ghost">Behandlungen ansehen</a>
+      </div>
+      <div class="trust-badge">
+        <span class="stars">★★★★★</span>
+        <span><strong>Google</strong> · Hervorragend bewertet von internationalen Patienten</span>
+      </div>
+    </div>
+    <div class="hero-visual reveal d2">
+      <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1100&q=80" alt="Selbstbewusstes strahlendes Lächeln">
+      <div class="glass-card">
+        <div class="big">50–80%</div>
+        <div class="lbl">Ersparnis bei gleicher Qualität</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST BAR ============ -->
+<div class="trustbar">
+  <div class="container">
+    <div class="trust-item reveal"><span class="ic">✦</span>Über 30 Jahre Familientradition</div>
+    <div class="trust-item reveal d1"><span class="ic">✦</span>Straumann &amp; Nobel Biocare</div>
+    <div class="trust-item reveal d2"><span class="ic">✦</span>Promovierter Zahnarzt (dr.sc.)</div>
+    <div class="trust-item reveal d3"><span class="ic">✦</span>DE · EN · HR · IT</div>
+  </div>
+</div>
+
+<!-- ============ SERVICES ============ -->
+<section id="leistungen">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Leistungen</div>
+      <h2>Sagen Sie uns, was Sie stört.</h2>
+      <p>Wir denken vom Problem aus — nicht vom Katalog. Finden Sie Ihre Behandlung.</p>
+    </div>
+    <div class="services-grid">
+      <div class="svc-card reveal">
+        <div class="svc-icon">🦷</div>
+        <div class="svc-q">„Mir fehlt ein Zahn“</div>
+        <h3>Implantate</h3>
+        <p>Festsitzender Zahnersatz mit Straumann &amp; Nobel Biocare — wie ein eigener Zahn, ein Leben lang.</p>
+        <span class="more">Mehr erfahren →</span>
+      </div>
+      <div class="svc-card reveal d1">
+        <div class="svc-icon">✨</div>
+        <div class="svc-q">„Ich möchte schönere Zähne“</div>
+        <h3>Kronen &amp; Veneers</h3>
+        <p>Zirkon- und Keramikrestaurationen für ein natürliches, makelloses Lächeln.</p>
+        <span class="more">Mehr erfahren →</span>
+      </div>
+      <div class="svc-card reveal d2">
+        <div class="svc-icon">💎</div>
+        <div class="svc-q">„Hellere Zähne“</div>
+        <h3>Bleaching</h3>
+        <p>Professionelle Aufhellung — sichtbar strahlender in nur einer Sitzung.</p>
+        <span class="more">Mehr erfahren →</span>
+      </div>
+      <div class="svc-card reveal d3">
+        <div class="svc-icon">🩺</div>
+        <div class="svc-q">„Vorsorge &amp; Pflege“</div>
+        <h3>Allgemeine Zahnmedizin</h3>
+        <p>Prophylaxe, Endodontie, Füllungen — moderne Zahnheilkunde auf höchstem Niveau.</p>
+        <span class="more">Mehr erfahren →</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INSURANCE / ZAHNTOURISMUS ============ -->
+<section class="insurance on-dark" id="zahntourismus">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="eyebrow on-dark">Zahntourismus &amp; Krankenkasse</div>
+      <h2>Ihre deutsche Krankenkasse <span class="accent">zahlt mit</span>.</h2>
+      <p>Das EU-Recht erlaubt Ihre Behandlung in Kroatien. Ihre gesetzliche Krankenversicherung (GKV) erstattet den Festzuschuss der Regelversorgung — genau wie bei einer Behandlung in Deutschland.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="num">1</div>
+        <span class="ic">📄</span>
+        <h4>Heil- und Kostenplan</h4>
+        <p>Wir erstellen Ihren Plan auf dem deutschen Formular Ihrer Kasse.</p>
+      </div>
+      <div class="step reveal d1">
+        <div class="num">2</div>
+        <span class="ic">📬</span>
+        <h4>Bei der Kasse einreichen</h4>
+        <p>Reichen Sie den Plan vor der Behandlung bei Ihrer Krankenkasse ein.</p>
+      </div>
+      <div class="step reveal d2">
+        <div class="num">3</div>
+        <span class="ic">✅</span>
+        <h4>Genehmigung abwarten</h4>
+        <p>Warten Sie die Bewilligung des Festzuschusses ab.</p>
+      </div>
+      <div class="step reveal d3">
+        <div class="num">4</div>
+        <span class="ic">✈️</span>
+        <h4>Behandlung in Zagreb</h4>
+        <p>Wir kümmern uns um den Rest — entspannt und planbar.</p>
+      </div>
+    </div>
+    <p class="disclaimer">⚠︎ Keine Rechtsberatung – Erstattung individuell mit Ihrer Kasse klären.</p>
+  </div>
+</section>
+
+<!-- ============ PRICE TABLE ============ -->
+<section class="prices" id="preise">
+  <div class="container">
+    <div class="sec-head center reveal">
+      <div class="eyebrow">Kostenvergleich</div>
+      <h2>Gleiche Qualität. Halber Preis.</h2>
+      <p>Transparente Wettbewerbspreise — Kroatien gegenüber Deutschland.</p>
+    </div>
+    <div class="price-wrap reveal d1">
+      <div class="price-row price-head">
+        <div>Behandlung</div>
+        <div>Kroatien 🇭🇷</div>
+        <div>Deutschland 🇩🇪</div>
+        <div>Ersparnis</div>
+      </div>
+      <div class="price-row">
+        <div class="treat">Einzelimplantat inkl. Krone<small>Vollständige Versorgung</small></div>
+        <div class="hr">€800–1.500</div>
+        <div class="de">€1.800–4.000</div>
+        <div><span class="save-tag">50–70%</span></div>
+      </div>
+      <div class="price-row">
+        <div class="treat">Premium-Implantat<small>Straumann / Nobel Biocare</small></div>
+        <div class="hr">€750–950</div>
+        <div class="de">€1.800–4.000</div>
+        <div><span class="save-tag">50–80%</span></div>
+      </div>
+      <div class="price-row">
+        <div class="treat">Krone Zirkon / Keramik<small>Pro Krone</small></div>
+        <div class="hr">€200–300</div>
+        <div class="de">deutlich höher</div>
+        <div><span class="save-tag">bis 70%</span></div>
+      </div>
+    </div>
+    <p class="price-note">Richtwerte – Wettbewerbspreise, finale Preise nach Befund.</p>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="reviews on-dark">
+  <div class="container">
+    <div class="reveal">
+      <div class="big-stars">★★★★★</div>
+      <div class="google-line">★★★★★ auf <span class="gold">Google</span></div>
+      <p style="color:rgba(255,255,255,.74);max-width:34rem;margin:.6rem auto 0">Was unsere Patientinnen und Patienten über uns sagen.</p>
+    </div>
+    <div class="review-grid">
+      <div class="review-card reveal">
+        <div class="stars" style="color:var(--gold)">★★★★★</div>
+        <div class="quote">„Najbolji stomatolog na svijetu, jedan jedini!“</div>
+        <div class="trans">Bester Zahnarzt der Welt — einzigartig.</div>
+        <div class="author">— Google-Bewertung</div>
+      </div>
+      <div class="review-card reveal d1">
+        <div class="stars" style="color:var(--gold)">★★★★★</div>
+        <div class="quote">„Najbolji zubar ikada!“</div>
+        <div class="trans">Bester Zahnarzt überhaupt.</div>
+        <div class="author">— Google-Bewertung</div>
+      </div>
+      <div class="review-card reveal d2">
+        <div class="stars" style="color:var(--gold)">★★★★★</div>
+        <div class="quote">„Profesionalnost. Uljudnost. Izvrsna kvaliteta.“</div>
+        <div class="trans">Professionalität. Höflichkeit. Hervorragende Qualität.</div>
+        <div class="author">— Google-Bewertung</div>
+      </div>
+    </div>
+    <a href="#" class="btn btn-gold reveal d2">Alle Bewertungen auf Google →</a>
+  </div>
+</section>
+
+<!-- ============ TEAM ============ -->
+<section class="team" id="team">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Unser Team</div>
+      <h2>Familie seit 1991. Hightech heute.</h2>
+    </div>
+    <p class="team-story reveal d1">1991 als Familienpraxis gegründet, ist Bedek Dental heute eine frisch renovierte Hightech-Praxis im Herzen Zagrebs. Drei Jahrzehnte Erfahrung, modernste Technologie und ein promovierter Inhaber — vereint in der Mission, internationale Patientinnen und Patienten auf Weltklasse-Niveau zu versorgen.</p>
+    <div class="team-grid">
+      <div class="member reveal d1">
+        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=600&q=80" alt="dr.sc. Ivan Bedek">
+        <div class="body">
+          <h3>dr.sc. Ivan Bedek, dr.med.dent.</h3>
+          <div class="role">Inhaber · Promoviert 2019</div>
+          <p>Spezialist für Implantologie und ästhetische Zahnmedizin. Promovierter Zahnarzt mit Fokus auf Premium-Versorgung für internationale Patienten.</p>
+          <div class="tags"><span>Implantologie</span><span>Ästhetik</span><span>dr.sc.</span></div>
+        </div>
+      </div>
+      <div class="member reveal d2">
+        <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=600&q=80" alt="Martina Laktić">
+        <div class="body">
+          <h3>Martina Laktić, dr.med.dent.</h3>
+          <div class="role">Familienzahnmedizin &amp; Endodontie</div>
+          <p>Einfühlsame Versorgung für die ganze Familie sowie spezialisierte Wurzelkanalbehandlungen mit modernsten Methoden.</p>
+          <div class="tags"><span>Familienzahnmedizin</span><span>Endodontie</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact on-dark" id="kontakt">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="eyebrow on-dark">Kontakt</div>
+      <h2>Sprechen wir über Ihr Lächeln.</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="reveal d1">
+        <div class="map-box">
+          <span class="mtxt">📍 Karte</span>
+          <a href="https://maps.google.com/?q=Zatišje+6/1,+Zagreb" class="btn btn-primary">Route planen →</a>
+        </div>
+        <div class="info-block">
+          <div class="lbl">Adresse</div>
+          <div class="val">Zatišje 6/1, 10000 Zagreb<br><small style="color:rgba(255,255,255,.6)">Im hinteren Hof · frisch renovierte Praxis</small></div>
+        </div>
+        <div class="parking"><span class="ic">🅿︎</span>In 1 Min. Laufnähe finden Sie immer einen Parkplatz.</div>
+        <div class="info-block">
+          <div class="lbl">Telefon</div>
+          <div class="val"><a href="tel:+385957299112">+385 95 729 9112</a></div>
+        </div>
+        <div class="contact-actions">
+          <a href="tel:+385957299112" class="btn btn-ghost">✆ Anrufen</a>
+          <a href="https://wa.me/385957299112" class="btn btn-gold">WhatsApp schreiben</a>
+        </div>
+      </div>
+      <form class="cform reveal d2" onsubmit="return false">
+        <div class="field">
+          <label>Name</label>
+          <input type="text" placeholder="Ihr Name">
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label>E-Mail</label>
+            <input type="email" placeholder="ihre@email.de">
+          </div>
+          <div class="field">
+            <label>Telefon</label>
+            <input type="tel" placeholder="+49 …">
+          </div>
+        </div>
+        <div class="field">
+          <label>Ihr Anliegen</label>
+          <textarea rows="4" placeholder="Beschreiben Sie kurz, worum es geht …"></textarea>
+        </div>
+        <div class="field">
+          <label>Foto-Upload (optional)</label>
+          <div class="upload">📎 Röntgenbild oder Foto hochladen</div>
+        </div>
+        <button class="btn btn-primary">Anfrage senden →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="wm" style="color:#fff"><span class="dot"></span>Bedek Dental</div>
+        <p>Ordinacija dentalne medicine dr.sc. Ivan Bedek, dr.med.dent. — Weltklasse-Zahnmedizin in Zagreb für deutsche und internationale Patienten.</p>
+        <div class="foot-flags">🇩🇪 DE · 🇬🇧 EN · 🇭🇷 HR · 🇮🇹 IT</div>
+      </div>
+      <div class="foot-col">
+        <h5>Navigation</h5>
+        <a href="#start">Start</a>
+        <a href="#leistungen">Leistungen</a>
+        <a href="#zahntourismus">Zahntourismus</a>
+        <a href="#team">Team</a>
+        <a href="#kontakt">Kontakt</a>
+      </div>
+      <div class="foot-col">
+        <h5>Kontakt</h5>
+        <a href="https://maps.google.com/?q=Zatišje+6/1,+Zagreb">Zatišje 6/1, 10000 Zagreb</a>
+        <a href="tel:+385957299112">+385 95 729 9112</a>
+        <a href="https://wa.me/385957299112">WhatsApp</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Ordinacija dentalne medicine dr.sc. Ivan Bedek, dr.med.dent. · Alle Rechte vorbehalten.</span>
+      <span>Stand Juni 2026. Keine Rechts- oder Medizinberatung.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Scroll reveal
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+// Mobile burger (simple toggle of nav links)
+document.querySelector('.burger').addEventListener('click',()=>{
+  const l=document.querySelector('.nav-links');
+  l.style.display=l.style.display==='flex'?'none':'flex';
+  l.style.position='absolute';l.style.top='72px';l.style.left='0';l.style.right='0';
+  l.style.flexDirection='column';l.style.background='#08171b';l.style.padding='1rem 22px';l.style.gap='1rem';
+});
+</script>
+</body>
+</html>

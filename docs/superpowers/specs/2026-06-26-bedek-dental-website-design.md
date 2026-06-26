@@ -183,9 +183,12 @@ Alle Aussagen werden gegen **offizielle/autoritative Quellen** geprüft und nur 
 - **Phase 1 (heute, Demo):** Astro-Setup, Design-System, alle 6 Seiten in DE (EN/HR/IT-Gerüst), KI-Bilder, Lead-Formular (gestubbt), Voice-AI-Feature visuell dargestellt, Netlify-Deploy, Lighthouse-Check.
 - **Phase 2 (nach Zusage):** Volle 4-Sprachen-Inhalte, echte Bilder/Texte vom Kunden, GHL-Pipeline + Voice AI live, Custom-Domain, Reviews-Automation.
 
-## 11. Offene Punkte (für Phase 2 / Kunden-Input)
-- Finale Texte & echte Fotos von Dr. Bedek
-- Tatsächliche Preisliste der Praxis
-- GHL-Account-Details / Telefonnummer für Voice AI
-- Domain-Wahl
-- Genaue Festzuschuss-Werte 2026 (Patient klärt individuell mit Kasse — wird so kommuniziert)
+## 11. Phase-2-Punkte — Entscheidungen (Kunden-Input eingearbeitet)
+- **Texte & Fotos:** Bestehende bedek.hr-Texte übernehmen, redaktionell optimieren, **für LLM-/KI-Lesbarkeit** strukturieren (semantisches HTML, Schema.org/JSON-LD `Dentist`/`MedicalBusiness`, `llms.txt`) und **für Agentic Commerce** vorbereiten (strukturierte Leistungs-/Preisdaten, maschinenlesbare Endpunkte). Echte Fotos später vom Kunden; vorerst KI-modernisierte Bilder.
+- **Preisliste:** **Reale Wettbewerbspreise** kroatischer Kliniken recherchieren und als transparente **Platzhalter-Preise** (klar als Richtwerte gekennzeichnet) einbauen, bis Dr. Bedek seine echte Liste liefert.
+- **GHL (Phase 2):** Kunde (Manuel) hat **Agency-Lizenz**, stellt Zugänge bereit. Benötigt: Sub-Account/Location-ID, API-Key, Kalender-ID, **Telefonnummer für Voice AI**, WhatsApp-Anbindung. **KI-Chatbot** mit **Branchenwissen (Dentaltourismus/Zahnmedizin) + Guidelines/Guardrails** (Preise, Ablauf, Kasse, Ton; keine medizinischen Diagnosen, keine Garantie-Versprechen).
+- **Domain:** **Bestehende Domain bedek.hr** weiterverwenden; Deploy auf **Manuels Netlify-Account**; Demo zunächst Netlify-Subdomain, dann bedek.hr umstellen.
+- **Festzuschuss 2026:** Aktuelle Werte recherchieren **und rechtlich verifizieren**; mit Disclaimer + Quellen + "individuell mit Kasse klären".
+
+## 12. Design-Exploration
+Vor dem Vollausbau: 3 HTML-Mockups der Startseite in distinkten Richtungen (A: Editorial Luxury · B: Warm Human · C: Modern Bold Premium) → Kunde wählt Richtung → Vollausbau mit Sub-Agents.

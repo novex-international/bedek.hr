@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bedek Dental — Weltklasse-Zahnmedizin in Zagreb</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --clay: #c97b5a;
+    --clay-dark: #b3654a;
+    --clay-soft: #e3a589;
+    --cream: #f3ebe0;
+    --cream-deep: #ece0d0;
+    --sand: #faf5ee;
+    --sage: #7fa99b;
+    --sage-dark: #5f897b;
+    --charcoal: #3a322c;
+    --charcoal-soft: #6b6058;
+    --white: #ffffff;
+    --shadow-soft: 0 18px 48px -18px rgba(94, 64, 45, 0.28);
+    --shadow-card: 0 24px 60px -24px rgba(94, 64, 45, 0.35);
+    --radius-lg: 32px;
+    --radius-md: 24px;
+    --radius-sm: 16px;
+    --maxw: 1180px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Nunito', system-ui, sans-serif;
+    color: var(--charcoal);
+    background: var(--sand);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; line-height: 1.12; font-weight: 600; color: var(--charcoal); }
+
+  a { color: inherit; text-decoration: none; }
+
+  img { display: block; max-width: 100%; }
+
+  .wrap { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-weight: 700; font-size: 0.82rem; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--clay-dark);
+    background: rgba(201, 123, 90, 0.1);
+    padding: 7px 16px; border-radius: 999px;
+  }
+
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+    font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 1rem;
+    padding: 15px 28px; border-radius: 999px; cursor: pointer;
+    border: none; transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+    white-space: nowrap;
+  }
+  .btn-primary { background: var(--clay); color: #fff; box-shadow: 0 14px 30px -12px rgba(201, 123, 90, 0.7); }
+  .btn-primary:hover { background: var(--clay-dark); transform: translateY(-3px); box-shadow: 0 20px 38px -12px rgba(201, 123, 90, 0.8); }
+  .btn-ghost { background: var(--white); color: var(--charcoal); box-shadow: var(--shadow-soft); }
+  .btn-ghost:hover { transform: translateY(-3px); }
+  .btn-sage { background: var(--sage); color: #fff; box-shadow: 0 14px 30px -12px rgba(127, 169, 155, 0.7); }
+  .btn-sage:hover { background: var(--sage-dark); transform: translateY(-3px); }
+
+  /* ===== Header ===== */
+  header {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(250, 245, 238, 0.82);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(201, 123, 90, 0.12);
+  }
+  .nav {
+    display: flex; align-items: center; justify-content: space-between;
+    height: 78px; gap: 18px;
+  }
+  .wordmark { font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.55rem; color: var(--charcoal); display: flex; align-items: center; gap: 10px; }
+  .wordmark .dot { width: 11px; height: 11px; border-radius: 50%; background: var(--clay); display: inline-block; }
+  .wordmark b { color: var(--clay); font-weight: 600; }
+
+  .nav-links { display: flex; gap: 30px; list-style: none; font-weight: 600; font-size: 0.98rem; }
+  .nav-links a { position: relative; padding: 4px 0; color: var(--charcoal-soft); transition: color .2s; }
+  .nav-links a:hover { color: var(--clay-dark); }
+  .nav-links a::after { content: ''; position: absolute; left: 0; bottom: -2px; width: 0; height: 2px; background: var(--clay); border-radius: 2px; transition: width .25s; }
+  .nav-links a:hover::after { width: 100%; }
+
+  .nav-right { display: flex; align-items: center; gap: 16px; }
+  .langs { display: flex; align-items: center; gap: 4px; font-size: 0.82rem; font-weight: 700; }
+  .langs a { padding: 5px 7px; border-radius: 8px; color: var(--charcoal-soft); transition: background .2s, color .2s; }
+  .langs a.active { background: rgba(201, 123, 90, 0.15); color: var(--clay-dark); }
+  .langs a:hover { background: rgba(201, 123, 90, 0.1); }
+  .langs .sep { color: rgba(58,50,44,0.25); }
+
+  .icon-btn {
+    width: 42px; height: 42px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;
+    background: var(--white); box-shadow: var(--shadow-soft); color: var(--clay-dark); transition: transform .2s;
+  }
+  .icon-btn:hover { transform: translateY(-2px); }
+  .icon-btn.wa { background: #25d366; color: #fff; }
+
+  .hamburger { display: none; width: 46px; height: 46px; border-radius: 12px; background: var(--white); box-shadow: var(--shadow-soft); border: none; cursor: pointer; flex-direction: column; gap: 5px; align-items: center; justify-content: center; }
+  .hamburger span { width: 20px; height: 2px; background: var(--charcoal); border-radius: 2px; }
+
+  /* ===== Hero ===== */
+  .hero { padding: 64px 0 72px; position: relative; }
+  .hero::before {
+    content: ''; position: absolute; top: -120px; right: -160px; width: 520px; height: 520px;
+    background: radial-gradient(circle, rgba(201,123,90,0.16), transparent 68%); border-radius: 50%; z-index: 0;
+  }
+  .hero-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 56px; align-items: center; position: relative; z-index: 1; }
+  .hero h1 { font-size: clamp(2.4rem, 4.6vw, 3.7rem); font-weight: 600; margin: 22px 0 20px; letter-spacing: -0.01em; }
+  .hero h1 em { font-style: italic; color: var(--clay); }
+  .hero p.sub { font-size: 1.15rem; color: var(--charcoal-soft); max-width: 540px; margin-bottom: 30px; }
+  .hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 26px; }
+  .stars { color: #e8a33d; letter-spacing: 1px; }
+  .trust-badge { display: inline-flex; align-items: center; gap: 10px; font-weight: 600; color: var(--charcoal-soft); font-size: 0.95rem; }
+  .trust-badge .g { font-weight: 800; color: var(--charcoal); }
+
+  .hero-media { position: relative; }
+  .hero-media img {
+    width: 100%; height: 540px; object-fit: cover; border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card); animation: floatUp 1s ease both;
+  }
+  .hero-float {
+    position: absolute; bottom: 26px; left: -28px; background: var(--white);
+    border-radius: var(--radius-md); padding: 16px 20px; box-shadow: var(--shadow-card);
+    display: flex; align-items: center; gap: 14px; animation: floatUp 1.2s ease both;
+  }
+  .hero-float .av { width: 46px; height: 46px; border-radius: 50%; background: var(--sage); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-family: 'Fraunces', serif; }
+  .hero-float small { color: var(--charcoal-soft); font-size: 0.78rem; display: block; }
+  .hero-float strong { font-size: 0.98rem; }
+  .hero-float2 {
+    position: absolute; top: 24px; right: -22px; background: var(--clay); color: #fff;
+    border-radius: 18px; padding: 14px 20px; box-shadow: var(--shadow-card); text-align: center;
+    animation: floatUp 1.4s ease both;
+  }
+  .hero-float2 b { font-family: 'Fraunces', serif; font-size: 1.4rem; display: block; }
+  .hero-float2 span { font-size: 0.74rem; opacity: 0.9; }
+
+  @keyframes floatUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* ===== Trust bar ===== */
+  .trustbar { background: var(--charcoal); color: var(--cream); padding: 26px 0; }
+  .trustbar-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; text-align: center; }
+  .trustbar-item { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+  .trustbar-item .num { font-family: 'Fraunces', serif; font-size: 1.2rem; color: var(--clay-soft); font-weight: 600; }
+  .trustbar-item small { font-size: 0.86rem; opacity: 0.82; font-weight: 600; }
+  .trustbar-item + .trustbar-item { border-left: 1px solid rgba(255,255,255,0.12); }
+
+  /* ===== Section base ===== */
+  section.block { padding: 90px 0; }
+  .section-head { text-align: center; max-width: 680px; margin: 0 auto 54px; }
+  .section-head h2 { font-size: clamp(2rem, 3.6vw, 2.9rem); margin: 16px 0 14px; font-weight: 600; }
+  .section-head p { color: var(--charcoal-soft); font-size: 1.1rem; }
+
+  /* ===== Services ===== */
+  .services { background: var(--cream); }
+  .service-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+  .service-card {
+    background: var(--white); border-radius: var(--radius-md); padding: 30px 26px;
+    box-shadow: var(--shadow-soft); transition: transform .3s ease, box-shadow .3s ease;
+    display: flex; flex-direction: column; border: 1px solid rgba(201,123,90,0.07);
+  }
+  .service-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-card); }
+  .service-card .ic { width: 58px; height: 58px; border-radius: 18px; background: rgba(201,123,90,0.12); display: flex; align-items: center; justify-content: center; font-size: 1.7rem; margin-bottom: 18px; }
+  .service-card .quote { font-family: 'Fraunces', serif; font-style: italic; font-size: 1.05rem; color: var(--clay-dark); margin-bottom: 6px; }
+  .service-card h3 { font-size: 1.35rem; margin-bottom: 10px; }
+  .service-card p { color: var(--charcoal-soft); font-size: 0.96rem; flex-grow: 1; }
+  .service-card .arrow { margin-top: 16px; font-weight: 700; color: var(--clay-dark); font-size: 0.95rem; display: inline-flex; align-items: center; gap: 6px; }
+  .service-card:hover .arrow { gap: 12px; }
+
+  /* ===== Krankenkasse ===== */
+  .kasse { background: linear-gradient(160deg, var(--sage) 0%, var(--sage-dark) 100%); color: #fff; position: relative; overflow: hidden; }
+  .kasse::after { content: ''; position: absolute; bottom: -140px; left: -120px; width: 420px; height: 420px; background: radial-gradient(circle, rgba(255,255,255,0.12), transparent 70%); border-radius: 50%; }
+  .kasse .section-head h2, .kasse .section-head p { color: #fff; }
+  .kasse .eyebrow { background: rgba(255,255,255,0.2); color: #fff; }
+  .kasse .section-head p { opacity: 0.92; }
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; position: relative; z-index: 1; }
+  .step {
+    background: rgba(255,255,255,0.1); backdrop-filter: blur(6px); border: 1px solid rgba(255,255,255,0.2);
+    border-radius: var(--radius-md); padding: 28px 22px; text-align: center; transition: transform .3s, background .3s;
+  }
+  .step:hover { transform: translateY(-6px); background: rgba(255,255,255,0.16); }
+  .step .stepnum { width: 50px; height: 50px; margin: 0 auto 16px; border-radius: 50%; background: #fff; color: var(--sage-dark); display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-weight: 700; font-size: 1.35rem; }
+  .step .ic { font-size: 1.7rem; margin-bottom: 10px; }
+  .step h4 { color: #fff; font-size: 1.08rem; margin-bottom: 8px; }
+  .step p { font-size: 0.9rem; opacity: 0.9; }
+  .disclaimer { text-align: center; margin-top: 36px; font-size: 0.88rem; opacity: 0.82; position: relative; z-index: 1; }
+
+  /* ===== Kostenvergleich ===== */
+  .pricing-wrap { max-width: 940px; margin: 0 auto; }
+  .price-table {
+    background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-card);
+  }
+  .price-row { display: grid; grid-template-columns: 1.6fr 1fr 1fr 0.9fr; align-items: center; }
+  .price-head { background: var(--charcoal); color: var(--cream); font-weight: 700; }
+  .price-head > div { padding: 18px 22px; font-size: 0.92rem; }
+  .price-body .price-row { border-bottom: 1px solid var(--cream-deep); transition: background .2s; }
+  .price-body .price-row:hover { background: var(--sand); }
+  .price-body .price-row:last-child { border-bottom: none; }
+  .price-body > .price-row > div { padding: 20px 22px; }
+  .price-cell-name { font-weight: 700; color: var(--charcoal); }
+  .price-cell-name small { display: block; font-weight: 500; color: var(--charcoal-soft); font-size: 0.82rem; }
+  .price-hr { color: var(--sage-dark); font-weight: 800; font-family: 'Fraunces', serif; font-size: 1.05rem; }
+  .price-de { color: var(--charcoal-soft); text-decoration: line-through; text-decoration-color: rgba(201,123,90,0.5); }
+  .price-save { color: #fff; }
+  .price-save span { background: var(--clay); padding: 6px 12px; border-radius: 999px; font-weight: 800; font-size: 0.82rem; }
+  .price-note { text-align: center; margin-top: 22px; color: var(--charcoal-soft); font-size: 0.9rem; }
+
+  /* ===== Reviews ===== */
+  .reviews { background: var(--cream); }
+  .review-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+  .review-card { background: var(--white); border-radius: var(--radius-md); padding: 34px 28px; box-shadow: var(--shadow-soft); position: relative; transition: transform .3s; }
+  .review-card:hover { transform: translateY(-6px); }
+  .review-card .qmark { font-family: 'Fraunces', serif; font-size: 4rem; color: rgba(201,123,90,0.18); position: absolute; top: 8px; right: 22px; line-height: 1; }
+  .review-card .stars { font-size: 1.05rem; margin-bottom: 14px; }
+  .review-card blockquote { font-family: 'Fraunces', serif; font-style: italic; font-size: 1.18rem; color: var(--charcoal); margin-bottom: 10px; line-height: 1.4; }
+  .review-card .translate { color: var(--charcoal-soft); font-size: 0.92rem; margin-bottom: 16px; }
+  .review-card .author { display: flex; align-items: center; gap: 12px; }
+  .review-card .author .av { width: 40px; height: 40px; border-radius: 50%; background: var(--sage); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; }
+  .review-card .author small { color: var(--charcoal-soft); display: block; font-size: 0.8rem; }
+  .reviews-cta { text-align: center; margin-top: 44px; }
+
+  /* ===== Team ===== */
+  .team-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; margin-bottom: 60px; }
+  .team-intro img { width: 100%; height: 420px; object-fit: cover; border-radius: var(--radius-lg); box-shadow: var(--shadow-card); }
+  .team-intro h2 { font-size: clamp(2rem, 3.4vw, 2.7rem); margin: 16px 0 18px; }
+  .team-intro p { color: var(--charcoal-soft); font-size: 1.06rem; margin-bottom: 16px; }
+  .team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+  .team-card { background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-soft); display: flex; transition: transform .3s; }
+  .team-card:hover { transform: translateY(-6px); }
+  .team-card img { width: 190px; height: 100%; min-height: 240px; object-fit: cover; }
+  .team-card .tc-body { padding: 28px 26px; }
+  .team-card .tc-body h3 { font-size: 1.35rem; margin-bottom: 4px; }
+  .team-card .role { color: var(--clay-dark); font-weight: 700; font-size: 0.92rem; margin-bottom: 12px; }
+  .team-card .tc-body p { color: var(--charcoal-soft); font-size: 0.94rem; }
+
+  /* ===== Kontakt ===== */
+  .kontakt { background: var(--cream); }
+  .kontakt-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: start; }
+  .map-block {
+    height: 280px; border-radius: var(--radius-md); background: linear-gradient(135deg, var(--sage) 0%, var(--sage-dark) 100%);
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; color: #fff;
+    box-shadow: var(--shadow-soft); margin-bottom: 24px; position: relative; overflow: hidden;
+  }
+  .map-block::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle at 30% 40%, rgba(255,255,255,0.25) 0 3px, transparent 3px), radial-gradient(circle at 70% 65%, rgba(255,255,255,0.2) 0 4px, transparent 4px); opacity: 0.6; }
+  .map-block .pin { font-size: 2.4rem; position: relative; }
+  .map-block .btn { position: relative; }
+  .contact-info { display: grid; gap: 16px; }
+  .contact-row { display: flex; align-items: flex-start; gap: 14px; background: var(--white); padding: 18px 20px; border-radius: var(--radius-sm); box-shadow: var(--shadow-soft); }
+  .contact-row .ic { width: 44px; height: 44px; flex-shrink: 0; border-radius: 12px; background: rgba(201,123,90,0.12); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; }
+  .contact-row strong { display: block; font-size: 1rem; }
+  .contact-row small { color: var(--charcoal-soft); font-size: 0.9rem; }
+
+  .contact-form { background: var(--white); padding: 36px 34px; border-radius: var(--radius-lg); box-shadow: var(--shadow-card); }
+  .contact-form h3 { font-size: 1.55rem; margin-bottom: 6px; }
+  .contact-form > p { color: var(--charcoal-soft); margin-bottom: 22px; font-size: 0.96rem; }
+  .form-row { margin-bottom: 16px; }
+  .form-row.two { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  label { display: block; font-weight: 700; font-size: 0.85rem; margin-bottom: 6px; color: var(--charcoal); }
+  input, textarea {
+    width: 100%; font-family: 'Nunito', sans-serif; font-size: 0.98rem; padding: 13px 16px;
+    border: 1.5px solid var(--cream-deep); border-radius: 14px; background: var(--sand); color: var(--charcoal);
+    transition: border .2s, background .2s;
+  }
+  input:focus, textarea:focus { outline: none; border-color: var(--clay-soft); background: #fff; }
+  textarea { resize: vertical; min-height: 100px; }
+  .upload {
+    border: 1.5px dashed var(--clay-soft); border-radius: 14px; padding: 16px; text-align: center; color: var(--charcoal-soft);
+    font-size: 0.9rem; background: rgba(201,123,90,0.05); cursor: pointer; transition: background .2s;
+  }
+  .upload:hover { background: rgba(201,123,90,0.1); }
+  .contact-form .btn { width: 100%; margin-top: 6px; }
+
+  /* ===== Footer ===== */
+  footer { background: var(--charcoal); color: var(--cream); padding: 64px 0 30px; }
+  .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+  footer .wordmark { color: #fff; margin-bottom: 14px; }
+  footer .wordmark b { color: var(--clay-soft); }
+  footer p { opacity: 0.78; font-size: 0.94rem; max-width: 360px; }
+  footer h5 { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--clay-soft); margin-bottom: 16px; }
+  footer ul { list-style: none; display: grid; gap: 10px; }
+  footer ul a { opacity: 0.82; font-size: 0.94rem; transition: opacity .2s, color .2s; }
+  footer ul a:hover { opacity: 1; color: var(--clay-soft); }
+  .footer-langs { display: flex; gap: 10px; font-size: 0.9rem; opacity: 0.85; }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.12); padding-top: 24px; display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; font-size: 0.84rem; opacity: 0.7; }
+
+  .reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 980px) {
+    .nav-links, .langs .sep { display: none; }
+    .hamburger { display: flex; }
+    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+    .hero-media img { height: 420px; }
+    .trustbar-grid { grid-template-columns: 1fr 1fr; gap: 20px 0; }
+    .trustbar-item:nth-child(odd) { border-left: none; }
+    .trustbar-item:nth-child(3) { border-left: none; }
+    .service-grid { grid-template-columns: 1fr 1fr; }
+    .steps { grid-template-columns: 1fr 1fr; }
+    .review-grid { grid-template-columns: 1fr; }
+    .team-intro { grid-template-columns: 1fr; gap: 32px; }
+    .team-grid { grid-template-columns: 1fr; }
+    .kontakt-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 600px) {
+    .wrap { padding: 0 18px; }
+    section.block { padding: 64px 0; }
+    .service-grid, .steps { grid-template-columns: 1fr; }
+    .trustbar-grid { grid-template-columns: 1fr; }
+    .trustbar-item + .trustbar-item { border-left: none; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.12); }
+    .hero h1 { font-size: 2.2rem; }
+    .price-row { grid-template-columns: 1fr; }
+    .price-head { display: none; }
+    .price-body > .price-row > div { padding: 8px 20px; }
+    .price-cell-name { padding-top: 18px !important; }
+    .price-save { padding-bottom: 18px !important; }
+    .price-de::before { content: 'Deutschland: '; font-weight: 700; color: var(--charcoal); text-decoration: none; display: inline-block; }
+    .price-hr::before { content: 'Kroatien: '; font-weight: 700; color: var(--charcoal); }
+    .team-card { flex-direction: column; }
+    .team-card img { width: 100%; height: 220px; min-height: auto; }
+    .form-row.two { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .hero-float { left: 8px; }
+    .hero-float2 { right: 8px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== Header ===== -->
+<header>
+  <div class="wrap nav">
+    <a href="#start" class="wordmark"><span class="dot"></span>Bedek<b>&nbsp;Dental</b></a>
+    <ul class="nav-links">
+      <li><a href="#start">Start</a></li>
+      <li><a href="#leistungen">Leistungen</a></li>
+      <li><a href="#zahntourismus">Zahntourismus</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+    <div class="nav-right">
+      <nav class="langs" aria-label="Sprache wählen">
+        <a href="#" class="active">🇩🇪 DE</a><span class="sep">·</span>
+        <a href="#">🇬🇧 EN</a><span class="sep">·</span>
+        <a href="#">🇭🇷 HR</a><span class="sep">·</span>
+        <a href="#">🇮🇹 IT</a>
+      </nav>
+      <a href="tel:+385957299112" class="icon-btn" aria-label="Anrufen" title="Anrufen">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </a>
+      <a href="https://wa.me/385957299112" class="icon-btn wa" aria-label="WhatsApp" title="WhatsApp">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.978-1.039zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.017-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+      </a>
+      <a href="#kontakt" class="btn btn-primary">Termin anfragen</a>
+      <button class="hamburger" aria-label="Menü"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== Hero ===== -->
+<section class="hero" id="start">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">★ Premium-Zahnmedizin in Zagreb</span>
+      <h1>Ihr Lächeln in den <em>besten Händen</em> — Weltklasse-Zahnmedizin in Zagreb.</h1>
+      <p class="sub">Dieselbe Premium-Qualität wie in Deutschland — gleiche Marken Straumann &amp; Nobel Biocare, 50–80&nbsp;% günstiger. Ihre deutsche Krankenkasse zahlt mit, betreut von einem herzlichen Familienteam.</p>
+      <div class="hero-ctas">
+        <a href="#kontakt" class="btn btn-primary">Kostenlose Erstberatung</a>
+        <a href="#leistungen" class="btn btn-ghost">Behandlungen ansehen</a>
+      </div>
+      <div class="trust-badge">
+        <span class="stars">★★★★★</span>
+        <span><span class="g">Google</span> — von Patienten geliebt</span>
+      </div>
+    </div>
+    <div class="hero-media">
+      <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=900&q=80" alt="Lächelnde Patientin in heller, moderner Zahnarztpraxis" />
+      <div class="hero-float">
+        <div class="av">30+</div>
+        <div><strong>Jahre Familientradition</strong><small>seit 1991 in Zagreb</small></div>
+      </div>
+      <div class="hero-float2">
+        <b>−80%</b><span>Ersparnis ggü. DE</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Trust bar ===== -->
+<div class="trustbar">
+  <div class="wrap trustbar-grid">
+    <div class="trustbar-item"><span class="num">Über 30 Jahre</span><small>Familientradition</small></div>
+    <div class="trustbar-item"><span class="num">Straumann &amp; Nobel Biocare</span><small>Premium-Implantate</small></div>
+    <div class="trustbar-item"><span class="num">Promovierter Zahnarzt</span><small>dr.sc. — 2019</small></div>
+    <div class="trustbar-item"><span class="num">DE · EN · HR · IT</span><small>Wir sprechen Ihre Sprache</small></div>
+  </div>
+</div>
+
+<!-- ===== Services ===== -->
+<section class="block services reveal" id="leistungen">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Unsere Leistungen</span>
+      <h2>Was dürfen wir für Ihr Lächeln tun?</h2>
+      <p>Sagen Sie uns einfach, was Sie sich wünschen — wir finden gemeinsam die beste, sanfteste Lösung für Sie.</p>
+    </div>
+    <div class="service-grid">
+      <div class="service-card">
+        <div class="ic">🦷</div>
+        <p class="quote">„Mir fehlt ein Zahn“</p>
+        <h3>Implantate</h3>
+        <p>Festsitzender Zahnersatz mit Straumann &amp; Nobel Biocare — wie ein eigener Zahn, ein Leben lang.</p>
+        <span class="arrow">Mehr erfahren →</span>
+      </div>
+      <div class="service-card">
+        <div class="ic">✨</div>
+        <p class="quote">„Ich möchte schönere Zähne“</p>
+        <h3>Kronen &amp; Veneers</h3>
+        <p>Natürlich schöne Zirkon- und Keramikarbeiten, perfekt auf Ihr Gesicht abgestimmt.</p>
+        <span class="arrow">Mehr erfahren →</span>
+      </div>
+      <div class="service-card">
+        <div class="ic">💎</div>
+        <p class="quote">„Hellere Zähne“</p>
+        <h3>Bleaching</h3>
+        <p>Sanftes, professionelles Aufhellen für ein frisches, strahlendes Lächeln.</p>
+        <span class="arrow">Mehr erfahren →</span>
+      </div>
+      <div class="service-card">
+        <div class="ic">🩺</div>
+        <p class="quote">„Vorsorge &amp; Pflege“</p>
+        <h3>Allgemeine Zahnmedizin</h3>
+        <p>Prophylaxe, Füllungen, Wurzelbehandlung &amp; Endodontie — fürsorglich und schmerzarm.</p>
+        <span class="arrow">Mehr erfahren →</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Krankenkasse / Zahntourismus ===== -->
+<section class="block kasse reveal" id="zahntourismus">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Zahntourismus leicht gemacht</span>
+      <h2>Ihre deutsche Krankenkasse zahlt mit.</h2>
+      <p>Das EU-Recht erlaubt Ihre Behandlung in Kroatien. Ihre gesetzliche Krankenkasse (GKV) erstattet den Festzuschuss der Regelversorgung — wie bei einer Behandlung in Deutschland. So einfach geht's:</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="stepnum">1</div>
+        <div class="ic">📋</div>
+        <h4>Heil- &amp; Kostenplan</h4>
+        <p>Wir erstellen Ihren Plan auf dem deutschen Formular — vollständig &amp; nachvollziehbar.</p>
+      </div>
+      <div class="step">
+        <div class="stepnum">2</div>
+        <div class="ic">✉️</div>
+        <h4>Bei der Kasse einreichen</h4>
+        <p>Sie reichen den Plan vor der Behandlung bei Ihrer Krankenkasse ein.</p>
+      </div>
+      <div class="step">
+        <div class="stepnum">3</div>
+        <div class="ic">✅</div>
+        <h4>Genehmigung abwarten</h4>
+        <p>Ihre Kasse genehmigt den Festzuschuss — wir beraten Sie gern dabei.</p>
+      </div>
+      <div class="step">
+        <div class="stepnum">4</div>
+        <div class="ic">✈️</div>
+        <h4>Behandlung in Zagreb</h4>
+        <p>Sie reisen an, wir kümmern uns liebevoll um den Rest. Willkommen!</p>
+      </div>
+    </div>
+    <p class="disclaimer">Keine Rechtsberatung – die Erstattung klären Sie individuell mit Ihrer Kasse.</p>
+  </div>
+</section>
+
+<!-- ===== Kostenvergleich ===== -->
+<section class="block reveal">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Transparente Preise</span>
+      <h2>Premium-Qualität, faire Preise.</h2>
+      <p>Dieselben Markenmaterialien wie in Deutschland — zu kroatischen Wettbewerbspreisen. Hier sehen Sie, wie viel Sie sparen.</p>
+    </div>
+    <div class="pricing-wrap">
+      <div class="price-table">
+        <div class="price-row price-head">
+          <div>Behandlung</div>
+          <div>Kroatien</div>
+          <div>Deutschland</div>
+          <div>Ersparnis</div>
+        </div>
+        <div class="price-body">
+          <div class="price-row">
+            <div class="price-cell-name">Einzelimplantat inkl. Krone<small>Komplettlösung</small></div>
+            <div class="price-hr">€800–1.500</div>
+            <div class="price-de">€1.800–4.000</div>
+            <div class="price-save"><span>50–70%</span></div>
+          </div>
+          <div class="price-row">
+            <div class="price-cell-name">Premium-Implantat<small>Straumann / Nobel Biocare</small></div>
+            <div class="price-hr">€750–950</div>
+            <div class="price-de">€1.800–4.000</div>
+            <div class="price-save"><span>50–80%</span></div>
+          </div>
+          <div class="price-row">
+            <div class="price-cell-name">Krone Zirkon / Keramik<small>vollkeramisch, ästhetisch</small></div>
+            <div class="price-hr">€200–300</div>
+            <div class="price-de">deutlich höher</div>
+            <div class="price-save"><span>bis −70%</span></div>
+          </div>
+        </div>
+      </div>
+      <p class="price-note">Richtwerte – Wettbewerbspreise. Finale Preise nach individuellem Befund.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Reviews ===== -->
+<section class="block reviews reveal">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow"><span class="stars">★★★★★</span> auf Google</span>
+      <h2>Was unsere Patienten sagen</h2>
+      <p>Vertrauen verdient man sich — über Jahre, ein Lächeln nach dem anderen.</p>
+    </div>
+    <div class="review-grid">
+      <div class="review-card">
+        <span class="qmark">”</span>
+        <div class="stars">★★★★★</div>
+        <blockquote>„Najbolji stomatolog na svijetu, jedan jedini!“</blockquote>
+        <p class="translate">„Der beste Zahnarzt der Welt, einzigartig!“</p>
+        <div class="author"><div class="av">M</div><div><strong>Marko P.</strong><small>Google Bewertung</small></div></div>
+      </div>
+      <div class="review-card">
+        <span class="qmark">”</span>
+        <div class="stars">★★★★★</div>
+        <blockquote>„Najbolji zubar ikada!“</blockquote>
+        <p class="translate">„Der beste Zahnarzt überhaupt!“</p>
+        <div class="author"><div class="av">I</div><div><strong>Ivana K.</strong><small>Google Bewertung</small></div></div>
+      </div>
+      <div class="review-card">
+        <span class="qmark">”</span>
+        <div class="stars">★★★★★</div>
+        <blockquote>„Profesionalnost. Uljudnost. Izvrsna kvaliteta.“</blockquote>
+        <p class="translate">„Professionalität. Freundlichkeit. Hervorragende Qualität.“</p>
+        <div class="author"><div class="av">T</div><div><strong>Tomislav R.</strong><small>Google Bewertung</small></div></div>
+      </div>
+    </div>
+    <div class="reviews-cta">
+      <a href="#" class="btn btn-ghost">Alle Bewertungen auf Google →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Team ===== -->
+<section class="block reveal" id="team">
+  <div class="wrap">
+    <div class="team-intro">
+      <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=800&q=80" alt="Freundliches Zahnarztteam in moderner Praxis" />
+      <div>
+        <span class="eyebrow">Unser Team</span>
+        <h2>Eine Familie, die sich um Ihre kümmert.</h2>
+        <p>Was 1991 als kleine Familienpraxis begann, ist heute eine frisch renovierte, hochmoderne Ordination im Herzen von Zagreb — und doch ist eines geblieben: die persönliche Wärme, mit der wir jeden Patienten empfangen.</p>
+        <p>Bei uns sind Sie kein Fall, sondern ein Mensch. Wir nehmen uns Zeit, hören zu und erklären jeden Schritt — bis Sie sich rundum sicher und gut aufgehoben fühlen.</p>
+      </div>
+    </div>
+    <div class="team-grid">
+      <div class="team-card">
+        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=500&q=80" alt="dr.sc. Ivan Bedek, dr.med.dent." />
+        <div class="tc-body">
+          <h3>dr.sc. Ivan Bedek, dr.med.dent.</h3>
+          <p class="role">Inhaber · promoviert 2019</p>
+          <p>Spezialist für Implantologie und ästhetische Zahnmedizin. Führt die Familientradition mit Präzision, Ruhe und echtem Herz für seine Patienten fort.</p>
+        </div>
+      </div>
+      <div class="team-card">
+        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=500&q=80" alt="Martina Laktić, dr.med.dent." />
+        <div class="tc-body">
+          <h3>Martina Laktić, dr.med.dent.</h3>
+          <p class="role">Familienzahnmedizin &amp; Endodontie</p>
+          <p>Ihre einfühlsame Ansprechpartnerin für die ganze Familie — von der sanften Vorsorge bis zur präzisen Wurzelbehandlung.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Kontakt ===== -->
+<section class="block kontakt reveal" id="kontakt">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Kontakt</span>
+      <h2>Wir freuen uns auf Sie.</h2>
+      <p>Schreiben Sie uns — wir melden uns persönlich und beantworten gerne alle Ihre Fragen, ganz unverbindlich.</p>
+    </div>
+    <div class="kontakt-grid">
+      <div>
+        <div class="map-block">
+          <span class="pin">📍</span>
+          <strong>Karte</strong>
+          <a href="https://maps.google.com/?q=Zatišje+6,+Zagreb" class="btn btn-sage">Route planen</a>
+        </div>
+        <div class="contact-info">
+          <div class="contact-row">
+            <div class="ic">🏡</div>
+            <div><strong>Zatišje 6/1, 10000 Zagreb</strong><small>Im hinteren Hof — frisch renoviert.</small></div>
+          </div>
+          <div class="contact-row">
+            <div class="ic">🚗</div>
+            <div><strong>Bequem parken</strong><small>In 1 Min. Laufnähe finden Sie immer einen Parkplatz.</small></div>
+          </div>
+          <div class="contact-row">
+            <div class="ic">📞</div>
+            <div><strong>+385 95 729 9112</strong><small>Telefon &amp; WhatsApp — auch auf Deutsch.</small></div>
+          </div>
+        </div>
+      </div>
+      <form class="contact-form" onsubmit="return false;">
+        <h3>Termin anfragen</h3>
+        <p>Kostenlos &amp; unverbindlich. Wir antworten meist innerhalb eines Tages.</p>
+        <div class="form-row two">
+          <div><label for="name">Name</label><input id="name" type="text" placeholder="Ihr Name" /></div>
+          <div><label for="tel">Telefon</label><input id="tel" type="tel" placeholder="+49 …" /></div>
+        </div>
+        <div class="form-row">
+          <label for="email">E-Mail</label><input id="email" type="email" placeholder="ihre@email.de" />
+        </div>
+        <div class="form-row">
+          <label for="anliegen">Ihr Anliegen</label><textarea id="anliegen" placeholder="Erzählen Sie uns kurz, worum es geht …"></textarea>
+        </div>
+        <div class="form-row">
+          <label>Foto (optional)</label>
+          <label class="upload" for="foto">📎 Foto Ihrer Zähne hochladen — hilft uns bei der Ersteinschätzung<input id="foto" type="file" accept="image/*" hidden /></label>
+        </div>
+        <button type="submit" class="btn btn-primary">Anfrage senden</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="wordmark"><span class="dot"></span>Bedek<b>&nbsp;Dental</b></div>
+        <p>Ordinacija dentalne medicine dr.sc. Ivan Bedek, dr.med.dent. — Weltklasse-Zahnmedizin mit familiärer Wärme, im Herzen von Zagreb.</p>
+        <div class="footer-langs">🇩🇪 DE · 🇬🇧 EN · 🇭🇷 HR · 🇮🇹 IT</div>
+      </div>
+      <div>
+        <h5>Praxis</h5>
+        <ul>
+          <li><a href="#leistungen">Leistungen</a></li>
+          <li><a href="#zahntourismus">Zahntourismus</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Kontakt</h5>
+        <ul>
+          <li><a href="#">Zatišje 6/1, 10000 Zagreb</a></li>
+          <li><a href="tel:+385957299112">+385 95 729 9112</a></li>
+          <li><a href="https://wa.me/385957299112">WhatsApp schreiben</a></li>
+          <li><a href="https://maps.google.com/?q=Zatišje+6,+Zagreb">Route planen</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Ordinacija dentalne medicine dr.sc. Ivan Bedek, dr.med.dent. · Alle Rechte vorbehalten.</span>
+      <span>Stand Juni 2026. Keine Rechts- oder Medizinberatung.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+</script>
+</body>
+</html>
