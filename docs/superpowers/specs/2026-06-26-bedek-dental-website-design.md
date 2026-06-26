@@ -89,7 +89,7 @@ Jede Seite in 4 Sprachen.
    - Dentaltourismus-Teaser (inkl. "Ihre Kasse zahlt mit")
    - Kostenvergleich-Kurzblock
    - Vorher/Nachher
-   - **Google-Reviews-Highlight:** „★★★★★ auf Google"-Badge + echte Patientenstimmen als Luxus-Testimonial-Cards, Link auf das Google-Maps-Profil; zusätzlich länder-getaggte Testimonials (DE/AT/CH/Diaspora)
+   - **Google-Reviews-Highlight (authentische Kacheln):** Reviews als **echte Google-Style-Kacheln** wie auf Weltklasse-Seiten — pro Kachel: Avatar/Initiale, Name, ★★★★★, relatives Datum, Review-Text, **Google-„G"-Logo**, dazu Gesamt-Badge „5,0 ★ · Google". **Phase 2:** Live via **Google Places API** (Place-ID gesichert) → Kacheln aktualisieren sich automatisch. Demo: echte Quotes in identischer Kachel-Optik. Link aufs Google-Profil.
    - CTA-Sektion (Formular/Buchung)
 2. **Leistungen (`/de/leistungen`)** — Implantate, Kronen/Veneers, Bleaching, allg. Zahnmedizin; je Behandlung Nutzen, Ablauf, Material/Marken, Preisrahmen
 3. **Dentaltourismus (`/de/zahntourismus`)** ⭐ Kern-Funnel:
@@ -105,6 +105,11 @@ Jede Seite in 4 Sprachen.
    - **Aktives Behandler-Team:** Ivan Bedek + Martina Laktić.
    - **Marija Bedek, dr.med.dent.** (geb. 1952) — Gründerin/Legacy, **nicht mehr aktiv in der Praxis**. Erscheint nur als Teil der Gründungs-/Familiengeschichte, nicht als aktive Behandlerin.
    - **Narrativ:** "Familientradition, über 30 Jahre Vertrauen" — Gründung durch Marija 1991 → Übernahme & Weiterführung durch Ivan 2014 (promoviert) → heutige Praxis mit Ivan & Martina. Verbindet "old school"-Qualität + Wissenschaft + familiäre Wärme = Luxus × Human.
+
+   **Vollständige Vita (von bedek.hr übernommen, redaktionell optimiert, ohne inhaltliche Verfälschung):**
+   - **Ivan Bedek:** geb. 22.08.1979 Zagreb. Klassisches Gymnasium (Abitur 1998), Studium Zahnmedizin Universität Zagreb (Stipendiat), Diplom 26.05.2004 (Thesis: zahnärztliche Behandlung von Kindern mit besonderen Bedürfnissen). Magister 02/2010 (Erosionspotenzial häufig konsumierter Getränke in der Adoleszenz). 2014 eigene Praxis (nach Jahren bei Dr. Marija Bedek & Oralchirurg Dr. Tihomir Švajhler). **Promotion 12.12.2019** (Dissertation: kroatischer Standard zur Bestimmung des Zahnalters von Kindern anhand digitaler OPGs). Regelmäßige fachliche & wissenschaftliche Weiterbildung im In- und Ausland. Verheiratet, zwei Kinder.
+   - **Martina Laktić:** geb. 1993 Zagreb. Studium Zahnmedizin Universität Zagreb, Diplom 2018 (Thesis: Zahnerosion). Auszeichnungen: **Dekans-Preis**, **Rektor-Preis für individuelle wissenschaftliche/künstlerische Arbeit**, **Sonder-Rektor-Preis**. Bereits als Studentin in der Praxis Bedek; breite klinische Erfahrung über alle Bereiche. Schwerpunkte: **Familienzahnmedizin & Endodontie**.
+   - **⚠️ Titel-Faktencheck (Pflicht, abzustimmen):** Die englische bedek.hr-Seite labelt beide als "MD, PhD". Faktenlage: Ivan = **dr.sc.** (Promotion 2019) + **dr.med.dent.** → korrekt. "MD" trifft nicht zu (Zahnarzt, kein Humanmediziner). Bei **Martina** nennt die Vita **keinen Doktortitel** → "PhD" ist vermutlich Übersetzungsartefakt; bis zur Bestätigung führen wir sie als **Dr. med. dent. Martina Laktić** (mit ihren Preisen als Exzellenz-Signal), um keine falsche Credential-Behauptung zu machen. **Vor Live mit Dr. Bedek/Martina verifizieren.**
 5. **Galerie (`/de/galerie`)** — modernisierte Praxisbilder + Cases
 6. **Kontakt (`/de/kontakt`)** — Multistep-Formular, **Google-Maps-Einbettung mit Direkt-Navigation** ("Route planen" öffnet Google/Apple Maps zur Praxis), **Parkhinweis** ("In 1 Min. Laufnähe findet sich immer ein Parkplatz"), WhatsApp/Telefon, Buchung, Öffnungszeiten. Adresse Zatišje 6/1 (im hinteren Hof) klar beschrieben, damit Auswärtige sie finden.
 
@@ -189,6 +194,12 @@ Alle Aussagen werden gegen **offizielle/autoritative Quellen** geprüft und nur 
 - **GHL (Phase 2):** Kunde (Manuel) hat **Agency-Lizenz**, stellt Zugänge bereit. Benötigt: Sub-Account/Location-ID, API-Key, Kalender-ID, **Telefonnummer für Voice AI**, WhatsApp-Anbindung. **KI-Chatbot** mit **Branchenwissen (Dentaltourismus/Zahnmedizin) + Guidelines/Guardrails** (Preise, Ablauf, Kasse, Ton; keine medizinischen Diagnosen, keine Garantie-Versprechen).
 - **Domain:** **Bestehende Domain bedek.hr** weiterverwenden; Deploy auf **Manuels Netlify-Account**; Demo zunächst Netlify-Subdomain, dann bedek.hr umstellen.
 - **Festzuschuss 2026:** Aktuelle Werte recherchieren **und rechtlich verifizieren**; mit Disclaimer + Quellen + "individuell mit Kasse klären".
+
+## 11b. Bild-Pipeline (KI)
+- **Arzt-Porträts:** echte Originale (`ivan.png`, `martina.jpg`) im Projekt. Wunsch: KI-**Gleichrichtung** (einheitliche Ausrichtung/Blickrichtung beider Personen) + **Modernisierung/Retusche** — **ohne die Person zu verändern** (Identität erhalten, nur Licht/Schärfe/Hintergrund/Konsistenz).
+- **Praxis-Innenräume:** **KI-Bilder auf Basis der alten Raumfotos** erzeugen (gleicher Raum, modernisiert/renoviert) — Bild-zu-Bild, da die Räumlichkeit gleich bleibt.
+- **Tooling-Hinweis:** In dieser Umgebung **kein natives Bild-KI-Tool**. Umsetzung über externes Bildmodell (OpenAI `gpt-image-1` Edit, Google Imagen/"nano banana", Flux via fal/Replicate) per Skript (mit `truststore` wegen TLS-Interception) **oder** extern generiert & eingespielt. Entscheidung offen (siehe Frage).
+- **Demo-Fallback:** echte Porträts as-is + premium Stock-Interieurs; KI-Bilder werden nachgeschoben, sobald Provider/Key feststeht.
 
 ## 12. Design-Exploration
 Vor dem Vollausbau: 3 HTML-Mockups der Startseite in distinkten Richtungen (A: Editorial Luxury · B: Warm Human · C: Modern Bold Premium) → Kunde wählt Richtung → Vollausbau mit Sub-Agents.
