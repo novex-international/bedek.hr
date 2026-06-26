@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Leistungen – Bedek Dental Zagreb</title>
-<meta name="description" content="Leistungen von Bedek Dental Zagreb: Implantate (Straumann & Nobel Biocare), Kronen & Veneers aus Zirkon und E-max, Bleaching, Prophylaxe und Endodontie. Hochwertige Zahnmedizin mit ehrlicher Beratung." />
+<title>Bedek Dental — Dental Practice in Zagreb | Experience You Can Feel</title>
+<meta name="description" content="Bedek Dental: a doctorate-holding dentist and an award-winning dentist, over 30 years of family tradition. Health before aesthetics. Patients from across Europe. Zagreb." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -93,6 +93,10 @@
   .flags button:hover{opacity:1;background:var(--ice)}
   .flags button.active{opacity:1;background:var(--mint);box-shadow:inset 0 0 0 1.5px var(--teal)}
   .flags button img{display:block;width:24px;height:17px;object-fit:cover;border-radius:3px;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+  .flags a{display:inline-flex;padding:5px 6px;border-radius:8px;opacity:.55;transition:.2s}
+  .flags a:hover{opacity:1;background:var(--ice)}
+  .flags a.active{opacity:1;background:var(--mint);box-shadow:inset 0 0 0 1.5px var(--teal)}
+  .flags a img{display:block;width:24px;height:17px;object-fit:cover;border-radius:3px;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
   .nav-phone{display:flex;align-items:center;gap:7px;font-family:'Manrope';font-weight:700;font-size:.92rem;color:var(--teal-deep);white-space:nowrap;flex-shrink:0}
   .icon-btn{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:var(--mint);color:var(--teal-deep);transition:.2s}
   .icon-btn:hover{background:var(--teal);color:#fff;transform:translateY(-2px)}
@@ -299,77 +303,6 @@
     .flags{display:none}
     .nav-right .icon-btn.wa{display:none}
   }
-
-  /* ===== Page-specific (Leistungen) ===== */
-  .page-hero{position:relative;overflow:hidden;padding:54px 0 60px;background:
-    radial-gradient(900px 480px at 82% -10%, var(--mint), transparent 60%),
-    linear-gradient(180deg,var(--ice),#fff 75%)}
-  .page-hero .crumb{font-size:.84rem;color:var(--muted);margin-bottom:18px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-  .page-hero .crumb a{color:var(--teal-deep);font-weight:600}
-  .page-hero .crumb a:hover{text-decoration:underline}
-  .page-hero .crumb .sep{opacity:.5}
-  .page-hero h1{font-size:clamp(2.1rem,4.4vw,3.3rem);font-weight:800;letter-spacing:-.03em;max-width:18ch}
-  .page-hero .sub{font-size:1.1rem;color:var(--slate);margin-top:18px;max-width:58ch}
-
-  /* Brand trust band */
-  .brands{background:var(--warm);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:42px 0}
-  .brands .lead-line{font-family:'Manrope';font-weight:700;font-size:1.05rem;color:var(--ink);max-width:60ch}
-  .brand-chips{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px;align-items:center}
-  .brand-chip{display:inline-flex;align-items:center;gap:9px;background:#fff;border:1px solid var(--line);
-    padding:12px 20px;border-radius:14px;box-shadow:var(--shadow-sm);font-family:'Manrope';font-weight:700;
-    font-size:1rem;color:var(--teal-ink);letter-spacing:-.01em}
-  .brand-chip .bdot{width:9px;height:9px;border-radius:50%;background:var(--teal)}
-  .brand-chip small{display:block;font-family:'Inter';font-weight:500;font-size:.74rem;color:var(--muted);letter-spacing:0}
-
-  /* Treatment sections (alternating) */
-  .treat{padding:84px 0;border-bottom:1px solid var(--line)}
-  .treat:nth-child(even){background:var(--warm)}
-  .treat-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-  .treat.flip .treat-media{order:2}
-  .treat-media{position:relative}
-  .treat-media .ph{border-radius:26px;overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:4/3.2;background:var(--mint)}
-  .treat-media .ph img{width:100%;height:100%;object-fit:cover}
-  .treat-media .float-badge{position:absolute;background:#fff;border-radius:16px;padding:14px 18px;box-shadow:var(--shadow);display:flex;align-items:center;gap:12px;left:-18px;bottom:26px;max-width:78%}
-  .treat.flip .treat-media .float-badge{left:auto;right:-18px}
-  .treat-media .float-badge .ic{width:42px;height:42px;border-radius:12px;background:var(--mint);display:flex;align-items:center;justify-content:center;color:var(--teal-deep);flex:none}
-  .treat-media .float-badge b{font-family:'Manrope';font-size:.96rem;display:block;line-height:1.2}
-  .treat-media .float-badge small{color:var(--muted);font-size:.78rem}
-  .treat-body .prob{color:var(--coral);font-weight:600;font-size:.9rem;margin:14px 0 8px}
-  .treat-body h2{font-size:clamp(1.7rem,3.2vw,2.4rem);font-weight:800;margin:0 0 14px}
-  .treat-body p{color:var(--slate);font-size:1.02rem;margin-bottom:14px}
-  .ben-list{list-style:none;display:grid;gap:10px;margin:18px 0 4px}
-  .ben-list li{display:flex;gap:11px;align-items:flex-start;font-size:.97rem;color:var(--ink)}
-  .ben-list li svg{flex:none;color:var(--teal);margin-top:3px}
-  .matband{display:inline-flex;align-items:center;gap:9px;background:var(--mint);border:1px solid #d6ece7;color:var(--teal-ink);
-    font-size:.84rem;font-weight:600;padding:9px 15px;border-radius:999px;margin-top:18px}
-  .proc{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
-  .proc .pstep{display:flex;align-items:center;gap:9px;background:#fff;border:1px solid var(--line);border-radius:12px;
-    padding:10px 14px;font-size:.86rem;color:var(--slate);box-shadow:var(--shadow-sm)}
-  .proc .pstep b{font-family:'Manrope';color:var(--teal);font-size:.95rem}
-  .price-soft{margin-top:20px;font-size:.86rem;color:var(--muted)}
-  .price-soft a{color:var(--teal-deep);font-weight:600;text-decoration:underline}
-
-  /* CTA */
-  .cta-final{background:linear-gradient(150deg,var(--teal-ink),var(--teal-deep));color:#fff;padding:84px 0}
-  .cta-final .wrap{text-align:center;max-width:760px}
-  .cta-final h2{color:#fff;font-size:clamp(1.8rem,3.4vw,2.6rem);font-weight:800;margin:12px 0 16px}
-  .cta-final p{color:rgba(255,255,255,.86);font-size:1.08rem;max-width:56ch;margin:0 auto 28px}
-  .cta-final .eyebrow{color:#bdeee6}
-  .cta-final .eyebrow::before{background:var(--coral)}
-  .cta-final .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-  .cta-final .btn-ghost{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.3)}
-  .cta-final .btn-ghost:hover{background:rgba(255,255,255,.16);border-color:#fff}
-
-  @media(max-width:980px){
-    .treat-grid{grid-template-columns:1fr;gap:36px}
-    .treat.flip .treat-media{order:0}
-    .treat.flip .treat-media .float-badge{right:auto;left:-18px}
-  }
-  @media(max-width:760px){
-    .treat{padding:60px 0}
-    .treat-media .float-badge{left:8px;max-width:84%}
-    .treat.flip .treat-media .float-badge{left:8px}
-  }
 </style>
 </head>
 <body>
@@ -378,194 +311,64 @@
 <header>
   <div class="wrap">
     <nav class="nav">
-      <a href="index.html" class="wordmark"><span class="dot"></span>Bedek Dental</a>
+      <a href="#start" class="wordmark"><span class="dot"></span>Bedek Dental</a>
       <div class="nav-links" id="navlinks">
-        <a href="index.html">Start</a>
-        <a href="leistungen.html" class="active">Leistungen</a>
-        <a href="team.html">Über uns</a>
-        <a href="zahntourismus.html">Zahntourismus</a>
-        <a href="kontakt.html">Kontakt</a>
+        <a href="index.html" class="active">Home</a>
+        <a href="leistungen.html">Services</a>
+        <a href="team.html">About us</a>
+        <a href="zahntourismus.html">Dental Tourism</a>
+        <a href="kontakt.html">Contact</a>
       </div>
       <div class="nav-right">
         <div class="flags" id="flags">
-          <button class="active" title="Deutsch"><img src="https://flagcdn.com/de.svg" alt="Deutsch" loading="lazy"></button>
-          <button title="English"><img src="https://flagcdn.com/gb.svg" alt="English" loading="lazy"></button>
-          <button title="Hrvatski"><img src="https://flagcdn.com/hr.svg" alt="Hrvatski" loading="lazy"></button>
-          <button title="Italiano"><img src="https://flagcdn.com/it.svg" alt="Italiano" loading="lazy"></button>
+          <a href="../de/index.html" title="Deutsch"><img src="https://flagcdn.com/de.svg" alt="Deutsch"></a>
+          <a href="../en/index.html" title="English" class="active"><img src="https://flagcdn.com/gb.svg" alt="English"></a>
+          <a href="../hr/index.html" title="Hrvatski"><img src="https://flagcdn.com/hr.svg" alt="Hrvatski"></a>
+          <a href="../it/index.html" title="Italiano"><img src="https://flagcdn.com/it.svg" alt="Italiano"></a>
         </div>
         <a href="tel:+385957299112" class="nav-phone"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.74-1.27a2 2 0 0 1 2.11-.45c.74.34 1.53.57 2.34.7A2 2 0 0 1 22 16.92z"/></svg><span class="lbl">+385 95 729 9112</span></a>
         <a href="https://wa.me/385957299112" class="icon-btn wa" title="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 0 0 1.51 5.26l-.999 3.648 3.748-.984zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.074-.149-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a>
-        <a href="kontakt.html" class="btn btn-primary" style="padding:11px 20px">Termin anfragen</a>
-        <button class="burger" id="burger" aria-label="Menü"><span></span><span></span><span></span></button>
+        <a href="#kontakt" class="btn btn-primary" style="padding:11px 20px">Request appointment</a>
+        <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
       </div>
     </nav>
   </div>
 </header>
 
-<!-- PAGE HERO -->
-<section class="page-hero">
-  <div class="wrap reveal in">
-    <div class="crumb">
-      <a href="index.html">Start</a><span class="sep">›</span><span>Leistungen</span>
+<!-- HERO -->
+<section class="hero" id="start">
+  <div class="wrap hero-grid">
+    <div class="reveal in">
+      <span class="eyebrow">Dental Practice in Zagreb · Since 1991</span>
+      <h1>Experience you can feel.<br><span class="accent">Trust</span> that lasts.</h1>
+      <p class="sub">A doctorate-holding dentist and an award-winning dentist, personal care and an honest "health-first" philosophy. Patients from all across Europe trust us with their smile.</p>
+      <div class="chips">
+        <span class="chip"><span class="stars">★★★★★</span> Google</span>
+        <span class="chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg> Doctorate-holding dentist (dr.sc.)</span>
+        <span class="chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.5 6.5L21 9l-5 4 1.5 7L12 16l-5.5 4L8 13 3 9l6.5-.5z"/></svg> Over 30 years of family tradition</span>
+      </div>
+      <div class="hero-cta">
+        <a href="#kontakt" class="btn btn-primary">Free initial consultation</a>
+        <a href="#team" class="btn btn-ghost">Meet our team</a>
+      </div>
+      <div class="hero-trust">
+        <div class="avstack"><span>IB</span><span>ML</span><span>+</span></div>
+        <span>Two experienced dentists · Newly renovated practice · Appointments in English</span>
+      </div>
     </div>
-    <span class="eyebrow">Leistungen</span>
-    <h1>Hochwertige Zahnmedizin für jedes Anliegen</h1>
-    <p class="sub">Vom akuten Problem bis zum strahlenden Lächeln – mit erstklassigen Materialien, modernster Diagnostik und einer ehrlichen Beratung, die immer den Erhalt Ihrer Zähne in den Mittelpunkt stellt.</p>
-  </div>
-</section>
-
-<!-- BRAND TRUST BAND -->
-<section class="brands">
-  <div class="wrap reveal">
-    <span class="eyebrow">Premium-Marken</span>
-    <p class="lead-line" style="margin-top:12px">Wir arbeiten ausschließlich mit weltweit anerkannten Premium-Systemen – für Ergebnisse, die Jahrzehnte halten.</p>
-    <div class="brand-chips">
-      <span class="brand-chip"><span class="bdot"></span>Straumann<small>Schweizer Implantatsystem</small></span>
-      <span class="brand-chip"><span class="bdot"></span>Nobel Biocare<small>Implantologie-Weltmarke</small></span>
-      <span class="brand-chip"><span class="bdot"></span>Zirkon<small>Hochfeste Vollkeramik</small></span>
-      <span class="brand-chip"><span class="bdot"></span>E-max<small>Lithium-Disilikat-Keramik</small></span>
-    </div>
-  </div>
-</section>
-
-<!-- TREATMENT: IMPLANTATE -->
-<section class="treat">
-  <div class="wrap treat-grid">
-    <div class="treat-media reveal">
-      <div class="ph"><img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=900&q=80" alt="Zahnimplantat – Modell und Behandlung" loading="lazy"></div>
-      <div class="float-badge">
+    <div class="hero-visual reveal in">
+      <div class="hero-img">
+        <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=900&q=80" alt="Bright, modern dental practice" loading="eager">
+      </div>
+      <div class="hero-badge">
         <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div>
-        <div><b>Festsitzend & dauerhaft</b><small>Wie ein eigener Zahn</small></div>
+        <div><b>Health first</b><small>No unnecessary procedures</small></div>
       </div>
-    </div>
-    <div class="treat-body reveal">
-      <span class="eyebrow">Implantate</span>
-      <div class="prob">Fehlender Zahn? Lockere Prothese? Lücke beim Lachen?</div>
-      <h2>Festsitzender Zahnersatz, der bleibt.</h2>
-      <p>Ein Implantat ist eine künstliche Zahnwurzel aus hochreinem Titan, die fest mit dem Kieferknochen verwächst. Darauf setzen wir eine individuell gefertigte Krone – die Lücke verschwindet, ohne dass gesunde Nachbarzähne beschliffen werden müssen.</p>
-      <ul class="ben-list">
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Fester Halt – sicheres Kauen, Sprechen und Lachen ohne Wackeln</li>
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Knochenerhalt – das Implantat belastet den Kiefer wie eine echte Wurzel und beugt Abbau vor</li>
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Fühlt sich an wie ein eigener Zahn – Nachbarzähne bleiben unberührt</li>
-      </ul>
-      <span class="matband"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.5 6.5L21 9l-5 4 1.5 7L12 16l-5.5 4L8 13 3 9l6.5-.5z"/></svg>Premium-Systeme: Straumann &amp; Nobel Biocare</span>
-      <div class="proc">
-        <span class="pstep"><b>1</b>Diagnostik &amp; 3D-Planung</span>
-        <span class="pstep"><b>2</b>Schonende Implantation</span>
-        <span class="pstep"><b>3</b>Einheilphase</span>
-        <span class="pstep"><b>4</b>Individuelle Krone</span>
+      <div class="hero-badge2">
+        <div class="stars">★★★★★</div>
+        <b>5.0</b>
+        <small>Google reviews</small>
       </div>
-      <p class="price-soft">Transparente Richtwerte zu Kosten und Krankenkassen-Zuschuss finden Sie auf der Seite <a href="zahntourismus.html">Zahntourismus</a>.</p>
-    </div>
-  </div>
-</section>
-
-<!-- TREATMENT: KRONEN & VENEERS -->
-<section class="treat flip">
-  <div class="wrap treat-grid">
-    <div class="treat-media reveal">
-      <div class="ph"><img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=900&q=80" alt="Keramik-Veneers und Kronen Farbmuster" loading="lazy"></div>
-      <div class="float-badge">
-        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 4v5c0 4-3 7-7 9-4-2-7-5-7-9V7z"/></svg></div>
-        <div><b>Natürliche Optik</b><small>Zirkon &amp; E-max</small></div>
-      </div>
-    </div>
-    <div class="treat-body reveal">
-      <span class="eyebrow">Kronen &amp; Veneers</span>
-      <div class="prob">Abgebrochen, verfärbt oder unzufrieden mit der Form?</div>
-      <h2>Ästhetik, die man nicht erkennt – weil sie echt wirkt.</h2>
-      <p>Kronen umhüllen einen geschwächten Zahn vollständig und geben ihm Stabilität zurück. Veneers sind hauchdünne Keramikschalen für die sichtbaren Frontzähne. Beide fertigen wir digital geplant aus hochwertiger Vollkeramik – für ein Ergebnis, das sich nahtlos in Ihr Lächeln einfügt.</p>
-      <ul class="ben-list">
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Natürliche Optik in Form und Farbe – lichtdurchlässig wie echter Zahnschmelz</li>
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Biokompatibel und metallfrei – verträglich, ohne dunkle Ränder am Zahnfleisch</li>
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Langlebig und hochfest – Zirkon und E-max trotzen jahrelanger Kaubelastung</li>
-      </ul>
-      <span class="matband"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.5 6.5L21 9l-5 4 1.5 7L12 16l-5.5 4L8 13 3 9l6.5-.5z"/></svg>Materialien: Zirkon &amp; Vollkeramik / E-max · digital geplant</span>
-      <div class="proc">
-        <span class="pstep"><b>1</b>Digitaler Scan</span>
-        <span class="pstep"><b>2</b>Farb- &amp; Formplanung</span>
-        <span class="pstep"><b>3</b>Präzise Fertigung</span>
-        <span class="pstep"><b>4</b>Einsetzen</span>
-      </div>
-      <p class="price-soft">Transparente Richtwerte zu Kosten und Krankenkassen-Zuschuss finden Sie auf der Seite <a href="zahntourismus.html">Zahntourismus</a>.</p>
-    </div>
-  </div>
-</section>
-
-<!-- TREATMENT: ÄSTHETIK & BLEACHING -->
-<section class="treat">
-  <div class="wrap treat-grid">
-    <div class="treat-media reveal">
-      <div class="ph"><img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=900&q=80" alt="Strahlend helles Lächeln nach professioneller Aufhellung" loading="lazy"></div>
-      <div class="float-badge">
-        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19"/></svg></div>
-        <div><b>Zahnschonend</b><small>Schmelz bleibt intakt</small></div>
-      </div>
-    </div>
-    <div class="treat-body reveal">
-      <span class="eyebrow">Ästhetik &amp; Bleaching</span>
-      <div class="prob">Verfärbte Zähne durch Kaffee, Tee oder Rotwein?</div>
-      <h2>Ein hellereres Lächeln – schonend und professionell.</h2>
-      <p>Unsere professionelle Aufhellung hebt Verfärbungen behutsam auf und stimmt sich auf Ihren Zahnschmelz ab. Vor jeder Behandlung prüfen wir die Zahngesundheit – denn ein schönes Lächeln beginnt mit gesunden Zähnen, nicht mit dem Bleichmittel.</p>
-      <ul class="ben-list">
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Sichtbar helleres Lächeln – natürlich und gleichmäßig</li>
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Substanzschonend – auf Ihren Zahnschmelz abgestimmt, ohne ihn anzugreifen</li>
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Professionell überwacht – statt riskanter Hausmittel</li>
-      </ul>
-      <span class="matband"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.5 6.5L21 9l-5 4 1.5 7L12 16l-5.5 4L8 13 3 9l6.5-.5z"/></svg>Professionelle Aufhellung · zahnschonend</span>
-      <p class="price-soft">Transparente Richtwerte zu Kosten und Krankenkassen-Zuschuss finden Sie auf der Seite <a href="zahntourismus.html">Zahntourismus</a>.</p>
-    </div>
-  </div>
-</section>
-
-<!-- TREATMENT: ALLGEMEINE ZAHNMEDIZIN & PROPHYLAXE -->
-<section class="treat flip">
-  <div class="wrap treat-grid">
-    <div class="treat-media reveal">
-      <div class="ph"><img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=900&q=80" alt="Zahnvorsorge und professionelle Kontrolle" loading="lazy"></div>
-      <div class="float-badge">
-        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
-        <div><b>Vorsorge zuerst</b><small>Probleme früh erkennen</small></div>
-      </div>
-    </div>
-    <div class="treat-body reveal">
-      <span class="eyebrow">Allgemeine Zahnmedizin &amp; Prophylaxe</span>
-      <div class="prob">Kontrolle, Schmerzen oder einfach Vorsorge?</div>
-      <h2>Gesunde Zähne erhalten – bevor größere Eingriffe nötig werden.</h2>
-      <p>Die beste Behandlung ist die, die gar nicht erst nötig wird. Mit regelmäßiger Prophylaxe, professioneller Zahnreinigung und gründlicher Diagnostik erkennen wir Probleme früh. Wo eine Versorgung nötig ist, arbeiten wir substanzschonend und erhalten so viel gesunden Zahn wie möglich.</p>
-      <ul class="ben-list">
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Vorsorge &amp; professionelle Reinigung – für langfristig gesunde Zähne</li>
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Substanzschonende, zahnfarbene Füllungen – ästhetisch und stabil</li>
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Ehrliche Diagnostik – nur was Ihren Zähnen wirklich hilft</li>
-      </ul>
-      <span class="matband"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.5 6.5L21 9l-5 4 1.5 7L12 16l-5.5 4L8 13 3 9l6.5-.5z"/></svg>Prophylaxe · professionelle Reinigung · zahnfarbene Füllungen</span>
-      <p class="price-soft">Transparente Richtwerte zu Kosten und Krankenkassen-Zuschuss finden Sie auf der Seite <a href="zahntourismus.html">Zahntourismus</a>.</p>
-    </div>
-  </div>
-</section>
-
-<!-- TREATMENT: ENDODONTIE -->
-<section class="treat">
-  <div class="wrap treat-grid">
-    <div class="treat-media reveal">
-      <div class="ph"><img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=900&q=80" alt="Moderne Behandlungstechnik bei der Wurzelbehandlung" loading="lazy"></div>
-      <div class="float-badge">
-        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2c-1 0-2 .8-2 2 0 1.5 1 2 1 4 0 3-2 4-2 8 0 3 1 6 3 6s3-3 3-6c0-4-2-5-2-8 0-2 1-2.5 1-4 0-1.2-1-2-2-2z"/></svg></div>
-        <div><b>Schwerpunkt</b><small>Zahnärztin Martina Laktić</small></div>
-      </div>
-    </div>
-    <div class="treat-body reveal">
-      <span class="eyebrow">Endodontie · Wurzelbehandlung</span>
-      <div class="prob">Starke Schmerzen oder eine entzündete Zahnwurzel?</div>
-      <h2>Den eigenen Zahn retten – statt ihn zu verlieren.</h2>
-      <p>Eine Wurzelbehandlung befreit den Zahn von einer Entzündung im Inneren und erhält ihn so dauerhaft. Sie ist ein besonderer Schwerpunkt unserer Zahnärztin Martina Laktić, die mit moderner Technik und viel Feingefühl arbeitet – damit Ihr natürlicher Zahn erhalten bleibt.</p>
-      <ul class="ben-list">
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Zahnerhaltend – der eigene Zahn bleibt erhalten statt gezogen zu werden</li>
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Moderne Technik – präzise Aufbereitung der feinen Wurzelkanäle</li>
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Spezialisierte Betreuung – Schwerpunkt von Zahnärztin Martina Laktić</li>
-      </ul>
-      <span class="matband"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.5 6.5L21 9l-5 4 1.5 7L12 16l-5.5 4L8 13 3 9l6.5-.5z"/></svg>Moderne Endodontie · zahnerhaltend</span>
-      <p class="price-soft">Mehr über unsere Spezialistinnen und Spezialisten erfahren Sie auf der Seite <a href="team.html">Über uns</a>.</p>
     </div>
   </div>
 </section>
@@ -573,22 +376,231 @@
 <!-- PHILOSOPHY -->
 <section class="philo">
   <div class="wrap">
-    <span class="eyebrow">Unsere Haltung</span>
-    <div class="quote-mark">„</div>
-    <h2>Gesundheit vor Ästhetik.<br>Keine unnötigen Eingriffe.</h2>
-    <p>Wir beraten konservativ und ehrlich: Was Ihren Zähnen wirklich hilft, steht im Mittelpunkt – nicht der größtmögliche Eingriff. Substanzschonend, nachhaltig und mit der Ruhe, die aus jahrzehntelanger Erfahrung kommt. So entsteht Vertrauen, das bleibt.</p>
+    <span class="eyebrow">Our Approach</span>
+    <div class="quote-mark">"</div>
+    <h2>Health before aesthetics.<br>No unnecessary procedures.</h2>
+    <p>We advise conservatively and honestly: what truly helps your teeth comes first — not the largest possible procedure. Tooth-preserving, sustainable and with the calm that comes from decades of experience. That is how lasting trust is built.</p>
   </div>
 </section>
 
-<!-- CTA -->
-<section class="cta-final">
+<!-- REVIEWS -->
+<section class="section reviews" id="bewertungen">
   <div class="wrap">
-    <span class="eyebrow">Erstberatung</span>
-    <h2>Unverbindliche Erstberatung – wir beraten Sie ehrlich.</h2>
-    <p>Erzählen Sie uns von Ihrem Anliegen. Wir nehmen uns Zeit, schauen genau hin und empfehlen nur, was Ihren Zähnen wirklich hilft – ganz ohne Druck und auf Deutsch.</p>
-    <div class="btns">
-      <a href="kontakt.html" class="btn btn-coral">Erstberatung anfragen</a>
-      <a href="zahntourismus.html" class="btn btn-ghost">Kosten &amp; Krankenkasse ansehen</a>
+    <div class="reveal">
+      <div class="reviews-head">
+        <div>
+          <span class="eyebrow">What Patients Say</span>
+          <h2 style="margin-bottom:6px"><span style="color:#f5a623">★★★★★</span> on Google</h2>
+          <p class="lead">Real voices from people who have entrusted us with their smile.</p>
+        </div>
+        <div class="gscore">
+          <div class="num">5.0</div>
+          <div>
+            <div class="stars">★★★★★</div>
+            <small>Google reviews</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="review-grid">
+      <div class="review-card reveal">
+        <div class="gicon"><svg width="22" height="22" viewBox="0 0 48 48"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34A21.99 21.99 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg></div>
+        <div class="stars">★★★★★</div>
+        <div class="q">„Najbolji stomatolog na svijetu, jedan jedini!"</div>
+        <p class="de">The best dentist in the world — the only one!</p>
+        <div class="who"><div class="av">D</div><div><b>D. A.</b><small>Google review</small></div></div>
+      </div>
+      <div class="review-card reveal">
+        <div class="gicon"><svg width="22" height="22" viewBox="0 0 48 48"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34A21.99 21.99 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg></div>
+        <div class="stars">★★★★★</div>
+        <div class="q">„Najbolji zubar ikada!"</div>
+        <p class="de">The best dentist ever!</p>
+        <div class="who"><div class="av">G</div><div><b>G. S.</b><small>Google review</small></div></div>
+      </div>
+      <div class="review-card reveal">
+        <div class="gicon"><svg width="22" height="22" viewBox="0 0 48 48"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34A21.99 21.99 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg></div>
+        <div class="stars">★★★★★</div>
+        <div class="q">„Profesionalnost. Uljudnost. Izvrsna kvaliteta."</div>
+        <p class="de">Professionalism. Courtesy. Excellent quality.</p>
+        <div class="who"><div class="av">N</div><div><b>N. B.</b><small>Google review</small></div></div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:36px" class="reveal">
+      <a href="https://www.google.com/maps/place/Ordinacija+Bedek+dr.med.dent./@45.8175349,15.9469534,17z/data=!4m8!3m7!1s0x4765d6d78cddcedf:0xa11aa27589aff892!9m1!1b1" target="_blank" rel="noopener" class="btn btn-ghost">See all reviews</a>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="section" id="team">
+  <div class="wrap">
+    <div class="reveal" style="max-width:700px">
+      <span class="eyebrow">Our Team</span>
+      <h2>People who earn your trust</h2>
+      <p class="lead">Personal care from experienced specialists — scientifically grounded and with heart.</p>
+    </div>
+    <div class="team-grid">
+      <div class="doc-card reveal">
+        <div class="doc-photo">
+          <img src="../assets/dr-ivan-bedek.png" alt="dr.sc. Ivan Bedek, dr.med.dent.">
+          <span class="tag">Owner</span>
+        </div>
+        <div class="doc-body">
+          <h3>dr.sc. Ivan Bedek, dr.med.dent.</h3>
+          <div class="doc-role">Owner · Doctorate 2019 · Active in research</div>
+          <p>Ivan Bedek leads the practice in its second generation. As a doctorate-holding dentist, he combines scientific precision with calm, honest advice — always with the goal of preserving healthy tooth structure rather than treating unnecessarily.</p>
+          <div class="creds">
+            <span>dr.sc. – Doctorate 2019</span>
+            <span>Implantology</span>
+            <span>Research & Teaching</span>
+          </div>
+        </div>
+      </div>
+      <div class="doc-card reveal">
+        <div class="doc-photo">
+          <img src="../assets/dr-martina-laktic.png" alt="Martina Laktić, dr.med.dent.">
+          <span class="tag">Dentist</span>
+        </div>
+        <div class="doc-body">
+          <h3>Martina Laktić, dr.med.dent.</h3>
+          <div class="doc-role">Family Dentistry & Endodontics</div>
+          <p>Martina Laktić cares for patients of all ages with a special focus on root canal treatments and compassionate family dentistry. Her outstanding achievements were recognised with the Dean's Award and the Rector's Award.</p>
+          <div class="creds">
+            <span>Endodontics</span>
+            <span>Dean's Award</span>
+            <span>Rector's Award</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="family-note reveal">
+      <div class="yr">1991</div>
+      <p><b style="font-family:'Manrope';color:var(--ink)">A family tradition spanning more than 30 years.</b> What began in 1991 as a family practice is carried on today with the same care and the same standards — generation after generation, patient after patient.</p>
+    </div>
+  </div>
+</section>
+
+<!-- LEISTUNGEN -->
+<section class="section" id="leistungen" style="background:var(--warm)">
+  <div class="wrap">
+    <div class="reveal" style="max-width:700px">
+      <span class="eyebrow">Services</span>
+      <h2>High-quality dentistry for every need</h2>
+      <p class="lead">From an acute problem to a radiant smile — with first-class materials and premium brand systems.</p>
+    </div>
+    <div class="serv-grid">
+      <div class="serv-card reveal">
+        <div class="serv-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2c-1 0-2 .8-2 2 0 1.5 1 2 1 4 0 3-2 4-2 8 0 3 1 6 3 6s3-3 3-6c0-4-2-5-2-8 0-2 1-2.5 1-4 0-1.2-1-2-2-2z"/></svg></div>
+        <h3>Implants</h3>
+        <div class="prob">Missing a tooth? Loose denture?</div>
+        <p>Fixed, permanent tooth replacement that feels like your own tooth. The highest precision and biocompatibility.</p>
+        <div class="mat">Premium systems: Straumann · Nobel Biocare</div>
+      </div>
+      <div class="serv-card reveal">
+        <div class="serv-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l7 4v5c0 4-3 7-7 9-4-2-7-5-7-9V7z"/></svg></div>
+        <h3>Crowns & Veneers</h3>
+        <div class="prob">Chipped, discoloured, unhappy with them?</div>
+        <p>Aesthetic restorations in high-quality zirconia and ceramic — natural in shape and colour, durable and biocompatible.</p>
+        <div class="mat">Zirconia · all-ceramic · digitally planned</div>
+      </div>
+      <div class="serv-card reveal">
+        <div class="serv-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19"/></svg></div>
+        <h3>Whitening</h3>
+        <div class="prob">Discoloured teeth?</div>
+        <p>Gentle, professional whitening for a visibly brighter smile — enamel-friendly and tailored to your teeth.</p>
+        <div class="mat">Professional · enamel-friendly</div>
+      </div>
+      <div class="serv-card reveal">
+        <div class="serv-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
+        <h3>General Dentistry</h3>
+        <div class="prob">Prevention, pain, a check-up?</div>
+        <p>From prophylaxis and tooth-preserving fillings to root canal treatment — honest diagnostics, careful treatment.</p>
+        <div class="mat">Prophylaxis · Endodontics · Fillings</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ZAHNTOURISMUS -->
+<section class="section tour" id="zahntourismus">
+  <div class="wrap">
+    <div class="reveal tour-head">
+      <span class="eyebrow">Dental Tourism & Health Insurance</span>
+      <h2>Transparent costs — and your German health insurance contributes.</h2>
+      <p class="lead">Treatment in Zagreb is clearly regulated within the EU. Patients with German statutory insurance receive the same fixed subsidy from their fund as for standard care in Germany — fully transparent and fair.</p>
+    </div>
+    <div class="tour-cols">
+      <div class="steps reveal">
+        <div class="step"><div class="n">1</div><div><b>Treatment & cost plan (HKP)</b><p>You receive an HKP from us on the official German form.</p></div></div>
+        <div class="step"><div class="n">2</div><div><b>Submit before treatment</b><p>Submit the HKP to your health insurance fund before treatment begins.</p></div></div>
+        <div class="step"><div class="n">3</div><div><b>Await approval</b><p>Your fund reviews and approves the fixed subsidy.</p></div></div>
+        <div class="step"><div class="n">4</div><div><b>Treatment in Zagreb</b><p>We take care of the rest — relaxed and personal, on site.</p></div></div>
+      </div>
+      <div class="ins-box reveal">
+        <h3>Your fixed subsidy</h3>
+        <div class="big">typically 60% <span>of standard care</span></div>
+        <p>The statutory health insurance (GKV) pays the fixed subsidy for standard care — with a well-kept bonus booklet, even more.</p>
+        <div class="cost-table">
+          <div class="cost-row"><span>Crown</span><b>from approx. €230</b></div>
+          <div class="cost-row"><span>Zirconia crown</span><b>approx. €290</b></div>
+          <div class="cost-row"><span>Implant (Nobel / Straumann)</span><b>from approx. €670–950</b></div>
+        </div>
+        <p class="richt">Guide values for orientation — the final price depends on your individual diagnosis.</p>
+      </div>
+    </div>
+    <div class="disclaimer reveal">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v5M12 16h.01"/></svg>
+      <div><b style="font-family:'Manrope'">Please note:</b> This is not legal advice — please clarify the exact reimbursement individually with your health insurance fund. The basis is EU law on cross-border healthcare.</div>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section class="section" id="kontakt">
+  <div class="wrap">
+    <div class="reveal" style="max-width:700px">
+      <span class="eyebrow">Contact</span>
+      <h2>Let's get to know each other</h2>
+      <p class="lead">Write to us — we'll get back to you personally and are happy to advise you in English.</p>
+    </div>
+    <div class="contact-cols">
+      <div class="info-card reveal">
+        <div class="info-row">
+          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><b>Bedek Dental</b><span>Zatišje 6/1, 10000 Zagreb (in the rear courtyard)</span></div>
+        </div>
+        <div class="info-row">
+          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.74-1.27a2 2 0 0 1 2.11-.45c.74.34 1.53.57 2.34.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div><b>Phone</b><span><a href="tel:+385957299112">+385 95 729 9112</a></span></div>
+        </div>
+        <div class="info-row">
+          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 0 0 1.51 5.26l-.999 3.648 3.748-.984z"/></svg></div>
+          <div><b>WhatsApp</b><span><a href="https://wa.me/385957299112">Message us quickly: +385 95 729 9112</a></span></div>
+        </div>
+        <div class="map">
+          <div class="pin"></div>
+          <div class="maplabel">Map · Zatišje 6/1, Zagreb</div>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Zati%C5%A1je+6,+10000+Zagreb" target="_blank" rel="noopener" class="btn btn-ghost" style="padding:9px 18px;font-size:.85rem">Get directions</a>
+        </div>
+        <div class="parking">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 16V8h3.5a2.5 2.5 0 0 1 0 5H9"/></svg>
+          You'll always find parking within a 1-minute walk.
+        </div>
+      </div>
+
+      <form class="reveal" onsubmit="event.preventDefault();this.querySelector('.ok').style.display='block';">
+        <h3>Request an appointment</h3>
+        <p class="fhint">No obligation & free of charge. We usually reply within one business day.</p>
+        <div class="grid2">
+          <div class="field"><label for="name">Name</label><input id="name" type="text" placeholder="Your name" required></div>
+          <div class="field"><label for="tel">Phone</label><input id="tel" type="tel" placeholder="Your phone number"></div>
+        </div>
+        <div class="field"><label for="mail">Email</label><input id="mail" type="email" placeholder="you@email.com" required></div>
+        <div class="field"><label for="msg">Your enquiry</label><textarea id="msg" placeholder="Briefly describe your enquiry …"></textarea></div>
+        <div class="field"><label>Photo upload (optional)</label><label class="upload" for="file"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-4px"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg>&nbsp; Upload an X-ray or photo<input id="file" type="file" accept="image/*" hidden></label></div>
+        <button class="btn btn-coral" type="submit" style="width:100%;justify-content:center">Send request</button>
+        <div class="ok" style="display:none;margin-top:14px;background:var(--mint);color:var(--teal-ink);padding:12px;border-radius:10px;font-size:.9rem;text-align:center">Thank you! We'll get back to you personally very soon.</div>
+      </form>
     </div>
   </div>
 </section>
@@ -599,33 +611,33 @@
     <div class="foot-grid">
       <div class="foot-brand">
         <div class="wordmark" style="color:#fff"><span class="dot"></span>Bedek Dental</div>
-        <p>Ordinacija dentalne medicine dr.sc. Ivan Bedek, dr.med.dent.<br>Zatišje 6/1, 10000 Zagreb · Frisch renovierte Praxis im hinteren Hof.</p>
+        <p>Ordinacija dentalne medicine dr.sc. Ivan Bedek, dr.med.dent.<br>Zatišje 6/1, 10000 Zagreb · Newly renovated practice in the rear courtyard.</p>
         <div class="foot-langs">
-          <img src="https://flagcdn.com/de.svg" alt="Deutsch" width="26" height="18" style="border-radius:3px">
-          <img src="https://flagcdn.com/gb.svg" alt="English" width="26" height="18" style="border-radius:3px">
-          <img src="https://flagcdn.com/hr.svg" alt="Hrvatski" width="26" height="18" style="border-radius:3px">
-          <img src="https://flagcdn.com/it.svg" alt="Italiano" width="26" height="18" style="border-radius:3px">
+          <a href="../de/index.html"><img src="https://flagcdn.com/de.svg" alt="Deutsch" width="26" height="18" style="border-radius:3px"></a>
+          <a href="../en/index.html"><img src="https://flagcdn.com/gb.svg" alt="English" width="26" height="18" style="border-radius:3px"></a>
+          <a href="../hr/index.html"><img src="https://flagcdn.com/hr.svg" alt="Hrvatski" width="26" height="18" style="border-radius:3px"></a>
+          <a href="../it/index.html"><img src="https://flagcdn.com/it.svg" alt="Italiano" width="26" height="18" style="border-radius:3px"></a>
         </div>
       </div>
       <div class="foot-col">
         <h4>Navigation</h4>
-        <a href="index.html">Start</a>
-        <a href="leistungen.html">Leistungen</a>
-        <a href="team.html">Über uns</a>
-        <a href="zahntourismus.html">Zahntourismus</a>
-        <a href="kontakt.html">Kontakt</a>
+        <a href="index.html">Home</a>
+        <a href="leistungen.html">Services</a>
+        <a href="team.html">About us</a>
+        <a href="zahntourismus.html">Dental Tourism</a>
+        <a href="kontakt.html">Contact</a>
       </div>
       <div class="foot-col">
-        <h4>Kontakt</h4>
+        <h4>Contact</h4>
         <a href="tel:+385957299112">+385 95 729 9112</a>
         <a href="https://wa.me/385957299112">WhatsApp</a>
-        <a href="https://maps.google.com/?q=Zatišje+6,+Zagreb">Route planen</a>
-        <a href="kontakt.html">Termin anfragen</a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Zati%C5%A1je+6,+10000+Zagreb" target="_blank" rel="noopener">Get directions</a>
+        <a href="#kontakt">Request appointment</a>
       </div>
     </div>
     <div class="foot-bottom">
       <span>© 2026 Bedek Dental · Ordinacija dentalne medicine dr.sc. Ivan Bedek, dr.med.dent.</span>
-      <span>Stand Juni 2026. Keine Rechts- oder Medizinberatung.</span>
+      <span>As of June 2026. Not legal or medical advice.</span>
     </div>
   </div>
 </footer>

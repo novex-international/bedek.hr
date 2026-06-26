@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="hr">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Kontakt & Anfahrt – Bedek Dental Zagreb</title>
-<meta name="description" content="Kontakt zu Bedek Dental in Zagreb: Adresse Zatišje 6/1, Telefon, WhatsApp, Anfahrt mit Karte & Parkhinweis. Fordern Sie unverbindlich und kostenlos einen Termin an – Beratung auf Deutsch." />
+<title>Bedek Dental — Stomatološka ordinacija u Zagrebu | Iskustvo koje se osjeti</title>
+<meta name="description" content="Bedek Dental: doktor znanosti i nagrađivana doktorica dentalne medicine, više od 30 godina obiteljske tradicije. Zdravlje prije estetike. Pacijenti iz cijele Europe. Zagreb." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -89,10 +89,10 @@
   .nav-links a.active::after{width:100%}
   .nav-right{margin-left:auto;display:flex;align-items:center;gap:12px;flex-wrap:nowrap;flex-shrink:0}
   .flags{display:flex;gap:4px;align-items:center}
-  .flags button{background:none;border:none;cursor:pointer;font-size:1rem;padding:5px 6px;border-radius:8px;opacity:.5;transition:.2s;line-height:1}
-  .flags button:hover{opacity:1;background:var(--ice)}
-  .flags button.active{opacity:1;background:var(--mint);box-shadow:inset 0 0 0 1.5px var(--teal)}
-  .flags button img{display:block;width:24px;height:17px;object-fit:cover;border-radius:3px;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+  .flags a{display:inline-flex;padding:5px 6px;border-radius:8px;opacity:.55;transition:.2s}
+  .flags a:hover{opacity:1;background:var(--ice)}
+  .flags a.active{opacity:1;background:var(--mint);box-shadow:inset 0 0 0 1.5px var(--teal)}
+  .flags a img{display:block;width:24px;height:17px;object-fit:cover;border-radius:3px;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
   .nav-phone{display:flex;align-items:center;gap:7px;font-family:'Manrope';font-weight:700;font-size:.92rem;color:var(--teal-deep);white-space:nowrap;flex-shrink:0}
   .icon-btn{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:var(--mint);color:var(--teal-deep);transition:.2s}
   .icon-btn:hover{background:var(--teal);color:#fff;transform:translateY(-2px)}
@@ -249,8 +249,8 @@
   form .fhint{color:var(--muted);font-size:.88rem;margin-bottom:20px}
   .field{margin-bottom:16px}
   .field label{display:block;font-size:.84rem;font-weight:600;margin-bottom:7px;color:var(--ink)}
-  .field input,.field textarea,.field select{width:100%;padding:13px 15px;border:1.5px solid var(--line);border-radius:12px;font-family:inherit;font-size:.95rem;background:var(--ice);transition:.2s;color:var(--ink)}
-  .field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--teal);background:#fff;box-shadow:0 0 0 4px var(--mint)}
+  .field input,.field textarea{width:100%;padding:13px 15px;border:1.5px solid var(--line);border-radius:12px;font-family:inherit;font-size:.95rem;background:var(--ice);transition:.2s;color:var(--ink)}
+  .field input:focus,.field textarea:focus{outline:none;border-color:var(--teal);background:#fff;box-shadow:0 0 0 4px var(--mint)}
   .field textarea{resize:vertical;min-height:96px}
   .upload{border:1.6px dashed var(--line);border-radius:12px;padding:18px;text-align:center;color:var(--muted);font-size:.88rem;cursor:pointer;transition:.2s;background:var(--ice)}
   .upload:hover{border-color:var(--teal);color:var(--teal-deep);background:var(--mint)}
@@ -299,43 +299,6 @@
     .flags{display:none}
     .nav-right .icon-btn.wa{display:none}
   }
-
-  /* ===== Page-specific (Kontakt) ===== */
-  .page-hero{position:relative;overflow:hidden;padding:54px 0 48px;background:
-    radial-gradient(1000px 500px at 82% -20%, var(--mint), transparent 60%),
-    linear-gradient(180deg,var(--ice),#fff 80%);}
-  .page-hero h1{font-size:clamp(2.1rem,4.4vw,3.3rem);font-weight:800;letter-spacing:-.03em;margin:14px 0 14px}
-  .page-hero .sub{font-size:1.1rem;color:var(--slate);max-width:54ch}
-  .breadcrumb{display:flex;align-items:center;gap:8px;margin-top:22px;font-size:.84rem;color:var(--muted);font-weight:500}
-  .breadcrumb a{color:var(--teal-deep)}
-  .breadcrumb a:hover{text-decoration:underline}
-  .breadcrumb .sep{opacity:.55}
-  .breadcrumb .cur{color:var(--ink);font-weight:600}
-
-  .map-embed{margin-top:18px;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow-sm);line-height:0}
-  .map-embed iframe{width:100%;height:300px;border:0;display:block;filter:saturate(1.02)}
-  .map-actions{margin-top:14px}
-  .map-actions .btn{width:100%;justify-content:center}
-
-  .info-link{color:var(--teal-deep);font-weight:600}
-  .info-link:hover{text-decoration:underline}
-
-  /* Reassurance strip */
-  .reassure{background:var(--warm);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .reassure .wrap{display:flex;gap:26px;align-items:center;flex-wrap:wrap;padding-top:46px;padding-bottom:46px}
-  .reassure .ic{flex:none;width:62px;height:62px;border-radius:18px;background:var(--mint);display:flex;align-items:center;justify-content:center;color:var(--teal-deep)}
-  .reassure .txt{flex:1;min-width:260px}
-  .reassure h3{font-size:1.25rem;font-weight:800;margin-bottom:6px}
-  .reassure p{color:var(--slate);font-size:.98rem;max-width:64ch}
-
-  /* CTA closing */
-  .cta-close{background:linear-gradient(120deg,var(--teal-ink),var(--teal-deep));color:#fff}
-  .cta-close .wrap{text-align:center;max-width:760px;padding-top:84px;padding-bottom:84px}
-  .cta-close h2{color:#fff;font-size:clamp(1.7rem,3.4vw,2.5rem);font-weight:800;margin:10px 0 14px}
-  .cta-close p{color:rgba(255,255,255,.86);font-size:1.08rem;max-width:56ch;margin:0 auto 26px}
-  .cta-close .eyebrow{color:#bdeee6}
-  .cta-close .eyebrow::before{background:var(--coral)}
-  .cta-close .btn-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 </style>
 </head>
 <body>
@@ -344,149 +307,293 @@
 <header>
   <div class="wrap">
     <nav class="nav">
-      <a href="index.html" class="wordmark"><span class="dot"></span>Bedek Dental</a>
+      <a href="#start" class="wordmark"><span class="dot"></span>Bedek Dental</a>
       <div class="nav-links" id="navlinks">
-        <a href="index.html">Start</a>
-        <a href="leistungen.html">Leistungen</a>
-        <a href="team.html">Über uns</a>
-        <a href="zahntourismus.html">Zahntourismus</a>
-        <a href="kontakt.html" class="active">Kontakt</a>
+        <a href="index.html" class="active">Početna</a>
+        <a href="leistungen.html">Usluge</a>
+        <a href="team.html">O nama</a>
+        <a href="zahntourismus.html">Dentalni turizam</a>
+        <a href="kontakt.html">Kontakt</a>
       </div>
       <div class="nav-right">
         <div class="flags" id="flags">
-          <button class="active" title="Deutsch"><img src="https://flagcdn.com/de.svg" alt="Deutsch" loading="lazy"></button>
-          <button title="English"><img src="https://flagcdn.com/gb.svg" alt="English" loading="lazy"></button>
-          <button title="Hrvatski"><img src="https://flagcdn.com/hr.svg" alt="Hrvatski" loading="lazy"></button>
-          <button title="Italiano"><img src="https://flagcdn.com/it.svg" alt="Italiano" loading="lazy"></button>
+          <a href="../de/index.html" title="Deutsch"><img src="https://flagcdn.com/de.svg" alt="Deutsch"></a>
+          <a href="../en/index.html" title="English"><img src="https://flagcdn.com/gb.svg" alt="English"></a>
+          <a href="../hr/index.html" title="Hrvatski" class="active"><img src="https://flagcdn.com/hr.svg" alt="Hrvatski"></a>
+          <a href="../it/index.html" title="Italiano"><img src="https://flagcdn.com/it.svg" alt="Italiano"></a>
         </div>
         <a href="tel:+385957299112" class="nav-phone"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.74-1.27a2 2 0 0 1 2.11-.45c.74.34 1.53.57 2.34.7A2 2 0 0 1 22 16.92z"/></svg><span class="lbl">+385 95 729 9112</span></a>
         <a href="https://wa.me/385957299112" class="icon-btn wa" title="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 0 0 1.51 5.26l-.999 3.648 3.748-.984zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.074-.149-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a>
-        <a href="#kontakt" class="btn btn-primary" style="padding:11px 20px">Termin anfragen</a>
-        <button class="burger" id="burger" aria-label="Menü"><span></span><span></span><span></span></button>
+        <a href="#kontakt" class="btn btn-primary" style="padding:11px 20px">Zatražite termin</a>
+        <button class="burger" id="burger" aria-label="Izbornik"><span></span><span></span><span></span></button>
       </div>
     </nav>
   </div>
 </header>
 
-<!-- PAGE HERO -->
-<section class="page-hero">
-  <div class="wrap reveal in">
-    <span class="eyebrow">Kontakt</span>
-    <h1>Lernen wir uns kennen</h1>
-    <p class="sub">Wir beraten Sie gern persönlich und auf Deutsch.</p>
-    <div class="breadcrumb">
-      <a href="index.html">Start</a>
-      <span class="sep">›</span>
-      <span class="cur">Kontakt</span>
+<!-- HERO -->
+<section class="hero" id="start">
+  <div class="wrap hero-grid">
+    <div class="reveal in">
+      <span class="eyebrow">Stomatološka ordinacija u Zagrebu · Od 1991.</span>
+      <h1>Iskustvo koje se osjeti.<br><span class="accent">Povjerenje</span> koje ostaje.</h1>
+      <p class="sub">Doktor znanosti i nagrađivana doktorica dentalne medicine, osobna skrb i iskrena filozofija „prvo zdravlje". Pacijentice i pacijenti iz cijele Europe povjeravaju nam svoj osmijeh.</p>
+      <div class="chips">
+        <span class="chip"><span class="stars">★★★★★</span> Google</span>
+        <span class="chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg> Doktor znanosti (dr. sc.)</span>
+        <span class="chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.5 6.5L21 9l-5 4 1.5 7L12 16l-5.5 4L8 13 3 9l6.5-.5z"/></svg> Više od 30 godina obiteljske tradicije</span>
+      </div>
+      <div class="hero-cta">
+        <a href="#kontakt" class="btn btn-primary">Besplatna prva konzultacija</a>
+        <a href="#team" class="btn btn-ghost">Upoznajte naš tim</a>
+      </div>
+      <div class="hero-trust">
+        <div class="avstack"><span>IB</span><span>ML</span><span>+</span></div>
+        <span>Dva iskusna stomatologa · Svježe renovirana ordinacija · Termini i na njemačkom jeziku</span>
+      </div>
+    </div>
+    <div class="hero-visual reveal in">
+      <div class="hero-img">
+        <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=900&q=80" alt="Svijetla, moderna stomatološka ordinacija" loading="eager">
+      </div>
+      <div class="hero-badge">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div>
+        <div><b>Prvo zdravlje</b><small>Bez nepotrebnih zahvata</small></div>
+      </div>
+      <div class="hero-badge2">
+        <div class="stars">★★★★★</div>
+        <b>5,0</b>
+        <small>Google ocjene</small>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- TWO-COLUMN: INFO + MAP / FORM -->
-<section class="section" id="kontakt" style="padding-top:56px">
+<!-- PHILOSOPHY -->
+<section class="philo">
   <div class="wrap">
+    <span class="eyebrow">Naš stav</span>
+    <div class="quote-mark">„</div>
+    <h2>Zdravlje prije estetike.<br>Bez nepotrebnih zahvata.</h2>
+    <p>Savjetujemo konzervativno i iskreno: u središtu je ono što vašim zubima zaista pomaže – a ne najveći mogući zahvat. Štedljivo prema zubnoj supstanci, dugoročno i sa smirenošću koja dolazi iz desetljeća iskustva. Tako nastaje povjerenje koje ostaje.</p>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section reviews" id="bewertungen">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="reviews-head">
+        <div>
+          <span class="eyebrow">Što kažu pacijenti</span>
+          <h2 style="margin-bottom:6px"><span style="color:#f5a623">★★★★★</span> na Googleu</h2>
+          <p class="lead">Iskreni glasovi ljudi koji su nam povjerili svoj osmijeh.</p>
+        </div>
+        <div class="gscore">
+          <div class="num">5,0</div>
+          <div>
+            <div class="stars">★★★★★</div>
+            <small>Google ocjene</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="review-grid">
+      <div class="review-card reveal">
+        <div class="gicon"><svg width="22" height="22" viewBox="0 0 48 48"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34A21.99 21.99 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg></div>
+        <div class="stars">★★★★★</div>
+        <div class="q">„Najbolji stomatolog na svijetu, jedan jedini!"</div>
+        <div class="who"><div class="av">D</div><div><b>D. A.</b><small>Google recenzija</small></div></div>
+      </div>
+      <div class="review-card reveal">
+        <div class="gicon"><svg width="22" height="22" viewBox="0 0 48 48"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34A21.99 21.99 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg></div>
+        <div class="stars">★★★★★</div>
+        <div class="q">„Najbolji zubar ikada!"</div>
+        <div class="who"><div class="av">G</div><div><b>G. S.</b><small>Google recenzija</small></div></div>
+      </div>
+      <div class="review-card reveal">
+        <div class="gicon"><svg width="22" height="22" viewBox="0 0 48 48"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34A21.99 21.99 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg></div>
+        <div class="stars">★★★★★</div>
+        <div class="q">„Profesionalnost. Uljudnost. Izvrsna kvaliteta."</div>
+        <div class="who"><div class="av">N</div><div><b>N. B.</b><small>Google recenzija</small></div></div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:36px" class="reveal">
+      <a href="https://www.google.com/maps/place/Ordinacija+Bedek+dr.med.dent./@45.8175349,15.9469534,17z/data=!4m8!3m7!1s0x4765d6d78cddcedf:0xa11aa27589aff892!9m1!1b1" target="_blank" rel="noopener" class="btn btn-ghost">Pogledajte sve recenzije</a>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="section" id="team">
+  <div class="wrap">
+    <div class="reveal" style="max-width:700px">
+      <span class="eyebrow">Naš tim</span>
+      <h2>Ljudi koji zaslužuju vaše povjerenje</h2>
+      <p class="lead">Osobna skrb iskusnih stručnjaka – znanstveno utemeljena i sa srcem.</p>
+    </div>
+    <div class="team-grid">
+      <div class="doc-card reveal">
+        <div class="doc-photo">
+          <img src="../assets/dr-ivan-bedek.png" alt="dr. sc. Ivan Bedek, dr. med. dent.">
+          <span class="tag">Vlasnik</span>
+        </div>
+        <div class="doc-body">
+          <h3>dr. sc. Ivan Bedek, dr. med. dent.</h3>
+          <div class="doc-role">Vlasnik · Doktorirao 2019. · Znanstveno aktivan</div>
+          <p>Ivan Bedek vodi ordinaciju u drugoj generaciji. Kao doktor znanosti spaja znanstvenu preciznost sa smirenim, iskrenim savjetovanjem – uvijek s ciljem očuvanja zubne supstance umjesto nepotrebnog liječenja.</p>
+          <div class="creds">
+            <span>dr. sc. – doktorat 2019.</span>
+            <span>Implantologija</span>
+            <span>Istraživanje i nastava</span>
+          </div>
+        </div>
+      </div>
+      <div class="doc-card reveal">
+        <div class="doc-photo">
+          <img src="../assets/dr-martina-laktic.png" alt="Martina Laktić, dr. med. dent.">
+          <span class="tag">Doktorica dentalne medicine</span>
+        </div>
+        <div class="doc-body">
+          <h3>Martina Laktić, dr. med. dent.</h3>
+          <div class="doc-role">Obiteljska dentalna medicina i endodoncija</div>
+          <p>Martina Laktić skrbi za pacijentice i pacijente svih dobi, s posebnim naglaskom na liječenje korijenskih kanala i empatičnu obiteljsku dentalnu medicinu. Za svoja izvanredna postignuća nagrađena je Dekanovom i Rektorovom nagradom.</p>
+          <div class="creds">
+            <span>Endodoncija</span>
+            <span>Dekanova nagrada</span>
+            <span>Rektorova nagrada</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="family-note reveal">
+      <div class="yr">1991</div>
+      <p><b style="font-family:'Manrope';color:var(--ink)">Obiteljska tradicija duga više od 30 godina.</b> Ono što je 1991. započelo kao obiteljska ordinacija, danas se nastavlja s jednakom pažnjom i jednakim standardom – iz generacije u generaciju, od pacijenta do pacijenta.</p>
+    </div>
+  </div>
+</section>
+
+<!-- LEISTUNGEN -->
+<section class="section" id="leistungen" style="background:var(--warm)">
+  <div class="wrap">
+    <div class="reveal" style="max-width:700px">
+      <span class="eyebrow">Usluge</span>
+      <h2>Vrhunska dentalna medicina za svaku potrebu</h2>
+      <p class="lead">Od akutnog problema do blistavog osmijeha – uz prvoklasne materijale i renomirane sustave.</p>
+    </div>
+    <div class="serv-grid">
+      <div class="serv-card reveal">
+        <div class="serv-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2c-1 0-2 .8-2 2 0 1.5 1 2 1 4 0 3-2 4-2 8 0 3 1 6 3 6s3-3 3-6c0-4-2-5-2-8 0-2 1-2.5 1-4 0-1.2-1-2-2-2z"/></svg></div>
+        <h3>Implantati</h3>
+        <div class="prob">Nedostaje vam zub? Labava proteza?</div>
+        <p>Fiksni, trajni zubni nadomjestak koji se osjeća kao vlastiti zub. Najviša preciznost i podnošljivost.</p>
+        <div class="mat">Premium sustavi: Straumann · Nobel Biocare</div>
+      </div>
+      <div class="serv-card reveal">
+        <div class="serv-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l7 4v5c0 4-3 7-7 9-4-2-7-5-7-9V7z"/></svg></div>
+        <h3>Krunice i ljuskice</h3>
+        <div class="prob">Slomljeno, promijenjene boje, nezadovoljni?</div>
+        <p>Estetski nadomjesci od vrhunskog cirkonija i keramike – prirodni u obliku i boji, dugotrajni i biokompatibilni.</p>
+        <div class="mat">Cirkonij · puna keramika · digitalno planirano</div>
+      </div>
+      <div class="serv-card reveal">
+        <div class="serv-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19"/></svg></div>
+        <h3>Izbjeljivanje</h3>
+        <div class="prob">Zubi promijenjene boje?</div>
+        <p>Nježno, profesionalno izbjeljivanje za vidljivo svjetliji osmijeh – štedljivo prema zubu i prilagođeno vašoj caklini.</p>
+        <div class="mat">Profesionalno · štedljivo prema zubu</div>
+      </div>
+      <div class="serv-card reveal">
+        <div class="serv-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
+        <h3>Opća dentalna medicina</h3>
+        <div class="prob">Prevencija, bolovi, kontrola?</div>
+        <p>Od profilakse preko štedljivih ispuna do liječenja korijenskog kanala – iskrena dijagnostika, pažljivo liječenje.</p>
+        <div class="mat">Profilaksa · endodoncija · ispuni</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ZAHNTOURISMUS -->
+<section class="section tour" id="zahntourismus">
+  <div class="wrap">
+    <div class="reveal tour-head">
+      <span class="eyebrow">Dentalni turizam i zdravstveno osiguranje</span>
+      <h2>Transparentni troškovi – uz sudjelovanje vašeg njemačkog osiguranja.</h2>
+      <p class="lead">Liječenje u Zagrebu unutar EU-a jasno je uređeno. Zakonski osiguranici od svojeg osiguranja dobivaju isti fiksni doprinos kao i za standardnu skrb u Njemačkoj – posve transparentno i pošteno.</p>
+    </div>
+    <div class="tour-cols">
+      <div class="steps reveal">
+        <div class="step"><div class="n">1</div><div><b>Plan liječenja i troškova (HKP)</b><p>Od nas dobivate HKP na njemačkom obrascu.</p></div></div>
+        <div class="step"><div class="n">2</div><div><b>Predaja prije liječenja</b><p>HKP predajte svojem zdravstvenom osiguranju prije početka liječenja.</p></div></div>
+        <div class="step"><div class="n">3</div><div><b>Čekanje odobrenja</b><p>Vaše osiguranje provjerava i odobrava fiksni doprinos.</p></div></div>
+        <div class="step"><div class="n">4</div><div><b>Liječenje u Zagrebu</b><p>Ostalo preuzimamo mi – opušteno i osobno na licu mjesta.</p></div></div>
+      </div>
+      <div class="ins-box reveal">
+        <h3>Vaš fiksni doprinos</h3>
+        <div class="big">u pravilu 60 % <span>standardne skrbi</span></div>
+        <p>Zakonsko zdravstveno osiguranje (GKV) plaća fiksni doprinos standardne skrbi – uz uredno vođenu bonus-knjižicu i više.</p>
+        <div class="cost-table">
+          <div class="cost-row"><span>Krunica</span><b>od oko 230 €</b></div>
+          <div class="cost-row"><span>Cirkonska krunica</span><b>oko 290 €</b></div>
+          <div class="cost-row"><span>Implantat (Nobel / Straumann)</span><b>od oko 670–950 €</b></div>
+        </div>
+        <p class="richt">Okvirne vrijednosti za orijentaciju – konačna cijena proizlazi iz individualnog nalaza.</p>
+      </div>
+    </div>
+    <div class="disclaimer reveal">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v5M12 16h.01"/></svg>
+      <div><b style="font-family:'Manrope'">Napomena:</b> Ne predstavlja pravni savjet – točan iznos povrata razjasnite individualno sa svojim zdravstvenim osiguranjem. Temelj je pravo EU-a o prekograničnoj zdravstvenoj zaštiti.</div>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section class="section" id="kontakt">
+  <div class="wrap">
+    <div class="reveal" style="max-width:700px">
+      <span class="eyebrow">Kontakt</span>
+      <h2>Upoznajmo se</h2>
+      <p class="lead">Pišite nam – javljamo se osobno i rado vas savjetujemo.</p>
+    </div>
     <div class="contact-cols">
-      <!-- LEFT: info + real map -->
       <div class="info-card reveal">
         <div class="info-row">
           <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <div><b>Bedek Dental</b><span>Zatišje 6/1, 10000 Zagreb<br>Im hinteren Hof – bitte im hinteren Teil des Innenhofs.</span></div>
+          <div><b>Bedek Dental</b><span>Zatišje 6/1, 10000 Zagreb (u stražnjem dvorištu)</span></div>
         </div>
         <div class="info-row">
           <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.74-1.27a2 2 0 0 1 2.11-.45c.74.34 1.53.57 2.34.7A2 2 0 0 1 22 16.92z"/></svg></div>
-          <div><b>Telefon</b><span><a class="info-link" href="tel:+385957299112">+385 95 729 9112</a></span></div>
+          <div><b>Telefon</b><span><a href="tel:+385957299112">+385 95 729 9112</a></span></div>
         </div>
         <div class="info-row">
           <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 0 0 1.51 5.26l-.999 3.648 3.748-.984z"/></svg></div>
-          <div><b>WhatsApp</b><span><a class="info-link" href="https://wa.me/385957299112">Schnell schreiben: +385 95 729 9112</a></span></div>
+          <div><b>WhatsApp</b><span><a href="https://wa.me/385957299112">Brzo nam pišite: +385 95 729 9112</a></span></div>
         </div>
-        <div class="info-row">
-          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg></div>
-          <div><b>E-Mail</b><span><a class="info-link" href="mailto:info@bedek.hr">info@bedek.hr</a></span></div>
+        <div class="map">
+          <div class="pin"></div>
+          <div class="maplabel">Karta · Zatišje 6/1, Zagreb</div>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Zati%C5%A1je+6,+10000+Zagreb" target="_blank" rel="noopener" class="btn btn-ghost" style="padding:9px 18px;font-size:.85rem">Isplanirajte put</a>
         </div>
-        <div class="info-row">
-          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
-          <div><b>Öffnungszeiten</b><span>Mo–Fr 09:00–17:00 Uhr<br>Termine nach Vereinbarung.</span></div>
-        </div>
-
-        <!-- REAL GOOGLE MAPS EMBED -->
-        <div class="map-embed">
-          <iframe
-            src="https://www.google.com/maps?q=Zati%C5%A1je%206,%2010000%20Zagreb&output=embed"
-            width="100%" height="300"
-            loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-            title="Standort Bedek Dental – Zatišje 6, Zagreb" allowfullscreen></iframe>
-        </div>
-        <div class="map-actions">
-          <a href="https://www.google.com/maps/dir/?api=1&destination=Zati%C5%A1je%206,%2010000%20Zagreb" target="_blank" rel="noopener" class="btn btn-ghost">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
-            Route planen
-          </a>
-        </div>
-
-        <!-- PARKHINWEIS -->
         <div class="parking">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 16V8h3.5a2.5 2.5 0 0 1 0 5H9"/></svg>
-          In 1 Min. Laufnähe finden Sie immer einen Parkplatz.
+          U jednoj minuti hoda uvijek ćete pronaći parkirno mjesto.
         </div>
       </div>
 
-      <!-- RIGHT: appointment request form -->
-      <form class="reveal" id="kontaktform" novalidate>
-        <h3>Termin anfragen</h3>
-        <p class="fhint">Unverbindlich &amp; kostenlos. Antwort i.d.R. innerhalb eines Werktags.</p>
+      <form class="reveal" onsubmit="event.preventDefault();this.querySelector('.ok').style.display='block';">
+        <h3>Zatražite termin</h3>
+        <p class="fhint">Bez obveze i besplatno. Odgovaramo u pravilu unutar jednog radnog dana.</p>
         <div class="grid2">
-          <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" placeholder="Ihr Name" required></div>
-          <div class="field"><label for="tel">Telefon</label><input id="tel" name="tel" type="tel" placeholder="+49 …"></div>
+          <div class="field"><label for="name">Ime</label><input id="name" type="text" placeholder="Vaše ime" required></div>
+          <div class="field"><label for="tel">Telefon</label><input id="tel" type="tel" placeholder="+385 …"></div>
         </div>
-        <div class="field"><label for="mail">E-Mail</label><input id="mail" name="mail" type="email" placeholder="ihre@email.de" required></div>
-        <div class="field">
-          <label for="anliegen">Anliegen / Behandlungswunsch</label>
-          <select id="anliegen" name="anliegen">
-            <option value="" selected>Bitte auswählen …</option>
-            <option>Erstberatung / Kennenlernen</option>
-            <option>Implantate</option>
-            <option>Kronen &amp; Veneers</option>
-            <option>Bleaching</option>
-            <option>Allgemeine Zahnmedizin / Vorsorge</option>
-            <option>Zahntourismus &amp; Krankenkasse (HKP)</option>
-            <option>Akute Schmerzen</option>
-            <option>Sonstiges</option>
-          </select>
-        </div>
-        <div class="field">
-          <label>Foto-/Röntgen-Upload (optional)</label>
-          <label class="upload" for="file"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-4px"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg>&nbsp; Röntgenbild oder Foto hochladen<input id="file" name="file" type="file" accept="image/*,.pdf" hidden></label>
-        </div>
-        <div class="field"><label for="msg">Nachricht</label><textarea id="msg" name="msg" placeholder="Beschreiben Sie kurz Ihr Anliegen …"></textarea></div>
-        <button class="btn btn-coral" type="submit" style="width:100%;justify-content:center">Anfrage senden</button>
-        <div class="ok" style="display:none;margin-top:14px;background:var(--mint);color:var(--teal-ink);padding:12px;border-radius:10px;font-size:.9rem;text-align:center">Vielen Dank! Wir melden uns in der Regel innerhalb eines Werktags persönlich bei Ihnen.</div>
+        <div class="field"><label for="mail">E-pošta</label><input id="mail" type="email" placeholder="vasa@adresa.hr" required></div>
+        <div class="field"><label for="msg">Vaš upit</label><textarea id="msg" placeholder="Ukratko opišite svoj upit …"></textarea></div>
+        <div class="field"><label>Učitavanje fotografije (nije obavezno)</label><label class="upload" for="file"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-4px"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg>&nbsp; Učitajte rendgensku snimku ili fotografiju<input id="file" type="file" accept="image/*" hidden></label></div>
+        <button class="btn btn-coral" type="submit" style="width:100%;justify-content:center">Pošaljite upit</button>
+        <div class="ok" style="display:none;margin-top:14px;background:var(--mint);color:var(--teal-ink);padding:12px;border-radius:10px;font-size:.9rem;text-align:center">Hvala vam! Uskoro ćemo vam se osobno javiti.</div>
       </form>
-    </div>
-  </div>
-</section>
-
-<!-- REASSURANCE STRIP: "Wir gehen ans Telefon" -->
-<section class="reassure">
-  <div class="wrap reveal">
-    <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.74-1.27a2 2 0 0 1 2.11-.45c.74.34 1.53.57 2.34.7A2 2 0 0 1 22 16.92z"/></svg></div>
-    <div class="txt">
-      <span class="eyebrow">Wir gehen ans Telefon</span>
-      <h3 style="margin-top:8px">Sie erreichen echte Menschen.</h3>
-      <p>Sie erreichen uns persönlich – und falls wir gerade behandeln, rufen wir zeitnah zurück oder buchen Ihren Termin direkt.</p>
-    </div>
-  </div>
-</section>
-
-<!-- CTA / CLOSING -->
-<section class="section cta-close">
-  <div class="wrap reveal">
-    <span class="eyebrow">Ihr nächster Schritt</span>
-    <h2>Schreiben Sie uns – der Rest ist entspannt.</h2>
-    <p>Ob Erstberatung, zweite Meinung oder Heil- und Kostenplan für Ihre Krankenkasse: Wir nehmen uns Zeit für Sie – persönlich und auf Deutsch.</p>
-    <div class="btn-row">
-      <a href="#kontakt" class="btn btn-primary">Termin anfragen</a>
-      <a href="https://wa.me/385957299112" class="btn btn-ghost" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.4)">WhatsApp schreiben</a>
     </div>
   </div>
 </section>
@@ -497,33 +604,33 @@
     <div class="foot-grid">
       <div class="foot-brand">
         <div class="wordmark" style="color:#fff"><span class="dot"></span>Bedek Dental</div>
-        <p>Ordinacija dentalne medicine dr.sc. Ivan Bedek, dr.med.dent.<br>Zatišje 6/1, 10000 Zagreb · Frisch renovierte Praxis im hinteren Hof.</p>
+        <p>Ordinacija dentalne medicine dr.sc. Ivan Bedek, dr.med.dent.<br>Zatišje 6/1, 10000 Zagreb · Svježe renovirana ordinacija u stražnjem dvorištu.</p>
         <div class="foot-langs">
-          <img src="https://flagcdn.com/de.svg" alt="Deutsch" width="26" height="18" style="border-radius:3px">
-          <img src="https://flagcdn.com/gb.svg" alt="English" width="26" height="18" style="border-radius:3px">
-          <img src="https://flagcdn.com/hr.svg" alt="Hrvatski" width="26" height="18" style="border-radius:3px">
-          <img src="https://flagcdn.com/it.svg" alt="Italiano" width="26" height="18" style="border-radius:3px">
+          <a href="../de/index.html"><img src="https://flagcdn.com/de.svg" alt="Deutsch" width="26" height="18" style="border-radius:3px"></a>
+          <a href="../en/index.html"><img src="https://flagcdn.com/gb.svg" alt="English" width="26" height="18" style="border-radius:3px"></a>
+          <a href="../hr/index.html"><img src="https://flagcdn.com/hr.svg" alt="Hrvatski" width="26" height="18" style="border-radius:3px"></a>
+          <a href="../it/index.html"><img src="https://flagcdn.com/it.svg" alt="Italiano" width="26" height="18" style="border-radius:3px"></a>
         </div>
       </div>
       <div class="foot-col">
-        <h4>Navigation</h4>
-        <a href="index.html">Start</a>
-        <a href="leistungen.html">Leistungen</a>
-        <a href="team.html">Über uns</a>
-        <a href="zahntourismus.html">Zahntourismus</a>
+        <h4>Navigacija</h4>
+        <a href="index.html">Početna</a>
+        <a href="leistungen.html">Usluge</a>
+        <a href="team.html">O nama</a>
+        <a href="zahntourismus.html">Dentalni turizam</a>
         <a href="kontakt.html">Kontakt</a>
       </div>
       <div class="foot-col">
         <h4>Kontakt</h4>
         <a href="tel:+385957299112">+385 95 729 9112</a>
         <a href="https://wa.me/385957299112">WhatsApp</a>
-        <a href="mailto:info@bedek.hr">info@bedek.hr</a>
-        <a href="https://www.google.com/maps/dir/?api=1&destination=Zati%C5%A1je%206,%2010000%20Zagreb">Route planen</a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Zati%C5%A1je+6,+10000+Zagreb" target="_blank" rel="noopener">Isplanirajte put</a>
+        <a href="#kontakt">Zatražite termin</a>
       </div>
     </div>
     <div class="foot-bottom">
       <span>© 2026 Bedek Dental · Ordinacija dentalne medicine dr.sc. Ivan Bedek, dr.med.dent.</span>
-      <span>Stand Juni 2026. Keine Rechts- oder Medizinberatung.</span>
+      <span>Stanje: lipanj 2026. Ne predstavlja pravni ni medicinski savjet.</span>
     </div>
   </div>
 </footer>
@@ -538,13 +645,6 @@
   // Reveal on scroll
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
   document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
-  // Form submit (no backend)
-  var kf=document.getElementById('kontaktform');
-  kf&&kf.addEventListener('submit',function(event){
-    event.preventDefault();
-    var ok=kf.querySelector('.ok');
-    if(ok){ok.style.display='block';ok.scrollIntoView({behavior:'smooth',block:'center'});}
-  });
 </script>
 </body>
 </html>

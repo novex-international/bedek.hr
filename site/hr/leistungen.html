@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Usluge – Bedek Dental Zagreb</title>
+<meta name="description" content="Usluge ordinacije Bedek Dental Zagreb: implantati (Straumann i Nobel Biocare), krunice i ljuskice od cirkonija i E-maxa, izbjeljivanje, profilaksa i endodoncija. Vrhunska dentalna medicina uz iskreno savjetovanje." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal:#2f8f86;
+    --teal-deep:#1d6f8c;
+    --teal-ink:#0e4f55;
+    --mint:#e9f6f3;
+    --ice:#f3f9fb;
+    --coral:#f2876b;
+    --coral-soft:#fbe7df;
+    --ink:#10282b;
+    --slate:#4a5d60;
+    --muted:#7a8c8e;
+    --line:#e3edee;
+    --white:#ffffff;
+    --warm:#faf8f5;
+    --shadow-sm:0 2px 8px rgba(20,60,65,.05);
+    --shadow:0 14px 40px rgba(20,60,65,.10);
+    --shadow-lg:0 26px 70px rgba(20,60,65,.16);
+    --radius:22px;
+    --radius-sm:14px;
+    --maxw:1180px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--white);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,h4,.wordmark{font-family:'Manrope',sans-serif;line-height:1.12;letter-spacing:-.02em}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{width:100%;max-width:100%;margin:0 auto;padding:0 clamp(20px,5vw,96px)}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:'Manrope',sans-serif;font-weight:700;
+    font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--teal-deep);
+  }
+  .eyebrow::before{content:"";width:26px;height:2px;background:var(--coral);border-radius:2px}
+  .section{padding:96px 0}
+  .section h2{font-size:clamp(1.9rem,3.6vw,2.85rem);font-weight:800;margin:14px 0 16px}
+  .lead{font-size:1.08rem;color:var(--slate);max-width:60ch}
+
+  /* Buttons */
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;
+    font-family:'Manrope',sans-serif;font-weight:700;font-size:.96rem;
+    padding:14px 24px;border-radius:999px;cursor:pointer;border:1.6px solid transparent;
+    transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
+    white-space:nowrap;
+  }
+  .btn-primary{background:var(--teal);color:#fff;box-shadow:0 12px 26px rgba(47,143,134,.32)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 34px rgba(47,143,134,.4);background:#27817a}
+  .btn-ghost{background:#fff;color:var(--teal-deep);border-color:var(--line)}
+  .btn-ghost:hover{transform:translateY(-2px);border-color:var(--teal);box-shadow:var(--shadow-sm)}
+  .btn-coral{background:var(--coral);color:#fff;box-shadow:0 12px 26px rgba(242,135,107,.3)}
+  .btn-coral:hover{transform:translateY(-2px);background:#ed7456}
+
+  /* Header */
+  header{
+    position:sticky;top:0;z-index:60;
+    background:rgba(255,255,255,.82);
+    backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;gap:18px;height:74px;flex-wrap:nowrap}
+  .wordmark{font-weight:800;font-size:1.35rem;letter-spacing:-.03em;color:var(--ink);display:flex;align-items:center;gap:9px;white-space:nowrap;flex-shrink:0}
+  .wordmark .dot{width:10px;height:10px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px var(--mint)}
+  .nav-links{display:flex;gap:24px;margin-left:16px;flex-wrap:nowrap;white-space:nowrap}
+  .nav-links a{font-weight:500;font-size:.95rem;color:var(--slate);position:relative;padding:4px 0;white-space:nowrap}
+  .nav-links a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--teal);transition:width .25s ease}
+  .nav-links a:hover{color:var(--ink)}
+  .nav-links a:hover::after{width:100%}
+  .nav-links a.active{color:var(--ink)}
+  .nav-links a.active::after{width:100%}
+  .nav-right{margin-left:auto;display:flex;align-items:center;gap:12px;flex-wrap:nowrap;flex-shrink:0}
+  .flags{display:flex;gap:4px;align-items:center}
+  .flags a{display:inline-flex;padding:5px 6px;border-radius:8px;opacity:.55;transition:.2s}
+  .flags a:hover{opacity:1;background:var(--ice)}
+  .flags a.active{opacity:1;background:var(--mint);box-shadow:inset 0 0 0 1.5px var(--teal)}
+  .flags a img{display:block;width:24px;height:17px;object-fit:cover;border-radius:3px;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+  .nav-phone{display:flex;align-items:center;gap:7px;font-family:'Manrope';font-weight:700;font-size:.92rem;color:var(--teal-deep);white-space:nowrap;flex-shrink:0}
+  .icon-btn{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:var(--mint);color:var(--teal-deep);transition:.2s}
+  .icon-btn:hover{background:var(--teal);color:#fff;transform:translateY(-2px)}
+  .burger{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:8px}
+  .burger span{width:24px;height:2.4px;background:var(--ink);border-radius:2px;transition:.3s}
+
+  /* Hero */
+  .hero{position:relative;background:
+    radial-gradient(1100px 600px at 78% -8%, var(--mint), transparent 60%),
+    linear-gradient(180deg,var(--ice),#fff 70%);
+    padding:64px 0 80px;overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center}
+  .hero h1{font-size:clamp(2.35rem,5vw,4rem);font-weight:800;letter-spacing:-.03em}
+  .hero h1 .accent{color:var(--teal)}
+  .hero .sub{font-size:1.12rem;color:var(--slate);margin:22px 0 8px;max-width:46ch}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 30px}
+  .chip{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);
+    padding:9px 15px;border-radius:999px;font-size:.86rem;font-weight:600;color:var(--ink);box-shadow:var(--shadow-sm)}
+  .chip .stars{color:#f5a623;letter-spacing:1px}
+  .chip svg{color:var(--teal)}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px}
+  .hero-trust{display:flex;align-items:center;gap:12px;margin-top:30px;color:var(--muted);font-size:.86rem}
+  .hero-trust .avstack{display:flex}
+  .hero-trust .avstack span{width:30px;height:30px;border-radius:50%;background:var(--mint);border:2px solid #fff;margin-left:-9px;display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700;color:var(--teal-deep)}
+  .hero-trust .avstack span:first-child{margin-left:0}
+
+  .hero-visual{position:relative}
+  .hero-img{border-radius:30px;overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:4/4.4;background:var(--mint)}
+  .hero-img img{width:100%;height:100%;object-fit:cover}
+  .hero-badge{
+    position:absolute;left:-22px;bottom:34px;background:#fff;border-radius:18px;
+    padding:16px 18px;box-shadow:var(--shadow);display:flex;align-items:center;gap:13px;
+    animation:floaty 5s ease-in-out infinite;
+  }
+  .hero-badge .ic{width:44px;height:44px;border-radius:13px;background:var(--mint);display:flex;align-items:center;justify-content:center;color:var(--teal-deep)}
+  .hero-badge b{font-family:'Manrope';font-size:1.05rem;display:block}
+  .hero-badge small{color:var(--muted);font-size:.78rem}
+  .hero-badge2{
+    position:absolute;right:-14px;top:30px;background:var(--teal-ink);color:#fff;border-radius:16px;
+    padding:13px 17px;box-shadow:var(--shadow);animation:floaty 6s ease-in-out infinite .5s;
+  }
+  .hero-badge2 .stars{color:#ffd166;font-size:.85rem;letter-spacing:1px}
+  .hero-badge2 b{font-family:'Manrope';font-size:1.4rem;line-height:1}
+  .hero-badge2 small{opacity:.8;font-size:.74rem;display:block}
+  @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease, transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  /* Philosophy band */
+  .philo{background:linear-gradient(120deg,var(--teal-ink),var(--teal-deep));color:#fff;padding:74px 0}
+  .philo .wrap{text-align:center;max-width:880px}
+  .philo h2{font-size:clamp(1.7rem,3.4vw,2.5rem);font-weight:800;color:#fff;margin:10px 0 18px}
+  .philo .quote-mark{font-family:'Manrope';font-size:3.4rem;color:var(--coral);line-height:.4;opacity:.9}
+  .philo p{color:rgba(255,255,255,.86);font-size:1.1rem;max-width:62ch;margin:0 auto}
+  .philo .eyebrow{color:#bdeee6}
+  .philo .eyebrow::before{background:var(--coral)}
+
+  /* Reviews */
+  .reviews{background:var(--warm)}
+  .reviews-head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:18px;margin-bottom:42px}
+  .gscore{display:flex;align-items:center;gap:16px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px 22px;box-shadow:var(--shadow-sm)}
+  .gscore .num{font-family:'Manrope';font-weight:800;font-size:2.4rem;color:var(--ink);line-height:1}
+  .gscore .stars{color:#f5a623;font-size:1.05rem;letter-spacing:2px}
+  .gscore small{color:var(--muted);font-size:.82rem}
+  .review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .review-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow-sm);transition:transform .3s ease, box-shadow .3s ease;position:relative}
+  .review-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+  .review-card .stars{color:#f5a623;letter-spacing:2px;font-size:1rem}
+  .review-card .q{font-family:'Manrope';font-weight:700;font-size:1.18rem;margin:14px 0 8px;letter-spacing:-.01em}
+  .review-card .de{color:var(--slate);font-size:.95rem}
+  .review-card .who{display:flex;align-items:center;gap:10px;margin-top:20px;padding-top:16px;border-top:1px solid var(--line)}
+  .review-card .who .av{width:38px;height:38px;border-radius:50%;background:var(--mint);color:var(--teal-deep);display:flex;align-items:center;justify-content:center;font-weight:700;font-family:'Manrope'}
+  .review-card .who b{font-size:.9rem;display:block}
+  .review-card .who small{color:var(--muted);font-size:.76rem}
+  .gicon{position:absolute;top:24px;right:26px;font-family:'Manrope';font-weight:800;font-size:1.3rem;color:#cfe6e2}
+
+  /* Team */
+  .team-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;margin-top:46px}
+  .doc-card{background:#fff;border:1px solid var(--line);border-radius:26px;overflow:hidden;box-shadow:var(--shadow-sm);transition:transform .35s ease, box-shadow .35s ease}
+  .doc-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+  .doc-photo{aspect-ratio:1/1.04;overflow:hidden;background:var(--mint);position:relative}
+  .doc-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform .6s ease}
+  .doc-card:hover .doc-photo img{transform:scale(1.04)}
+  .doc-photo .tag{position:absolute;left:16px;bottom:16px;background:rgba(255,255,255,.92);backdrop-filter:blur(6px);padding:7px 13px;border-radius:999px;font-size:.78rem;font-weight:700;font-family:'Manrope';color:var(--teal-deep)}
+  .doc-body{padding:26px 26px 30px}
+  .doc-body h3{font-size:1.4rem;font-weight:800}
+  .doc-role{color:var(--teal-deep);font-weight:600;font-size:.92rem;margin:4px 0 14px}
+  .doc-body p{color:var(--slate);font-size:.95rem}
+  .creds{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+  .creds span{background:var(--ice);border:1px solid var(--line);color:var(--teal-ink);font-size:.78rem;font-weight:600;padding:6px 12px;border-radius:999px}
+  .family-note{margin-top:40px;background:var(--mint);border:1px solid #d6ece7;border-radius:var(--radius);padding:30px 34px;display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+  .family-note .yr{font-family:'Manrope';font-weight:800;font-size:2.6rem;color:var(--teal);line-height:1}
+  .family-note p{color:var(--slate);max-width:62ch;flex:1;min-width:260px}
+
+  /* Leistungen */
+  .serv-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:46px}
+  .serv-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow-sm);transition:transform .3s ease, box-shadow .3s ease;position:relative;overflow:hidden}
+  .serv-card::before{content:"";position:absolute;inset:0 auto 0 0;width:4px;background:var(--teal);transform:scaleY(0);transform-origin:top;transition:transform .35s ease}
+  .serv-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+  .serv-card:hover::before{transform:scaleY(1)}
+  .serv-ic{width:54px;height:54px;border-radius:15px;background:var(--mint);display:flex;align-items:center;justify-content:center;color:var(--teal-deep);margin-bottom:18px}
+  .serv-card h3{font-size:1.28rem;font-weight:800}
+  .serv-card .prob{color:var(--coral);font-weight:600;font-size:.85rem;margin:6px 0 10px}
+  .serv-card p{color:var(--slate);font-size:.94rem}
+  .serv-card .mat{margin-top:14px;font-size:.82rem;color:var(--muted);font-weight:600}
+
+  /* Zahntourismus */
+  .tour{background:var(--ice)}
+  .tour-head{max-width:720px}
+  .tour-cols{display:grid;grid-template-columns:1.1fr .9fr;gap:42px;margin-top:46px;align-items:start}
+  .steps{display:flex;flex-direction:column;gap:14px}
+  .step{display:flex;gap:18px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px 22px;box-shadow:var(--shadow-sm)}
+  .step .n{flex:none;width:40px;height:40px;border-radius:12px;background:var(--teal);color:#fff;font-family:'Manrope';font-weight:800;display:flex;align-items:center;justify-content:center}
+  .step b{font-family:'Manrope';font-size:1.02rem}
+  .step p{color:var(--slate);font-size:.9rem;margin-top:2px}
+  .ins-box{background:linear-gradient(150deg,var(--teal-ink),var(--teal-deep));color:#fff;border-radius:var(--radius);padding:30px;box-shadow:var(--shadow)}
+  .ins-box h3{color:#fff;font-size:1.25rem;font-weight:800;margin-bottom:8px}
+  .ins-box .big{font-family:'Manrope';font-weight:800;font-size:2.2rem;color:#fff;line-height:1.1;margin:6px 0}
+  .ins-box .big span{color:#bdeee6;font-size:1rem;font-weight:600}
+  .ins-box p{color:rgba(255,255,255,.85);font-size:.9rem}
+  .cost-table{margin-top:18px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:14px;overflow:hidden}
+  .cost-row{display:flex;justify-content:space-between;align-items:center;padding:13px 18px;font-size:.92rem;border-bottom:1px solid rgba(255,255,255,.1)}
+  .cost-row:last-child{border-bottom:none}
+  .cost-row span:first-child{color:rgba(255,255,255,.9)}
+  .cost-row b{font-family:'Manrope';color:#fff}
+  .richt{font-size:.76rem;color:rgba(255,255,255,.6);margin-top:12px}
+  .disclaimer{margin-top:22px;background:var(--coral-soft);border:1px solid #f4cbbd;border-radius:14px;padding:16px 20px;font-size:.86rem;color:#8a4a36;display:flex;gap:12px;align-items:flex-start}
+  .disclaimer svg{flex:none;color:var(--coral);margin-top:1px}
+
+  /* Kontakt */
+  .contact-cols{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:46px;align-items:start}
+  .info-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow-sm)}
+  .info-row{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--line)}
+  .info-row:last-child{border-bottom:none}
+  .info-row .ic{flex:none;width:42px;height:42px;border-radius:12px;background:var(--mint);display:flex;align-items:center;justify-content:center;color:var(--teal-deep)}
+  .info-row b{font-family:'Manrope';font-size:.98rem;display:block}
+  .info-row span{color:var(--slate);font-size:.9rem}
+  .map{margin-top:18px;border-radius:16px;overflow:hidden;height:200px;position:relative;
+    background:linear-gradient(135deg,#dceef0,#eaf6f3);
+    background-image:
+      linear-gradient(rgba(47,143,134,.12) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(47,143,134,.12) 1px,transparent 1px);
+    background-size:28px 28px,28px 28px;
+    display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;border:1px solid var(--line)}
+  .map .pin{width:46px;height:46px;border-radius:50% 50% 50% 0;background:var(--coral);transform:rotate(-45deg);box-shadow:0 8px 20px rgba(242,135,107,.4);position:relative}
+  .map .pin::after{content:"";position:absolute;inset:13px;background:#fff;border-radius:50%}
+  .map .maplabel{font-family:'Manrope';font-weight:700;color:var(--teal-ink);z-index:2}
+  .parking{margin-top:14px;background:var(--mint);border-radius:12px;padding:13px 16px;font-size:.86rem;color:var(--teal-ink);display:flex;gap:10px;align-items:center}
+
+  form{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow-sm)}
+  form h3{font-size:1.3rem;font-weight:800;margin-bottom:6px}
+  form .fhint{color:var(--muted);font-size:.88rem;margin-bottom:20px}
+  .field{margin-bottom:16px}
+  .field label{display:block;font-size:.84rem;font-weight:600;margin-bottom:7px;color:var(--ink)}
+  .field input,.field textarea{width:100%;padding:13px 15px;border:1.5px solid var(--line);border-radius:12px;font-family:inherit;font-size:.95rem;background:var(--ice);transition:.2s;color:var(--ink)}
+  .field input:focus,.field textarea:focus{outline:none;border-color:var(--teal);background:#fff;box-shadow:0 0 0 4px var(--mint)}
+  .field textarea{resize:vertical;min-height:96px}
+  .upload{border:1.6px dashed var(--line);border-radius:12px;padding:18px;text-align:center;color:var(--muted);font-size:.88rem;cursor:pointer;transition:.2s;background:var(--ice)}
+  .upload:hover{border-color:var(--teal);color:var(--teal-deep);background:var(--mint)}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+
+  /* Footer */
+  footer{background:var(--ink);color:#cdd9da;padding:64px 0 30px}
+  .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:40px}
+  .foot-brand .wordmark{color:#fff;font-size:1.4rem;margin-bottom:14px}
+  .foot-brand p{font-size:.9rem;color:#94a8aa;max-width:42ch}
+  .foot-col h4{color:#fff;font-family:'Manrope';font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:16px}
+  .foot-col a{display:block;color:#aebfc0;font-size:.92rem;margin-bottom:10px;transition:.2s}
+  .foot-col a:hover{color:#fff;padding-left:4px}
+  .foot-langs{display:flex;gap:8px;margin-top:6px}
+  .foot-langs span{font-size:.9rem;opacity:.8}
+  .foot-bottom{margin-top:46px;padding-top:24px;border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;font-size:.82rem;color:#7f9395}
+
+  /* Responsive */
+  @media(max-width:1080px){
+    .nav-phone span.lbl{display:none}
+  }
+  @media(max-width:980px){
+    .hero-grid{grid-template-columns:1fr;gap:40px}
+    .hero-visual{max-width:460px;margin:0 auto}
+    .tour-cols,.contact-cols{grid-template-columns:1fr}
+    .review-grid{grid-template-columns:repeat(2,1fr)}
+    .nav-links{display:none}
+    .burger{display:flex}
+    .nav-links.open{display:flex;position:absolute;top:74px;left:0;right:0;flex-direction:column;background:#fff;padding:18px clamp(20px,5vw,96px);border-bottom:1px solid var(--line);box-shadow:var(--shadow);gap:4px;white-space:normal;margin-left:0}
+    .nav-links.open a{padding:11px 0}
+    .foot-grid{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:760px){
+    .section{padding:64px 0}
+    .team-grid,.serv-grid{grid-template-columns:1fr}
+    .review-grid{grid-template-columns:1fr}
+    .grid2{grid-template-columns:1fr}
+    .burger{display:flex}
+    .nav-links.open{display:flex;position:absolute;top:74px;left:0;right:0;flex-direction:column;background:#fff;padding:18px 22px;border-bottom:1px solid var(--line);box-shadow:var(--shadow);gap:6px}
+    .nav-links.open a{padding:10px 0}
+    .foot-grid{grid-template-columns:1fr}
+    .reviews-head{flex-direction:column;align-items:flex-start}
+    .hero-badge{left:8px}
+  }
+  @media(max-width:520px){
+    .flags{display:none}
+    .nav-right .icon-btn.wa{display:none}
+  }
+
+  /* ===== Page-specific (Leistungen) ===== */
+  .page-hero{position:relative;overflow:hidden;padding:54px 0 60px;background:
+    radial-gradient(900px 480px at 82% -10%, var(--mint), transparent 60%),
+    linear-gradient(180deg,var(--ice),#fff 75%)}
+  .page-hero .crumb{font-size:.84rem;color:var(--muted);margin-bottom:18px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .page-hero .crumb a{color:var(--teal-deep);font-weight:600}
+  .page-hero .crumb a:hover{text-decoration:underline}
+  .page-hero .crumb .sep{opacity:.5}
+  .page-hero h1{font-size:clamp(2.1rem,4.4vw,3.3rem);font-weight:800;letter-spacing:-.03em;max-width:18ch}
+  .page-hero .sub{font-size:1.1rem;color:var(--slate);margin-top:18px;max-width:58ch}
+
+  /* Brand trust band */
+  .brands{background:var(--warm);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:42px 0}
+  .brands .lead-line{font-family:'Manrope';font-weight:700;font-size:1.05rem;color:var(--ink);max-width:60ch}
+  .brand-chips{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px;align-items:center}
+  .brand-chip{display:inline-flex;align-items:center;gap:9px;background:#fff;border:1px solid var(--line);
+    padding:12px 20px;border-radius:14px;box-shadow:var(--shadow-sm);font-family:'Manrope';font-weight:700;
+    font-size:1rem;color:var(--teal-ink);letter-spacing:-.01em}
+  .brand-chip .bdot{width:9px;height:9px;border-radius:50%;background:var(--teal)}
+  .brand-chip small{display:block;font-family:'Inter';font-weight:500;font-size:.74rem;color:var(--muted);letter-spacing:0}
+
+  /* Treatment sections (alternating) */
+  .treat{padding:84px 0;border-bottom:1px solid var(--line)}
+  .treat:nth-child(even){background:var(--warm)}
+  .treat-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .treat.flip .treat-media{order:2}
+  .treat-media{position:relative}
+  .treat-media .ph{border-radius:26px;overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:4/3.2;background:var(--mint)}
+  .treat-media .ph img{width:100%;height:100%;object-fit:cover}
+  .treat-media .float-badge{position:absolute;background:#fff;border-radius:16px;padding:14px 18px;box-shadow:var(--shadow);display:flex;align-items:center;gap:12px;left:-18px;bottom:26px;max-width:78%}
+  .treat.flip .treat-media .float-badge{left:auto;right:-18px}
+  .treat-media .float-badge .ic{width:42px;height:42px;border-radius:12px;background:var(--mint);display:flex;align-items:center;justify-content:center;color:var(--teal-deep);flex:none}
+  .treat-media .float-badge b{font-family:'Manrope';font-size:.96rem;display:block;line-height:1.2}
+  .treat-media .float-badge small{color:var(--muted);font-size:.78rem}
+  .treat-body .prob{color:var(--coral);font-weight:600;font-size:.9rem;margin:14px 0 8px}
+  .treat-body h2{font-size:clamp(1.7rem,3.2vw,2.4rem);font-weight:800;margin:0 0 14px}
+  .treat-body p{color:var(--slate);font-size:1.02rem;margin-bottom:14px}
+  .ben-list{list-style:none;display:grid;gap:10px;margin:18px 0 4px}
+  .ben-list li{display:flex;gap:11px;align-items:flex-start;font-size:.97rem;color:var(--ink)}
+  .ben-list li svg{flex:none;color:var(--teal);margin-top:3px}
+  .matband{display:inline-flex;align-items:center;gap:9px;background:var(--mint);border:1px solid #d6ece7;color:var(--teal-ink);
+    font-size:.84rem;font-weight:600;padding:9px 15px;border-radius:999px;margin-top:18px}
+  .proc{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+  .proc .pstep{display:flex;align-items:center;gap:9px;background:#fff;border:1px solid var(--line);border-radius:12px;
+    padding:10px 14px;font-size:.86rem;color:var(--slate);box-shadow:var(--shadow-sm)}
+  .proc .pstep b{font-family:'Manrope';color:var(--teal);font-size:.95rem}
+  .price-soft{margin-top:20px;font-size:.86rem;color:var(--muted)}
+  .price-soft a{color:var(--teal-deep);font-weight:600;text-decoration:underline}
+
+  /* CTA */
+  .cta-final{background:linear-gradient(150deg,var(--teal-ink),var(--teal-deep));color:#fff;padding:84px 0}
+  .cta-final .wrap{text-align:center;max-width:760px}
+  .cta-final h2{color:#fff;font-size:clamp(1.8rem,3.4vw,2.6rem);font-weight:800;margin:12px 0 16px}
+  .cta-final p{color:rgba(255,255,255,.86);font-size:1.08rem;max-width:56ch;margin:0 auto 28px}
+  .cta-final .eyebrow{color:#bdeee6}
+  .cta-final .eyebrow::before{background:var(--coral)}
+  .cta-final .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .cta-final .btn-ghost{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.3)}
+  .cta-final .btn-ghost:hover{background:rgba(255,255,255,.16);border-color:#fff}
+
+  @media(max-width:980px){
+    .treat-grid{grid-template-columns:1fr;gap:36px}
+    .treat.flip .treat-media{order:0}
+    .treat.flip .treat-media .float-badge{right:auto;left:-18px}
+  }
+  @media(max-width:760px){
+    .treat{padding:60px 0}
+    .treat-media .float-badge{left:8px;max-width:84%}
+    .treat.flip .treat-media .float-badge{left:8px}
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="wrap">
+    <nav class="nav">
+      <a href="index.html" class="wordmark"><span class="dot"></span>Bedek Dental</a>
+      <div class="nav-links" id="navlinks">
+        <a href="index.html">Početna</a>
+        <a href="leistungen.html" class="active">Usluge</a>
+        <a href="team.html">O nama</a>
+        <a href="zahntourismus.html">Dentalni turizam</a>
+        <a href="kontakt.html">Kontakt</a>
+      </div>
+      <div class="nav-right">
+        <div class="flags" id="flags">
+          <a href="../de/leistungen.html" title="Deutsch"><img src="https://flagcdn.com/de.svg" alt="Deutsch"></a>
+          <a href="../en/leistungen.html" title="English"><img src="https://flagcdn.com/gb.svg" alt="English"></a>
+          <a href="../hr/leistungen.html" title="Hrvatski" class="active"><img src="https://flagcdn.com/hr.svg" alt="Hrvatski"></a>
+          <a href="../it/leistungen.html" title="Italiano"><img src="https://flagcdn.com/it.svg" alt="Italiano"></a>
+        </div>
+        <a href="tel:+385957299112" class="nav-phone"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.74-1.27a2 2 0 0 1 2.11-.45c.74.34 1.53.57 2.34.7A2 2 0 0 1 22 16.92z"/></svg><span class="lbl">+385 95 729 9112</span></a>
+        <a href="https://wa.me/385957299112" class="icon-btn wa" title="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 0 0 1.51 5.26l-.999 3.648 3.748-.984zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.074-.149-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a>
+        <a href="kontakt.html" class="btn btn-primary" style="padding:11px 20px">Zatražite termin</a>
+        <button class="burger" id="burger" aria-label="Izbornik"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="wrap reveal in">
+    <div class="crumb">
+      <a href="index.html">Početna</a><span class="sep">›</span><span>Usluge</span>
+    </div>
+    <span class="eyebrow">Usluge</span>
+    <h1>Vrhunska dentalna medicina za svaku potrebu</h1>
+    <p class="sub">Od akutnog problema do blistavog osmijeha – uz prvoklasne materijale, najsuvremeniju dijagnostiku i iskreno savjetovanje koje uvijek u središte stavlja očuvanje vaših zuba.</p>
+  </div>
+</section>
+
+<!-- BRAND TRUST BAND -->
+<section class="brands">
+  <div class="wrap reveal">
+    <span class="eyebrow">Premium marke</span>
+    <p class="lead-line" style="margin-top:12px">Radimo isključivo sa svjetski priznatim premium sustavima – za rezultate koji traju desetljećima.</p>
+    <div class="brand-chips">
+      <span class="brand-chip"><span class="bdot"></span>Straumann<small>Švicarski implantatni sustav</small></span>
+      <span class="brand-chip"><span class="bdot"></span>Nobel Biocare<small>Svjetska marka u implantologiji</small></span>
+      <span class="brand-chip"><span class="bdot"></span>Cirkonij<small>Visokočvrsta puna keramika</small></span>
+      <span class="brand-chip"><span class="bdot"></span>E-max<small>Litij-disilikatna keramika</small></span>
+    </div>
+  </div>
+</section>
+
+<!-- TREATMENT: IMPLANTATE -->
+<section class="treat">
+  <div class="wrap treat-grid">
+    <div class="treat-media reveal">
+      <div class="ph"><img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=900&q=80" alt="Zubni implantat – model i liječenje" loading="lazy"></div>
+      <div class="float-badge">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div>
+        <div><b>Fiksno i trajno</b><small>Kao vlastiti zub</small></div>
+      </div>
+    </div>
+    <div class="treat-body reveal">
+      <span class="eyebrow">Implantati</span>
+      <div class="prob">Nedostaje vam zub? Labava proteza? Praznina pri osmijehu?</div>
+      <h2>Fiksni zubni nadomjestak koji ostaje.</h2>
+      <p>Implantat je umjetni korijen zuba od visokočistog titana koji čvrsto srasta s čeljusnom kosti. Na njega postavljamo individualno izrađenu krunicu – praznina nestaje, a da pritom nije potrebno brusiti zdrave susjedne zube.</p>
+      <ul class="ben-list">
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Čvrsto uporište – sigurno žvakanje, govor i osmijeh bez klimanja</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Očuvanje kosti – implantat opterećuje čeljust poput pravog korijena i sprječava gubitak kosti</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Osjeća se kao vlastiti zub – susjedni zubi ostaju netaknuti</li>
+      </ul>
+      <span class="matband"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.5 6.5L21 9l-5 4 1.5 7L12 16l-5.5 4L8 13 3 9l6.5-.5z"/></svg>Premium sustavi: Straumann i Nobel Biocare</span>
+      <div class="proc">
+        <span class="pstep"><b>1</b>Dijagnostika i 3D planiranje</span>
+        <span class="pstep"><b>2</b>Nježno ugrađivanje implantata</span>
+        <span class="pstep"><b>3</b>Faza cijeljenja</span>
+        <span class="pstep"><b>4</b>Individualna krunica</span>
+      </div>
+      <p class="price-soft">Transparentne okvirne vrijednosti troškova i doprinosa zdravstvenog osiguranja pronaći ćete na stranici <a href="zahntourismus.html">Dentalni turizam</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TREATMENT: KRONEN & VENEERS -->
+<section class="treat flip">
+  <div class="wrap treat-grid">
+    <div class="treat-media reveal">
+      <div class="ph"><img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=900&q=80" alt="Keramičke ljuskice i uzorci boja krunica" loading="lazy"></div>
+      <div class="float-badge">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 4v5c0 4-3 7-7 9-4-2-7-5-7-9V7z"/></svg></div>
+        <div><b>Prirodan izgled</b><small>Cirkonij i E-max</small></div>
+      </div>
+    </div>
+    <div class="treat-body reveal">
+      <span class="eyebrow">Krunice i ljuskice</span>
+      <div class="prob">Slomljeno, promijenjene boje ili niste zadovoljni oblikom?</div>
+      <h2>Estetika koja se ne prepoznaje – jer djeluje posve prirodno.</h2>
+      <p>Krunice u potpunosti obavijaju oslabljeni zub i vraćaju mu stabilnost. Ljuskice (veneeri) tanke su keramičke pločice za vidljive prednje zube. Oboje izrađujemo digitalno planirano od vrhunske pune keramike – za rezultat koji se besprijekorno uklapa u vaš osmijeh.</p>
+      <ul class="ben-list">
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Prirodan izgled u obliku i boji – propušta svjetlost poput prave cakline</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Biokompatibilno i bez metala – dobro se podnosi, bez tamnih rubova uz desni</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Dugotrajno i visokočvrsto – cirkonij i E-max odolijevaju dugogodišnjem opterećenju pri žvakanju</li>
+      </ul>
+      <span class="matband"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.5 6.5L21 9l-5 4 1.5 7L12 16l-5.5 4L8 13 3 9l6.5-.5z"/></svg>Materijali: cirkonij i puna keramika / E-max · digitalno planirano</span>
+      <div class="proc">
+        <span class="pstep"><b>1</b>Digitalni sken</span>
+        <span class="pstep"><b>2</b>Planiranje boje i oblika</span>
+        <span class="pstep"><b>3</b>Precizna izrada</span>
+        <span class="pstep"><b>4</b>Ugradnja</span>
+      </div>
+      <p class="price-soft">Transparentne okvirne vrijednosti troškova i doprinosa zdravstvenog osiguranja pronaći ćete na stranici <a href="zahntourismus.html">Dentalni turizam</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TREATMENT: ÄSTHETIK & BLEACHING -->
+<section class="treat">
+  <div class="wrap treat-grid">
+    <div class="treat-media reveal">
+      <div class="ph"><img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=900&q=80" alt="Blistavo svijetao osmijeh nakon profesionalnog izbjeljivanja" loading="lazy"></div>
+      <div class="float-badge">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19"/></svg></div>
+        <div><b>Štedljivo prema zubu</b><small>Caklina ostaje netaknuta</small></div>
+      </div>
+    </div>
+    <div class="treat-body reveal">
+      <span class="eyebrow">Estetika i izbjeljivanje</span>
+      <div class="prob">Zubi promijenjene boje od kave, čaja ili crnog vina?</div>
+      <h2>Svjetliji osmijeh – nježno i profesionalno.</h2>
+      <p>Naše profesionalno izbjeljivanje obzirno uklanja promjene boje i prilagođava se vašoj caklini. Prije svakog tretmana provjeravamo zdravlje zuba – jer lijep osmijeh počinje zdravim zubima, a ne sredstvom za izbjeljivanje.</p>
+      <ul class="ben-list">
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Vidljivo svjetliji osmijeh – prirodan i ujednačen</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Štedljivo prema zubnoj supstanci – prilagođeno vašoj caklini, bez oštećivanja</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Pod profesionalnim nadzorom – umjesto rizičnih kućnih metoda</li>
+      </ul>
+      <span class="matband"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.5 6.5L21 9l-5 4 1.5 7L12 16l-5.5 4L8 13 3 9l6.5-.5z"/></svg>Profesionalno izbjeljivanje · štedljivo prema zubu</span>
+      <p class="price-soft">Transparentne okvirne vrijednosti troškova i doprinosa zdravstvenog osiguranja pronaći ćete na stranici <a href="zahntourismus.html">Dentalni turizam</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TREATMENT: ALLGEMEINE ZAHNMEDIZIN & PROPHYLAXE -->
+<section class="treat flip">
+  <div class="wrap treat-grid">
+    <div class="treat-media reveal">
+      <div class="ph"><img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=900&q=80" alt="Dentalna prevencija i profesionalna kontrola" loading="lazy"></div>
+      <div class="float-badge">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
+        <div><b>Prvo prevencija</b><small>Rano prepoznavanje problema</small></div>
+      </div>
+    </div>
+    <div class="treat-body reveal">
+      <span class="eyebrow">Opća dentalna medicina i profilaksa</span>
+      <div class="prob">Kontrola, bolovi ili jednostavno prevencija?</div>
+      <h2>Očuvati zdrave zube – prije nego što budu potrebni veći zahvati.</h2>
+      <p>Najbolji je onaj zahvat koji uopće ne postane potreban. Redovitom profilaksom, profesionalnim čišćenjem zuba i temeljitom dijagnostikom probleme prepoznajemo rano. Ondje gdje je sanacija potrebna, radimo štedljivo i čuvamo što više zdravog zuba.</p>
+      <ul class="ben-list">
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Prevencija i profesionalno čišćenje – za dugoročno zdrave zube</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Štedljivi ispuni u boji zuba – estetski i stabilni</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Iskrena dijagnostika – samo ono što vašim zubima zaista pomaže</li>
+      </ul>
+      <span class="matband"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.5 6.5L21 9l-5 4 1.5 7L12 16l-5.5 4L8 13 3 9l6.5-.5z"/></svg>Profilaksa · profesionalno čišćenje · ispuni u boji zuba</span>
+      <p class="price-soft">Transparentne okvirne vrijednosti troškova i doprinosa zdravstvenog osiguranja pronaći ćete na stranici <a href="zahntourismus.html">Dentalni turizam</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TREATMENT: ENDODONTIE -->
+<section class="treat">
+  <div class="wrap treat-grid">
+    <div class="treat-media reveal">
+      <div class="ph"><img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=900&q=80" alt="Suvremena tehnika pri liječenju korijenskog kanala" loading="lazy"></div>
+      <div class="float-badge">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2c-1 0-2 .8-2 2 0 1.5 1 2 1 4 0 3-2 4-2 8 0 3 1 6 3 6s3-3 3-6c0-4-2-5-2-8 0-2 1-2.5 1-4 0-1.2-1-2-2-2z"/></svg></div>
+        <div><b>Specijalnost</b><small>Doktorica Martina Laktić</small></div>
+      </div>
+    </div>
+    <div class="treat-body reveal">
+      <span class="eyebrow">Endodoncija · liječenje korijenskog kanala</span>
+      <div class="prob">Jaki bolovi ili upaljeni korijen zuba?</div>
+      <h2>Spasiti vlastiti zub – umjesto da ga izgubite.</h2>
+      <p>Liječenje korijenskog kanala oslobađa zub upale u unutrašnjosti i tako ga trajno čuva. To je posebna specijalnost naše doktorice Martine Laktić, koja radi sa suvremenom tehnikom i mnogo osjećaja – kako bi vaš prirodni zub ostao očuvan.</p>
+      <ul class="ben-list">
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Očuvanje zuba – vlastiti zub ostaje umjesto da bude izvađen</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Suvremena tehnika – precizna obrada finih korijenskih kanala</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Specijalizirana skrb – specijalnost doktorice Martine Laktić</li>
+      </ul>
+      <span class="matband"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.5 6.5L21 9l-5 4 1.5 7L12 16l-5.5 4L8 13 3 9l6.5-.5z"/></svg>Suvremena endodoncija · očuvanje zuba</span>
+      <p class="price-soft">Više o našim stručnjacima saznajte na stranici <a href="team.html">O nama</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section class="philo">
+  <div class="wrap">
+    <span class="eyebrow">Naš stav</span>
+    <div class="quote-mark">„</div>
+    <h2>Zdravlje prije estetike.<br>Bez nepotrebnih zahvata.</h2>
+    <p>Savjetujemo konzervativno i iskreno: u središtu je ono što vašim zubima zaista pomaže – a ne najveći mogući zahvat. Štedljivo prema zubnoj supstanci, dugoročno i sa smirenošću koja dolazi iz desetljeća iskustva. Tako nastaje povjerenje koje ostaje.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-final">
+  <div class="wrap">
+    <span class="eyebrow">Prva konzultacija</span>
+    <h2>Prva konzultacija bez obveze – savjetujemo vas iskreno.</h2>
+    <p>Ispričajte nam svoj upit. Uzimamo si vremena, pomno pregledavamo i preporučujemo samo ono što vašim zubima zaista pomaže – bez ikakvog pritiska.</p>
+    <div class="btns">
+      <a href="kontakt.html" class="btn btn-coral">Zatražite konzultaciju</a>
+      <a href="zahntourismus.html" class="btn btn-ghost">Pogledajte troškove i osiguranje</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="wordmark" style="color:#fff"><span class="dot"></span>Bedek Dental</div>
+        <p>Ordinacija dentalne medicine dr.sc. Ivan Bedek, dr.med.dent.<br>Zatišje 6/1, 10000 Zagreb · Svježe renovirana ordinacija u stražnjem dvorištu.</p>
+        <div class="foot-langs">
+          <a href="../de/leistungen.html"><img src="https://flagcdn.com/de.svg" alt="Deutsch" width="26" height="18" style="border-radius:3px"></a>
+          <a href="../en/leistungen.html"><img src="https://flagcdn.com/gb.svg" alt="English" width="26" height="18" style="border-radius:3px"></a>
+          <a href="../hr/leistungen.html"><img src="https://flagcdn.com/hr.svg" alt="Hrvatski" width="26" height="18" style="border-radius:3px"></a>
+          <a href="../it/leistungen.html"><img src="https://flagcdn.com/it.svg" alt="Italiano" width="26" height="18" style="border-radius:3px"></a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>Navigacija</h4>
+        <a href="index.html">Početna</a>
+        <a href="leistungen.html">Usluge</a>
+        <a href="team.html">O nama</a>
+        <a href="zahntourismus.html">Dentalni turizam</a>
+        <a href="kontakt.html">Kontakt</a>
+      </div>
+      <div class="foot-col">
+        <h4>Kontakt</h4>
+        <a href="tel:+385957299112">+385 95 729 9112</a>
+        <a href="https://wa.me/385957299112">WhatsApp</a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Zati%C5%A1je+6,+10000+Zagreb" target="_blank" rel="noopener">Isplanirajte put</a>
+        <a href="kontakt.html">Zatražite termin</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Bedek Dental · Ordinacija dentalne medicine dr.sc. Ivan Bedek, dr.med.dent.</span>
+      <span>Stanje: lipanj 2026. Ne predstavlja pravni ni medicinski savjet.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile nav
+  var burger=document.getElementById('burger'),nl=document.getElementById('navlinks');
+  burger&&burger.addEventListener('click',function(){nl.classList.toggle('open')});
+  nl&&nl.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nl.classList.remove('open')})});
+  // Flags
+  document.querySelectorAll('.flags button').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('.flags button').forEach(function(x){x.classList.remove('active')});b.classList.add('active')})});
+  // Reveal on scroll
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+</script>
+</body>
+</html>

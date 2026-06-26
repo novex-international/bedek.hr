@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="it">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Zahntourismus & Krankenkasse – Bedek Dental Zagreb</title>
-<meta name="description" content="Erstklassige Zahnmedizin in Zagreb – transparent und nah. So zahlt Ihre deutsche Krankenkasse mit: Festzuschuss, Heil- und Kostenplan (HKP) und Ablauf nach EU-Recht. Persönliche deutschsprachige Betreuung bei Bedek Dental." />
+<title>Turismo dentale &amp; cassa malattia – Bedek Dental Zagabria</title>
+<meta name="description" content="Odontoiatria di prima classe a Zagabria – trasparente e vicina. Ecco come la vostra cassa malattia tedesca partecipa: contributo fisso, piano di cura e dei costi (HKP) e procedura secondo il diritto UE. Assistenza personale in italiano da Bedek Dental." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -93,6 +93,10 @@
   .flags button:hover{opacity:1;background:var(--ice)}
   .flags button.active{opacity:1;background:var(--mint);box-shadow:inset 0 0 0 1.5px var(--teal)}
   .flags button img{display:block;width:24px;height:17px;object-fit:cover;border-radius:3px;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+  .flags a{display:inline-flex;padding:5px 6px;border-radius:8px;opacity:.55;transition:.2s}
+  .flags a:hover{opacity:1;background:var(--ice)}
+  .flags a.active{opacity:1;background:var(--mint);box-shadow:inset 0 0 0 1.5px var(--teal)}
+  .flags a img{display:block;width:24px;height:17px;object-fit:cover;border-radius:3px;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
   .nav-phone{display:flex;align-items:center;gap:7px;font-family:'Manrope';font-weight:700;font-size:.92rem;color:var(--teal-deep);white-space:nowrap;flex-shrink:0}
   .icon-btn{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:var(--mint);color:var(--teal-deep);transition:.2s}
   .icon-btn:hover{background:var(--teal);color:#fff;transform:translateY(-2px)}
@@ -415,23 +419,23 @@
     <nav class="nav">
       <a href="index.html" class="wordmark"><span class="dot"></span>Bedek Dental</a>
       <div class="nav-links" id="navlinks">
-        <a href="index.html">Start</a>
-        <a href="leistungen.html">Leistungen</a>
-        <a href="team.html">Über uns</a>
-        <a href="zahntourismus.html" class="active">Zahntourismus</a>
-        <a href="kontakt.html">Kontakt</a>
+        <a href="index.html">Home</a>
+        <a href="leistungen.html">Prestazioni</a>
+        <a href="team.html">Chi siamo</a>
+        <a href="zahntourismus.html" class="active">Turismo dentale</a>
+        <a href="kontakt.html">Contatti</a>
       </div>
       <div class="nav-right">
         <div class="flags" id="flags">
-          <button class="active" title="Deutsch"><img src="https://flagcdn.com/de.svg" alt="Deutsch" loading="lazy"></button>
-          <button title="English"><img src="https://flagcdn.com/gb.svg" alt="English" loading="lazy"></button>
-          <button title="Hrvatski"><img src="https://flagcdn.com/hr.svg" alt="Hrvatski" loading="lazy"></button>
-          <button title="Italiano"><img src="https://flagcdn.com/it.svg" alt="Italiano" loading="lazy"></button>
+          <a href="../de/zahntourismus.html" title="Deutsch"><img src="https://flagcdn.com/de.svg" alt="Deutsch"></a>
+          <a href="../en/zahntourismus.html" title="English"><img src="https://flagcdn.com/gb.svg" alt="English"></a>
+          <a href="../hr/zahntourismus.html" title="Hrvatski"><img src="https://flagcdn.com/hr.svg" alt="Hrvatski"></a>
+          <a href="../it/zahntourismus.html" title="Italiano" class="active"><img src="https://flagcdn.com/it.svg" alt="Italiano"></a>
         </div>
         <a href="tel:+385957299112" class="nav-phone"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.74-1.27a2 2 0 0 1 2.11-.45c.74.34 1.53.57 2.34.7A2 2 0 0 1 22 16.92z"/></svg><span class="lbl">+385 95 729 9112</span></a>
         <a href="https://wa.me/385957299112" class="icon-btn wa" title="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 0 0 1.51 5.26l-.999 3.648 3.748-.984zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.074-.149-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a>
-        <a href="kontakt.html" class="btn btn-primary" style="padding:11px 20px">Termin anfragen</a>
-        <button class="burger" id="burger" aria-label="Menü"><span></span><span></span><span></span></button>
+        <a href="kontakt.html" class="btn btn-primary" style="padding:11px 20px">Richiedi un appuntamento</a>
+        <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
       </div>
     </nav>
   </div>
@@ -440,11 +444,11 @@
 <!-- PAGE HERO -->
 <section class="pagehero">
   <div class="wrap">
-    <span class="eyebrow">Zahntourismus & Krankenkasse</span>
-    <h1>Erstklassige Zahnmedizin in Zagreb – <span class="accent">transparent und nah</span></h1>
-    <p class="sub">Dieselben Premium-Markensysteme wie in Deutschland, ein promovierter Zahnarzt und persönliche deutschsprachige Betreuung. Innerhalb der EU klar geregelt – Ihre gesetzliche Krankenkasse zahlt den Festzuschuss mit.</p>
-    <nav class="crumb" aria-label="Brotkrümel">
-      <a href="index.html">Start</a><span class="sep">›</span><span>Zahntourismus</span>
+    <span class="eyebrow">Turismo dentale e cassa malattia</span>
+    <h1>Odontoiatria di prima classe a Zagabria – <span class="accent">trasparente e vicina</span></h1>
+    <p class="sub">Gli stessi sistemi premium di marca della Germania, un dentista con dottorato di ricerca e una dentista pluripremiata e assistenza personale in italiano. Chiaramente regolamentato all'interno dell'UE – la vostra cassa malattia obbligatoria tedesca partecipa con il contributo fisso.</p>
+    <nav class="crumb" aria-label="Briciole di pane">
+      <a href="index.html">Home</a><span class="sep">›</span><span>Turismo dentale</span>
     </nav>
   </div>
 </section>
@@ -453,33 +457,33 @@
 <section class="section">
   <div class="wrap">
     <div class="reveal" style="max-width:720px">
-      <span class="eyebrow">Warum Zagreb · Warum Bedek</span>
-      <h2>Qualität zuerst – die Ersparnis ergibt sich von selbst</h2>
-      <p class="lead">Eine gute Entscheidung trifft man nicht über den Preis, sondern über das Vertrauen. Bei uns erhalten Sie hochwertige Zahnmedizin auf europäischem Spitzenniveau – ruhig, ehrlich und ohne unnötige Eingriffe.</p>
+      <span class="eyebrow">Perché Zagabria · Perché Bedek</span>
+      <h2>Prima la qualità – il risparmio viene da sé</h2>
+      <p class="lead">Una buona decisione non si prende in base al prezzo, ma in base alla fiducia. Da noi ricevete un'odontoiatria di alta qualità ai massimi livelli europei – con serenità, onestà e senza interventi superflui.</p>
     </div>
     <div class="media-cols">
       <div class="reveal">
         <div class="feat-list">
           <div class="feat">
             <div class="fic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 2c-1 0-2 .8-2 2 0 1.5 1 2 1 4 0 3-2 4-2 8 0 3 1 6 3 6s3-3 3-6c0-4-2-5-2-8 0-2 1-2.5 1-4 0-1.2-1-2-2-2z"/></svg></div>
-            <div><b>Dieselben Premium-Marken wie in Deutschland</b><span>Implantate von Straumann und Nobel Biocare, hochwertiges Zirkon und Vollkeramik – identische Markensysteme, identische Standards.</span></div>
+            <div><b>Gli stessi marchi premium della Germania</b><span>Impianti Straumann e Nobel Biocare, zirconio di alta qualità e ceramica integrale – sistemi di marca identici, standard identici.</span></div>
           </div>
           <div class="feat">
             <div class="fic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
-            <div><b>Promovierter Zahnarzt (dr.sc.)</b><span>dr.sc. Ivan Bedek verbindet wissenschaftliche Präzision mit jahrzehntelanger Familientradition – Behandlung, die fundiert und nachvollziehbar ist.</span></div>
+            <div><b>Dentista con dottorato di ricerca (dr.sc.)</b><span>dr.sc. Ivan Bedek unisce la precisione scientifica a una tradizione familiare decennale – un trattamento fondato e comprensibile.</span></div>
           </div>
           <div class="feat">
             <div class="fic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-            <div><b>Persönliche deutschsprachige Betreuung</b><span>Von der ersten Anfrage bis zur Nachsorge: Beratung und Termine auf Deutsch – ohne Sprachbarriere, mit echter Ansprechperson.</span></div>
+            <div><b>Assistenza personale in italiano</b><span>Dalla prima richiesta al follow-up: consulenza e appuntamenti in italiano – senza barriere linguistiche, con una persona di riferimento reale.</span></div>
           </div>
           <div class="feat">
             <div class="fic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-            <div><b>Kurze, unkomplizierte Anreise</b><span>Zagreb ist mit Direktflügen, Bahn und Auto gut erreichbar. Viele Behandlungen lassen sich auf wenige Reisen bündeln.</span></div>
+            <div><b>Un viaggio breve e semplice</b><span>Zagabria è ben raggiungibile con voli diretti, treno e auto. Molti trattamenti si possono concentrare in pochi viaggi.</span></div>
           </div>
         </div>
       </div>
       <div class="media-figure reveal">
-        <img src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?auto=format&fit=crop&w=1000&q=80" alt="Zagreb – gut erreichbare Stadt in der EU" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?auto=format&fit=crop&w=1000&q=80" alt="Zagabria – città ben raggiungibile nell'UE" loading="lazy">
       </div>
     </div>
   </div>
@@ -489,74 +493,74 @@
 <section class="section tour" id="erstattung">
   <div class="wrap">
     <div class="reveal tour-head">
-      <span class="eyebrow">Krankenkassen-Erstattung</span>
-      <h2>Ihre deutsche Krankenkasse zahlt mit – klar geregelt durch EU-Recht</h2>
-      <p class="lead">Seit dem EU-Beitritt Kroatiens 2013 gilt die EU-Richtlinie 2011/24/EU zur grenzüberschreitenden Gesundheitsversorgung. Gesetzlich Versicherte erhalten denselben Festzuschuss wie bei einer Behandlung in Deutschland – auf Grundlage von §13 Abs. 4/5 SGB V.</p>
+      <span class="eyebrow">Rimborso della cassa malattia</span>
+      <h2>La vostra cassa malattia tedesca partecipa – chiaramente regolato dal diritto UE</h2>
+      <p class="lead">Dall'adesione della Croazia all'UE nel 2013 si applica la direttiva UE 2011/24/UE sull'assistenza sanitaria transfrontaliera. Gli assicurati del sistema obbligatorio ricevono lo stesso contributo fisso previsto per un trattamento in Germania – sulla base del §13 commi 4/5 SGB V.</p>
     </div>
 
     <div class="media-cols rev" style="margin-top:46px">
       <div class="media-figure reveal">
-        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1000&q=80" alt="Heil- und Kostenplan und Beratung in moderner Zahnarztpraxis" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1000&q=80" alt="Piano di cura e dei costi e consulenza in uno studio dentistico moderno" loading="lazy">
       </div>
       <div class="reveal">
-        <h3 style="font-size:1.4rem;font-weight:800;margin-bottom:10px">Wie der Festzuschuss funktioniert</h3>
-        <p style="color:var(--slate)">Die gesetzliche Krankenkasse (GKV) erstattet den <b>befundbezogenen Festzuschuss der Regelversorgung</b> nach §55 SGB V. Das ist ein fester Betrag, der sich nach Ihrem Befund richtet – unabhängig davon, ob Sie sich in Deutschland oder in Zagreb behandeln lassen. Mit gepflegtem Bonusheft steigt Ihr Anteil:</p>
+        <h3 style="font-size:1.4rem;font-weight:800;margin-bottom:10px">Come funziona il contributo fisso</h3>
+        <p style="color:var(--slate)">La cassa malattia obbligatoria (GKV) rimborsa il <b>contributo fisso delle cure standard in base alla diagnosi</b> ai sensi del §55 SGB V. È un importo fisso che dipende dalla vostra diagnosi – indipendentemente dal fatto che vi facciate trattare in Germania o a Zagabria. Con un libretto bonus regolare la vostra quota aumenta:</p>
         <div class="tiers">
-          <div class="tier"><div class="pct">60 %</div><small>ohne Bonus</small></div>
-          <div class="tier"><div class="pct">70 %</div><small>5 Jahre Bonusheft</small></div>
-          <div class="tier"><div class="pct">75 %</div><small>10 Jahre Bonusheft</small></div>
-          <div class="tier high"><div class="pct">100 %</div><small>Härtefallregelung</small></div>
+          <div class="tier"><div class="pct">60 %</div><small>senza bonus</small></div>
+          <div class="tier"><div class="pct">70 %</div><small>5 anni di libretto bonus</small></div>
+          <div class="tier"><div class="pct">75 %</div><small>10 anni di libretto bonus</small></div>
+          <div class="tier high"><div class="pct">100 %</div><small>regola per casi di difficoltà</small></div>
         </div>
-        <p style="color:var(--muted);font-size:.86rem;margin-top:16px">Stufen der Regelversorgung 2026, jeweils bezogen auf den Festzuschuss des Befundes.</p>
+        <p style="color:var(--muted);font-size:.86rem;margin-top:16px">Livelli delle cure standard 2026, ciascuno riferito al contributo fisso della diagnosi.</p>
       </div>
     </div>
 
     <div class="ins-box reveal" style="margin-top:40px">
-      <h3>Festzuschuss-Beispiele 2026 (zur Orientierung)</h3>
+      <h3>Esempi di contributo fisso 2026 (a titolo orientativo)</h3>
       <div class="cost-table">
-        <div class="cost-row"><span>Krone – Festzuschuss</span><b>ca. 239 € – 299 €</b></div>
-        <div class="cost-row"><span>Brücke (Einzelzahnlücke) – Festzuschuss</span><b>ca. 553 € – 691 €</b></div>
+        <div class="cost-row"><span>Corona – contributo fisso</span><b>ca. 239 € – 299 €</b></div>
+        <div class="cost-row"><span>Ponte (vuoto di un dente) – contributo fisso</span><b>ca. 553 € – 691 €</b></div>
       </div>
-      <p class="richt">Jeweils von „ohne Bonus" (60 %) bis „maximaler Bonus" (75 %). Werte zur Orientierung – maßgeblich ist Ihr individueller Befund und der Bescheid Ihrer Kasse.</p>
+      <p class="richt">Rispettivamente da „senza bonus" (60 %) a „bonus massimo" (75 %). Valori a titolo orientativo – ciò che conta è la vostra diagnosi individuale e la decisione della vostra cassa.</p>
     </div>
 
     <div class="honest reveal" style="margin-top:30px">
-      <b>Wichtig: Zahnersatz ist vorab genehmigungspflichtig</b>
-      <p>Zahnersatz und Implantate müssen <b>vor Behandlungsbeginn</b> von Ihrer Krankenkasse genehmigt werden. Ohne genehmigten Heil- und Kostenplan (HKP) vor der Behandlung gibt es keinen Zuschuss. Reichen Sie den HKP daher immer rechtzeitig ein – wir bereiten ihn für Sie vor.</p>
+      <b>Importante: le protesi richiedono l'approvazione preventiva</b>
+      <p>Protesi e impianti devono essere approvati dalla vostra cassa malattia <b>prima dell'inizio del trattamento</b>. Senza un piano di cura e dei costi (HKP) approvato prima della cura non c'è alcun contributo. Presentate quindi sempre l'HKP per tempo – lo prepariamo noi per voi.</p>
     </div>
 
-    <h3 style="font-size:1.4rem;font-weight:800;margin:48px 0 0" class="reveal">In 4 Schritten zur Erstattung</h3>
+    <h3 style="font-size:1.4rem;font-weight:800;margin:48px 0 0" class="reveal">In 4 passi verso il rimborso</h3>
     <div class="stepgrid">
       <div class="stepcard reveal">
         <div class="n">1</div>
-        <b>HKP erstellen</b>
-        <p>Wir erstellen Ihren Heil- und Kostenplan auf dem deutschen Kassenformular.</p>
+        <b>Creazione dell'HKP</b>
+        <p>Creiamo il vostro piano di cura e dei costi sul modulo della cassa tedesca.</p>
       </div>
       <div class="stepcard reveal">
         <div class="n">2</div>
-        <b>Vorab einreichen</b>
-        <p>Sie reichen den HKP <b>vor der Behandlung</b> bei Ihrer Krankenkasse ein.</p>
+        <b>Presentazione preventiva</b>
+        <p>Presentate l'HKP <b>prima del trattamento</b> alla vostra cassa malattia.</p>
       </div>
       <div class="stepcard reveal">
         <div class="n">3</div>
-        <b>Genehmigung</b>
-        <p>Die Kasse prüft (in der Regel ca. 3 Wochen) und genehmigt den Festzuschuss.</p>
+        <b>Approvazione</b>
+        <p>La cassa verifica (di norma ca. 3 settimane) e approva il contributo fisso.</p>
       </div>
       <div class="stepcard reveal">
         <div class="n">4</div>
-        <b>Behandlung & Erstattung</b>
-        <p>Behandlung in Zagreb; die Erstattung erfolgt nach Vorlage der Rechnung.</p>
+        <b>Trattamento e rimborso</b>
+        <p>Trattamento a Zagabria; il rimborso avviene dietro presentazione della fattura.</p>
       </div>
     </div>
 
     <div class="honest reveal" style="margin-top:34px">
-      <b>Ehrlich gesagt – was die GKV nicht abdeckt</b>
-      <p>Bei Implantaten oder hochwertiger Keramik zahlt die gesetzliche Kasse meist nur den Festzuschuss der Regelversorgung. Den darüber hinausgehenden Mehrbetrag und die Reisekosten tragen Sie selbst. Dafür profitieren Sie von <b>2 Jahren Gewährleistung</b> auf Zahnersatz – und wir denken die Nachsorge von Anfang an mit. So wissen Sie vorher genau, woran Sie sind.</p>
+      <b>A dire il vero – ciò che la GKV non copre</b>
+      <p>Per impianti o ceramica di alta qualità la cassa obbligatoria di norma versa solo il contributo fisso delle cure standard. L'importo eccedente e le spese di viaggio sono a vostro carico. In compenso beneficiate di <b>2 anni di garanzia</b> sulle protesi – e pensiamo al follow-up fin dall'inizio. Così sapete in anticipo esattamente a cosa andate incontro.</p>
     </div>
 
     <div class="disclaimer reveal">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v5M12 16h.01"/></svg>
-      <div><b style="font-family:'Manrope'">Hinweis:</b> Keine Rechts- oder Steuerberatung. Die genaue Erstattung klären Sie bitte individuell mit Ihrer Krankenkasse. Grundlage ist das EU-Recht zur grenzüberschreitenden Gesundheitsversorgung (EU-RL 2011/24/EU, §13 SGB V).</div>
+      <div><b style="font-family:'Manrope'">Nota:</b> Nessuna consulenza legale o fiscale. Il rimborso esatto va chiarito individualmente con la vostra cassa malattia. Il riferimento è il diritto UE sull'assistenza sanitaria transfrontaliera (Dir. UE 2011/24/UE, §13 SGB V).</div>
     </div>
   </div>
 </section>
@@ -565,27 +569,27 @@
 <section class="section">
   <div class="wrap">
     <div class="reveal" style="max-width:720px">
-      <span class="eyebrow">Kosten-Orientierung</span>
-      <h2>Transparente Richtwerte – fair und nachvollziehbar</h2>
-      <p class="lead">Damit Sie planen können, finden Sie hier marktübliche Richtwerte kroatischer Kliniken. Verstehen Sie diese als Orientierung – Ihr verbindlicher Preis ergibt sich nach individuellem Befund und persönlichem Kostenvoranschlag.</p>
+      <span class="eyebrow">Orientamento sui costi</span>
+      <h2>Valori indicativi trasparenti – equi e comprensibili</h2>
+      <p class="lead">Per permettervi di pianificare, qui trovate i valori indicativi di mercato delle cliniche croate. Considerateli come orientamento – il vostro prezzo vincolante dipenderà dalla diagnosi individuale e da un preventivo personale.</p>
     </div>
     <div class="pricetable reveal">
       <table>
         <thead>
-          <tr><th>Leistung</th><th style="text-align:right">Richtwert (Marktpreis)</th></tr>
+          <tr><th>Prestazione</th><th style="text-align:right">Valore indicativo (prezzo di mercato)</th></tr>
         </thead>
         <tbody>
-          <tr><td>Metallkeramik-Krone</td><td class="val">ab ca. 230 €</td></tr>
-          <tr><td>Zirkon- / E-max-Krone</td><td class="val">ca. 290 €</td></tr>
-          <tr><td>Veneer (Keramik)</td><td class="val">ca. 290 – 380 €</td></tr>
-          <tr><td>Implantat (Nobel Biocare / Straumann)</td><td class="val">ca. 670 – 950 €</td></tr>
-          <tr><td>All-on-4 (festsitzend, pro Kiefer)</td><td class="val">ab ca. 2.600 €</td></tr>
+          <tr><td>Corona in metallo-ceramica</td><td class="val">da ca. 230 €</td></tr>
+          <tr><td>Corona in zirconio / E-max</td><td class="val">ca. 290 €</td></tr>
+          <tr><td>Faccetta (ceramica)</td><td class="val">ca. 290 – 380 €</td></tr>
+          <tr><td>Impianto (Nobel Biocare / Straumann)</td><td class="val">ca. 670 – 950 €</td></tr>
+          <tr><td>All-on-4 (fisso, per arcata)</td><td class="val">da ca. 2.600 €</td></tr>
         </tbody>
       </table>
     </div>
     <div class="pricenote reveal">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
-      <span>Richtwerte zur Orientierung (Marktpreise) – der finale Preis ergibt sich nach individuellem Befund. Den Festzuschuss Ihrer Krankenkasse können Sie von diesen Beträgen abziehen.</span>
+      <span>Valori indicativi a titolo orientativo (prezzi di mercato) – il prezzo finale dipende dalla diagnosi individuale. Il contributo fisso della vostra cassa malattia può essere sottratto da questi importi.</span>
     </div>
   </div>
 </section>
@@ -595,22 +599,22 @@
   <div class="wrap">
     <div class="diaspora reveal">
       <div>
-        <span class="eyebrow">Für die kroatische Diaspora · DE / AT / CH</span>
-        <h2>Ihr Zuhause, Ihr Lächeln</h2>
-        <p>Behandlung in der Heimat – mit deutschsprachiger Betreuung und abgerechnet über Ihre deutsche Krankenkasse. Verbinden Sie den Besuch bei Familie und Freunden mit erstklassiger Zahnmedizin. Liječenje u domovini, na vašem jeziku, uz njemačku zdravstvenu zaštitu.</p>
+        <span class="eyebrow">Per la diaspora croata · DE / AT / CH</span>
+        <h2>La vostra casa, il vostro sorriso</h2>
+        <p>Trattamento in patria – con assistenza in lingua tedesca e rimborso tramite la vostra cassa malattia tedesca. Unite la visita a familiari e amici a un'odontoiatria di prima classe. Liječenje u domovini, na vašem jeziku, uz njemačku zdravstvenu zaštitu.</p>
         <div class="diaspora-flags">
-          <img src="https://flagcdn.com/de.svg" alt="Deutschland">
-          <img src="https://flagcdn.com/at.svg" alt="Österreich">
-          <img src="https://flagcdn.com/ch.svg" alt="Schweiz">
-          <img src="https://flagcdn.com/hr.svg" alt="Hrvatska">
+          <img src="https://flagcdn.com/de.svg" alt="Germania">
+          <img src="https://flagcdn.com/at.svg" alt="Austria">
+          <img src="https://flagcdn.com/ch.svg" alt="Svizzera">
+          <img src="https://flagcdn.com/hr.svg" alt="Croazia">
         </div>
         <div class="hr-line">
           „Vaš dom, vaš osmijeh – vrhunska stomatologija dok ste kod kuće."
-          <small>Ihr Zuhause, Ihr Lächeln – Spitzen-Zahnmedizin, während Sie daheim sind.</small>
+          <small>La vostra casa, il vostro sorriso – odontoiatria d'eccellenza mentre siete a casa.</small>
         </div>
       </div>
       <div class="diaspora-visual">
-        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="Familie verbindet Heimaturlaub mit Zahnbehandlung" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="Una famiglia unisce le vacanze in patria al trattamento dentale" loading="lazy">
       </div>
     </div>
   </div>
@@ -620,46 +624,46 @@
 <section class="section tour">
   <div class="wrap">
     <div class="reveal" style="max-width:720px">
-      <span class="eyebrow">Ihre Reise · Ablauf</span>
-      <h2>Von der ersten Anfrage bis zur Nachsorge</h2>
-      <p class="lead">Ein klarer, ruhiger Weg – Schritt für Schritt und immer mit persönlicher Ansprechperson auf Deutsch.</p>
+      <span class="eyebrow">Il vostro viaggio · Svolgimento</span>
+      <h2>Dalla prima richiesta al follow-up</h2>
+      <p class="lead">Un percorso chiaro e sereno – passo dopo passo e sempre con una persona di riferimento in italiano.</p>
     </div>
     <div class="journey">
       <div class="jcard reveal">
         <div class="ji"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
-        <div class="jstep">Schritt 1</div>
-        <h3>Voranfrage</h3>
-        <p>Sie schreiben uns – gern mit Foto oder aktuellem Röntgenbild. So bekommen wir ein erstes Bild Ihrer Situation.</p>
+        <div class="jstep">Passo 1</div>
+        <h3>Richiesta preliminare</h3>
+        <p>Ci scrivete – volentieri con una foto o una radiografia recente. Così ci facciamo una prima idea della vostra situazione.</p>
       </div>
       <div class="jcard reveal">
         <div class="ji"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg></div>
-        <div class="jstep">Schritt 2</div>
-        <h3>Kostenvoranschlag</h3>
-        <p>Sie erhalten einen kostenlosen, unverbindlichen Kostenvoranschlag – transparent und nachvollziehbar.</p>
+        <div class="jstep">Passo 2</div>
+        <h3>Preventivo</h3>
+        <p>Ricevete un preventivo gratuito e senza impegno – trasparente e comprensibile.</p>
       </div>
       <div class="jcard reveal">
         <div class="ji"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
-        <div class="jstep">Schritt 3</div>
-        <h3>HKP & Genehmigung</h3>
-        <p>Wir erstellen den Heil- und Kostenplan; Sie reichen ihn vorab bei Ihrer Kasse zur Genehmigung ein.</p>
+        <div class="jstep">Passo 3</div>
+        <h3>HKP e approvazione</h3>
+        <p>Creiamo il piano di cura e dei costi; voi lo presentate in anticipo alla vostra cassa per l'approvazione.</p>
       </div>
       <div class="jcard reveal">
         <div class="ji"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 4.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg></div>
-        <div class="jstep">Schritt 4</div>
-        <h3>Anreise nach Zagreb</h3>
-        <p>Sie reisen entspannt an – wir helfen bei der Terminplanung und bündeln Behandlungen sinnvoll.</p>
+        <div class="jstep">Passo 4</div>
+        <h3>Viaggio verso Zagabria</h3>
+        <p>Viaggiate con serenità – vi aiutiamo nella pianificazione degli appuntamenti e concentriamo sensatamente i trattamenti.</p>
       </div>
       <div class="jcard reveal">
         <div class="ji"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2c-1 0-2 .8-2 2 0 1.5 1 2 1 4 0 3-2 4-2 8 0 3 1 6 3 6s3-3 3-6c0-4-2-5-2-8 0-2 1-2.5 1-4 0-1.2-1-2-2-2z"/></svg></div>
-        <div class="jstep">Schritt 5</div>
-        <h3>Behandlung</h3>
-        <p>Hochwertige Behandlung mit Premium-Markensystemen – ruhig, präzise und substanzschonend.</p>
+        <div class="jstep">Passo 5</div>
+        <h3>Trattamento</h3>
+        <p>Trattamento di alta qualità con sistemi di marca premium – con calma, precisione e rispetto della sostanza.</p>
       </div>
       <div class="jcard reveal">
         <div class="ji"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
-        <div class="jstep">Schritt 6</div>
-        <h3>Nachsorge</h3>
-        <p>Wir bleiben erreichbar, planen Kontrollen mit und stehen Ihnen bei Fragen auch nach der Reise zur Seite.</p>
+        <div class="jstep">Passo 6</div>
+        <h3>Follow-up</h3>
+        <p>Restiamo raggiungibili, pianifichiamo i controlli e siamo al vostro fianco per ogni domanda anche dopo il viaggio.</p>
       </div>
     </div>
   </div>
@@ -669,34 +673,34 @@
 <section class="section">
   <div class="wrap">
     <div class="reveal" style="max-width:720px;margin:0 auto;text-align:center">
-      <span class="eyebrow" style="justify-content:center">Häufige Fragen</span>
-      <h2>Klar beantwortet – ehrlich und vollständig</h2>
-      <p class="lead" style="margin:0 auto">Die wichtigsten Fragen rund um Erstattung, Ablauf und Betreuung.</p>
+      <span class="eyebrow" style="justify-content:center">Domande frequenti</span>
+      <h2>Risposte chiare – oneste e complete</h2>
+      <p class="lead" style="margin:0 auto">Le domande più importanti su rimborso, svolgimento e assistenza.</p>
     </div>
     <div class="faq-list">
       <details class="faq reveal">
-        <summary>Zahlt meine Krankenkasse für eine Behandlung in Zagreb? <span class="pl">+</span></summary>
-        <div class="faq-body">Ja. Als gesetzlich Versicherte:r erhalten Sie nach EU-Recht (EU-RL 2011/24/EU, §13 SGB V) denselben befundbezogenen Festzuschuss wie bei der Regelversorgung in Deutschland. Voraussetzung bei Zahnersatz: Der Heil- und Kostenplan muss vorab genehmigt sein. Den Mehrbetrag über die Regelversorgung hinaus sowie die Reise tragen Sie selbst.</div>
+        <summary>La mia cassa malattia paga per un trattamento a Zagabria? <span class="pl">+</span></summary>
+        <div class="faq-body">Sì. Come assicurato del sistema obbligatorio ricevete, ai sensi del diritto UE (Dir. UE 2011/24/UE, §13 SGB V), lo stesso contributo fisso in base alla diagnosi previsto per le cure standard in Germania. Condizione per le protesi: il piano di cura e dei costi deve essere approvato in anticipo. L'importo eccedente le cure standard e il viaggio sono a vostro carico.</div>
       </details>
       <details class="faq reveal">
-        <summary>Wie läuft das mit dem Heil- und Kostenplan (HKP)? <span class="pl">+</span></summary>
-        <div class="faq-body">Wir erstellen Ihren HKP auf dem deutschen Kassenformular. Sie reichen ihn <b>vor Behandlungsbeginn</b> bei Ihrer Krankenkasse ein. Die Kasse prüft in der Regel rund 3 Wochen und genehmigt den Festzuschuss. Erst danach beginnt die Behandlung – so ist der Zuschuss gesichert.</div>
+        <summary>Come funziona con il piano di cura e dei costi (HKP)? <span class="pl">+</span></summary>
+        <div class="faq-body">Creiamo il vostro HKP sul modulo della cassa tedesca. Lo presentate <b>prima dell'inizio del trattamento</b> alla vostra cassa malattia. La cassa verifica di norma circa 3 settimane e approva il contributo fisso. Solo allora inizia il trattamento – così il contributo è garantito.</div>
       </details>
       <details class="faq reveal">
-        <summary>Welche Implantate verwenden Sie? <span class="pl">+</span></summary>
-        <div class="faq-body">Wir arbeiten mit denselben Premium-Markensystemen wie führende deutsche Praxen: Straumann und Nobel Biocare. Diese Systeme sind weltweit dokumentiert, langzeiterprobt und gut verträglich – die Qualität ist identisch, unabhängig vom Behandlungsort.</div>
+        <summary>Quali impianti utilizzate? <span class="pl">+</span></summary>
+        <div class="faq-body">Lavoriamo con gli stessi sistemi di marca premium dei principali studi tedeschi: Straumann e Nobel Biocare. Questi sistemi sono documentati in tutto il mondo, testati nel lungo periodo e ben tollerati – la qualità è identica, indipendentemente dal luogo del trattamento.</div>
       </details>
       <details class="faq reveal">
-        <summary>Wie viele Reisen muss ich einplanen? <span class="pl">+</span></summary>
-        <div class="faq-body">Das hängt vom Befund ab. Viele Behandlungen lassen sich auf wenige Termine bündeln. Bei Implantaten ist meist eine Heilungsphase nötig, sodass zwei Aufenthalte sinnvoll sein können. Wir planen die Termine vorab mit Ihnen, damit sich Anreisen und Wartezeiten möglichst gering halten.</div>
+        <summary>Quanti viaggi devo mettere in conto? <span class="pl">+</span></summary>
+        <div class="faq-body">Dipende dalla diagnosi. Molti trattamenti si possono concentrare in pochi appuntamenti. Per gli impianti è di solito necessaria una fase di guarigione, per cui possono essere sensati due soggiorni. Pianifichiamo gli appuntamenti in anticipo con voi, in modo da ridurre il più possibile viaggi e tempi di attesa.</div>
       </details>
       <details class="faq reveal">
-        <summary>Was ist mit Gewährleistung und Nachsorge? <span class="pl">+</span></summary>
-        <div class="faq-body">Auf Zahnersatz gewähren wir 2 Jahre Gewährleistung. Die Nachsorge denken wir von Anfang an mit: Wir bleiben erreichbar, planen Kontrollen ein und stimmen uns bei Bedarf mit Ihrem Zahnarzt vor Ort ab. Ihre langfristige Zahngesundheit steht im Mittelpunkt.</div>
+        <summary>Cosa succede con garanzia e follow-up? <span class="pl">+</span></summary>
+        <div class="faq-body">Sulle protesi offriamo 2 anni di garanzia. Pensiamo al follow-up fin dall'inizio: restiamo raggiungibili, pianifichiamo i controlli e ci coordiniamo all'occorrenza con il vostro dentista in loco. La vostra salute dentale a lungo termine è al centro.</div>
       </details>
       <details class="faq reveal">
-        <summary>In welcher Sprache werde ich betreut? <span class="pl">+</span></summary>
-        <div class="faq-body">Durchgehend auf Deutsch – von der ersten Anfrage über Beratung und Behandlung bis zur Nachsorge. Auf Wunsch auch auf Kroatisch, Englisch oder Italienisch. Sie haben immer eine persönliche Ansprechperson.</div>
+        <summary>In quale lingua vengo assistito? <span class="pl">+</span></summary>
+        <div class="faq-body">Sempre in italiano – dalla prima richiesta alla consulenza e al trattamento fino al follow-up. Su richiesta anche in croato, tedesco o inglese. Avete sempre una persona di riferimento dedicata.</div>
       </details>
     </div>
   </div>
@@ -707,13 +711,13 @@
   <div class="wrap">
     <div class="disclaimer reveal" style="max-width:920px;margin:0 auto 40px;font-size:.9rem">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v5M12 16h.01"/></svg>
-      <div><b style="font-family:'Manrope'">Hinweis:</b> Keine Rechts- oder Steuerberatung. Die genaue Erstattung klären Sie individuell mit Ihrer Krankenkasse. Stand: Juni 2026. Quellen: EU-RL 2011/24/EU, §13 & §55 SGB V, Bundeszahnärztekammer, GKV-Spitzenverband.</div>
+      <div><b style="font-family:'Manrope'">Nota:</b> Nessuna consulenza legale o fiscale. Il rimborso esatto va chiarito individualmente con la vostra cassa malattia. Aggiornato a: giugno 2026. Fonti: Dir. UE 2011/24/UE, §13 e §55 SGB V, Bundeszahnärztekammer, GKV-Spitzenverband.</div>
     </div>
     <div class="ctaband reveal">
-      <span class="eyebrow" style="color:#bdeee6;justify-content:center">Unverbindlich & kostenlos</span>
-      <h2>Kostenlosen Kostenvoranschlag anfragen</h2>
-      <p>Schicken Sie uns Ihr Anliegen – gern mit Foto oder Röntgenbild. Wir melden uns persönlich auf Deutsch und erstellen Ihnen einen transparenten Kostenvoranschlag.</p>
-      <a href="kontakt.html" class="btn btn-coral">Kostenlosen Kostenvoranschlag anfragen</a>
+      <span class="eyebrow" style="color:#bdeee6;justify-content:center">Senza impegno e gratuito</span>
+      <h2>Richiedi un preventivo gratuito</h2>
+      <p>Inviateci la vostra richiesta – volentieri con una foto o una radiografia. Vi ricontatteremo personalmente in italiano e vi prepareremo un preventivo trasparente.</p>
+      <a href="kontakt.html" class="btn btn-coral">Richiedi un preventivo gratuito</a>
     </div>
   </div>
 </section>
@@ -724,33 +728,33 @@
     <div class="foot-grid">
       <div class="foot-brand">
         <div class="wordmark" style="color:#fff"><span class="dot"></span>Bedek Dental</div>
-        <p>Ordinacija dentalne medicine dr.sc. Ivan Bedek, dr.med.dent.<br>Zatišje 6/1, 10000 Zagreb · Frisch renovierte Praxis im hinteren Hof.</p>
+        <p>Ordinacija dentalne medicine dr.sc. Ivan Bedek, dr.med.dent.<br>Zatišje 6/1, 10000 Zagabria · Studio appena ristrutturato nel cortile sul retro.</p>
         <div class="foot-langs">
-          <img src="https://flagcdn.com/de.svg" alt="Deutsch" width="26" height="18" style="border-radius:3px">
-          <img src="https://flagcdn.com/gb.svg" alt="English" width="26" height="18" style="border-radius:3px">
-          <img src="https://flagcdn.com/hr.svg" alt="Hrvatski" width="26" height="18" style="border-radius:3px">
-          <img src="https://flagcdn.com/it.svg" alt="Italiano" width="26" height="18" style="border-radius:3px">
+          <a href="../de/zahntourismus.html" title="Deutsch"><img src="https://flagcdn.com/de.svg" alt="Deutsch" width="26" height="18" style="border-radius:3px"></a>
+          <a href="../en/zahntourismus.html" title="English"><img src="https://flagcdn.com/gb.svg" alt="English" width="26" height="18" style="border-radius:3px"></a>
+          <a href="../hr/zahntourismus.html" title="Hrvatski"><img src="https://flagcdn.com/hr.svg" alt="Hrvatski" width="26" height="18" style="border-radius:3px"></a>
+          <a href="../it/zahntourismus.html" title="Italiano"><img src="https://flagcdn.com/it.svg" alt="Italiano" width="26" height="18" style="border-radius:3px"></a>
         </div>
       </div>
       <div class="foot-col">
-        <h4>Navigation</h4>
-        <a href="index.html">Start</a>
-        <a href="leistungen.html">Leistungen</a>
-        <a href="team.html">Über uns</a>
-        <a href="zahntourismus.html">Zahntourismus</a>
-        <a href="kontakt.html">Kontakt</a>
+        <h4>Navigazione</h4>
+        <a href="index.html">Home</a>
+        <a href="leistungen.html">Prestazioni</a>
+        <a href="team.html">Chi siamo</a>
+        <a href="zahntourismus.html">Turismo dentale</a>
+        <a href="kontakt.html">Contatti</a>
       </div>
       <div class="foot-col">
-        <h4>Kontakt</h4>
+        <h4>Contatti</h4>
         <a href="tel:+385957299112">+385 95 729 9112</a>
         <a href="https://wa.me/385957299112">WhatsApp</a>
-        <a href="https://maps.google.com/?q=Zatišje+6,+Zagreb">Route planen</a>
-        <a href="kontakt.html">Termin anfragen</a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Zati%C5%A1je+6,+10000+Zagreb" target="_blank" rel="noopener">Pianifica il percorso</a>
+        <a href="kontakt.html">Richiedi un appuntamento</a>
       </div>
     </div>
     <div class="foot-bottom">
       <span>© 2026 Bedek Dental · Ordinacija dentalne medicine dr.sc. Ivan Bedek, dr.med.dent.</span>
-      <span>Stand Juni 2026. Keine Rechts- oder Medizinberatung.</span>
+      <span>Aggiornato a giugno 2026. Nessuna consulenza legale o medica.</span>
     </div>
   </div>
 </footer>

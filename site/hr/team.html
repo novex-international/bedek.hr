@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="hr">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Über uns &amp; Team – Bedek Dental Zagreb</title>
-<meta name="description" content="Über uns: Über 30 Jahre Familientradition bei Bedek Dental in Zagreb. 1991 von Dr. Marija Bedek gegründet, heute geführt von dr.sc. Ivan Bedek mit Martina Laktić. Gesundheit vor Ästhetik – persönlich, ehrlich, deutschsprachig." />
+<title>O nama i tim – Bedek Dental Zagreb</title>
+<meta name="description" content="O nama: više od 30 godina obiteljske tradicije u ordinaciji Bedek Dental u Zagrebu. Osnovana 1991. od dr. Marije Bedek, danas je vodi dr. sc. Ivan Bedek s Martinom Laktić. Zdravlje prije estetike – osobno, iskreno, na hrvatskom i njemačkom." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -89,10 +89,10 @@
   .nav-links a.active::after{width:100%}
   .nav-right{margin-left:auto;display:flex;align-items:center;gap:12px;flex-wrap:nowrap;flex-shrink:0}
   .flags{display:flex;gap:4px;align-items:center}
-  .flags button{background:none;border:none;cursor:pointer;font-size:1rem;padding:5px 6px;border-radius:8px;opacity:.5;transition:.2s;line-height:1}
-  .flags button:hover{opacity:1;background:var(--ice)}
-  .flags button.active{opacity:1;background:var(--mint);box-shadow:inset 0 0 0 1.5px var(--teal)}
-  .flags button img{display:block;width:24px;height:17px;object-fit:cover;border-radius:3px;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+  .flags a{display:inline-flex;padding:5px 6px;border-radius:8px;opacity:.55;transition:.2s}
+  .flags a:hover{opacity:1;background:var(--ice)}
+  .flags a.active{opacity:1;background:var(--mint);box-shadow:inset 0 0 0 1.5px var(--teal)}
+  .flags a img{display:block;width:24px;height:17px;object-fit:cover;border-radius:3px;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
   .nav-phone{display:flex;align-items:center;gap:7px;font-family:'Manrope';font-weight:700;font-size:.92rem;color:var(--teal-deep);white-space:nowrap;flex-shrink:0}
   .icon-btn{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:var(--mint);color:var(--teal-deep);transition:.2s}
   .icon-btn:hover{background:var(--teal);color:#fff;transform:translateY(-2px)}
@@ -329,23 +329,23 @@
     <nav class="nav">
       <a href="index.html" class="wordmark"><span class="dot"></span>Bedek Dental</a>
       <div class="nav-links" id="navlinks">
-        <a href="index.html">Start</a>
-        <a href="leistungen.html">Leistungen</a>
-        <a href="team.html" class="active">Über uns</a>
-        <a href="zahntourismus.html">Zahntourismus</a>
+        <a href="index.html">Početna</a>
+        <a href="leistungen.html">Usluge</a>
+        <a href="team.html" class="active">O nama</a>
+        <a href="zahntourismus.html">Dentalni turizam</a>
         <a href="kontakt.html">Kontakt</a>
       </div>
       <div class="nav-right">
         <div class="flags" id="flags">
-          <button class="active" title="Deutsch"><img src="https://flagcdn.com/de.svg" alt="Deutsch" loading="lazy"></button>
-          <button title="English"><img src="https://flagcdn.com/gb.svg" alt="English" loading="lazy"></button>
-          <button title="Hrvatski"><img src="https://flagcdn.com/hr.svg" alt="Hrvatski" loading="lazy"></button>
-          <button title="Italiano"><img src="https://flagcdn.com/it.svg" alt="Italiano" loading="lazy"></button>
+          <a href="../de/team.html" title="Deutsch"><img src="https://flagcdn.com/de.svg" alt="Deutsch"></a>
+          <a href="../en/team.html" title="English"><img src="https://flagcdn.com/gb.svg" alt="English"></a>
+          <a href="../hr/team.html" title="Hrvatski" class="active"><img src="https://flagcdn.com/hr.svg" alt="Hrvatski"></a>
+          <a href="../it/team.html" title="Italiano"><img src="https://flagcdn.com/it.svg" alt="Italiano"></a>
         </div>
         <a href="tel:+385957299112" class="nav-phone"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.74-1.27a2 2 0 0 1 2.11-.45c.74.34 1.53.57 2.34.7A2 2 0 0 1 22 16.92z"/></svg><span class="lbl">+385 95 729 9112</span></a>
         <a href="https://wa.me/385957299112" class="icon-btn wa" title="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 0 0 1.51 5.26l-.999 3.648 3.748-.984zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.074-.149-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a>
-        <a href="kontakt.html" class="btn btn-primary" style="padding:11px 20px">Termin anfragen</a>
-        <button class="burger" id="burger" aria-label="Menü"><span></span><span></span><span></span></button>
+        <a href="kontakt.html" class="btn btn-primary" style="padding:11px 20px">Zatražite termin</a>
+        <button class="burger" id="burger" aria-label="Izbornik"><span></span><span></span><span></span></button>
       </div>
     </nav>
   </div>
@@ -354,11 +354,11 @@
 <!-- PAGE HERO -->
 <section class="page-hero">
   <div class="wrap reveal in">
-    <span class="eyebrow">Über uns</span>
-    <h1>Eine <span class="accent">Familientradition</span> für Ihr Lächeln</h1>
-    <p class="sub">Seit 1991 begleiten wir Menschen aus Zagreb und ganz Europa – mit Erfahrung, die man spürt, und einer Beratung, die ehrlich bleibt. Lernen Sie die Familie und das Team hinter Bedek Dental kennen.</p>
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <a href="index.html">Start</a><span class="sep">›</span><span>Über uns</span>
+    <span class="eyebrow">O nama</span>
+    <h1>Jedna <span class="accent">obiteljska tradicija</span> za vaš osmijeh</h1>
+    <p class="sub">Od 1991. pratimo ljude iz Zagreba i cijele Europe – s iskustvom koje se osjeti i savjetovanjem koje ostaje iskreno. Upoznajte obitelj i tim iza ordinacije Bedek Dental.</p>
+    <nav class="breadcrumb" aria-label="Navigacijski put">
+      <a href="index.html">Početna</a><span class="sep">›</span><span>O nama</span>
     </nav>
   </div>
 </section>
@@ -368,40 +368,40 @@
   <div class="wrap">
     <div class="story-grid">
       <div class="story-copy reveal">
-        <span class="eyebrow">Unsere Geschichte</span>
-        <h2 style="margin:14px 0 4px">Über 30 Jahre Vertrauen.</h2>
-        <p class="lead">Was als kleine Familienpraxis begann, ist heute eine moderne, frisch renovierte Praxis im Herzen von Zagreb – getragen von denselben Werten wie am ersten Tag: Sorgfalt, Ehrlichkeit und echte Nähe zum Menschen.</p>
+        <span class="eyebrow">Naša priča</span>
+        <h2 style="margin:14px 0 4px">Više od 30 godina povjerenja.</h2>
+        <p class="lead">Ono što je započelo kao mala obiteljska ordinacija, danas je moderna, svježe renovirana ordinacija u srcu Zagreba – nošena istim vrijednostima kao i prvog dana: pažnja, iskrenost i istinska bliskost s čovjekom.</p>
         <div class="timeline">
           <div class="tl-item">
             <div class="tl-rail"><div class="tl-dot">1991</div></div>
             <div class="tl-body">
-              <b>Gegründet von Dr. Marija Bedek</b>
-              <p>Mit viel Herz legte Dr. Marija Bedek den Grundstein für eine Praxis, in der der Mensch im Mittelpunkt steht – und schuf das Vertrauen, auf dem wir bis heute aufbauen.</p>
+              <b>Osnovala dr. Marija Bedek</b>
+              <p>S mnogo srca dr. Marija Bedek postavila je temelje ordinacije u kojoj je čovjek u središtu – i stvorila povjerenje na kojem gradimo do danas.</p>
             </div>
           </div>
           <div class="tl-item">
             <div class="tl-rail"><div class="tl-dot">2014</div></div>
             <div class="tl-body">
-              <b>Übernahme durch dr.sc. Ivan Bedek</b>
-              <p>Ihr Sohn dr.sc. Ivan Bedek übernahm die Praxis in zweiter Generation und führte die Familientradition mit wissenschaftlicher Präzision und derselben menschlichen Wärme fort.</p>
+              <b>Preuzimanje dr. sc. Ivana Bedeka</b>
+              <p>Njezin sin dr. sc. Ivan Bedek preuzeo je ordinaciju u drugoj generaciji i nastavio obiteljsku tradiciju sa znanstvenom preciznošću i istom ljudskom toplinom.</p>
             </div>
           </div>
           <div class="tl-item">
-            <div class="tl-rail"><div class="tl-dot">Heute</div></div>
+            <div class="tl-rail"><div class="tl-dot">Danas</div></div>
             <div class="tl-body">
-              <b>Eine moderne Praxis – Ivan &amp; Martina</b>
-              <p>In frisch renovierten Räumen betreuen dr.sc. Ivan Bedek und Martina Laktić ihre Patientinnen und Patienten persönlich, deutschsprachig und auf höchstem fachlichen Niveau.</p>
+              <b>Moderna ordinacija – Ivan i Martina</b>
+              <p>U svježe renoviranim prostorima dr. sc. Ivan Bedek i Martina Laktić osobno skrbe za svoje pacijentice i pacijente, na hrvatskom i njemačkom jeziku i na najvišoj stručnoj razini.</p>
             </div>
           </div>
         </div>
       </div>
       <div class="story-visual reveal">
         <div class="big-img">
-          <img src="./assets/praxis-1.jpeg" alt="Frisch renovierte Praxisräume von Bedek Dental in Zagreb" loading="lazy">
+          <img src="../assets/praxis-1.jpeg" alt="Svježe renovirani prostori ordinacije Bedek Dental u Zagrebu" loading="lazy">
         </div>
         <div class="story-badge">
           <div class="yr">1991</div>
-          <small>Familientradition<br>in zweiter Generation</small>
+          <small>Obiteljska tradicija<br>u drugoj generaciji</small>
         </div>
       </div>
     </div>
@@ -411,10 +411,10 @@
 <!-- PHILOSOPHY -->
 <section class="philo">
   <div class="wrap">
-    <span class="eyebrow">Unsere Haltung</span>
+    <span class="eyebrow">Naš stav</span>
     <div class="quote-mark">„</div>
-    <h2>Gesundheit vor Ästhetik.<br>Keine unnötigen Eingriffe.</h2>
-    <p>Wir beraten konservativ und ehrlich: Was Ihren Zähnen wirklich hilft, steht im Mittelpunkt – nicht der größtmögliche Eingriff. Substanzschonend, nachhaltig und mit der Ruhe, die aus jahrzehntelanger Erfahrung kommt. So entsteht Vertrauen, das bleibt.</p>
+    <h2>Zdravlje prije estetike.<br>Bez nepotrebnih zahvata.</h2>
+    <p>Savjetujemo konzervativno i iskreno: u središtu je ono što vašim zubima zaista pomaže – a ne najveći mogući zahvat. Štedljivo prema zubnoj supstanci, dugoročno i sa smirenošću koja dolazi iz desetljeća iskustva. Tako nastaje povjerenje koje ostaje.</p>
   </div>
 </section>
 
@@ -422,35 +422,35 @@
 <section class="section" id="team">
   <div class="wrap">
     <div class="reveal" style="max-width:700px">
-      <span class="eyebrow">Unser Team</span>
-      <h2>Menschen, die Ihr Vertrauen verdienen</h2>
-      <p class="lead">Persönliche Betreuung von erfahrenen Spezialisten – wissenschaftlich fundiert, deutschsprachig und mit Herz.</p>
+      <span class="eyebrow">Naš tim</span>
+      <h2>Ljudi koji zaslužuju vaše povjerenje</h2>
+      <p class="lead">Osobna skrb iskusnih stručnjaka – znanstveno utemeljena, na hrvatskom i njemačkom jeziku i sa srcem.</p>
     </div>
     <div class="team-grid">
 
       <!-- Ivan -->
       <div class="doc-card reveal">
         <div class="doc-photo">
-          <img src="./assets/dr-ivan-bedek.png" alt="dr.sc. Ivan Bedek, dr.med.dent.">
-          <span class="tag">Inhaber</span>
+          <img src="../assets/dr-ivan-bedek.png" alt="dr. sc. Ivan Bedek, dr. med. dent.">
+          <span class="tag">Vlasnik</span>
         </div>
         <div class="doc-body">
-          <h3>dr.sc. Ivan Bedek, dr.med.dent.</h3>
-          <div class="doc-role">Inhaber · Promoviert 2019 · Implantologie &amp; Prothetik</div>
-          <p>Ivan Bedek führt die Praxis in zweiter Generation. Als promovierter Zahnarzt verbindet er wissenschaftliche Präzision mit ruhiger, ehrlicher Beratung – stets mit dem Ziel, gesunde Zahnsubstanz zu erhalten statt unnötig zu behandeln.</p>
+          <h3>dr. sc. Ivan Bedek, dr. med. dent.</h3>
+          <div class="doc-role">Vlasnik · Doktorirao 2019. · Implantologija i protetika</div>
+          <p>Ivan Bedek vodi ordinaciju u drugoj generaciji. Kao doktor znanosti spaja znanstvenu preciznost sa smirenim, iskrenim savjetovanjem – uvijek s ciljem očuvanja zdrave zubne supstance umjesto nepotrebnog liječenja.</p>
           <ul class="vita">
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Geboren am 22.08.1979 in Zagreb; Klassisches Gymnasium (Abschluss 1998).</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg><span>Studium der Zahnmedizin an der Universität Zagreb (als Stipendiat), <b>Diplom 2004</b> – Abschlussthema: zahnärztliche Behandlung von Kindern mit besonderen Bedürfnissen.</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg><span><b>Magister 2010</b> – Forschung zum Erosionspotenzial häufig konsumierter Getränke in der Adoleszenz.</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18"/><path d="M5 21V7l8-4 8 4v14"/><path d="M9 9h.01M9 13h.01M9 17h.01"/></svg><span>2014 eigene Praxis – zuvor tätig bei Dr. Marija Bedek und beim Oralchirurgen Dr. Tihomir Švajhler.</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M9 13.8V22l3-2 3 2v-8.2"/></svg><span><b>Promotion am 12.12.2019</b> – kroatischer Standard zur Bestimmung des Zahnalters von Kindern anhand digitaler Panoramaaufnahmen (OPG).</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg><span>Regelmäßige fachliche und wissenschaftliche Weiterbildung im In- und Ausland.</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg><span>Verheiratet, zwei Kinder.</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Rođen 22. 8. 1979. u Zagrebu; Klasična gimnazija (maturirao 1998.).</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg><span>Studij dentalne medicine na Sveučilištu u Zagrebu (kao stipendist), <b>diploma 2004.</b> – tema završnog rada: stomatološko liječenje djece s posebnim potrebama.</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg><span><b>Magisterij 2010.</b> – istraživanje erozivnog potencijala često konzumiranih napitaka u adolescenciji.</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18"/><path d="M5 21V7l8-4 8 4v14"/><path d="M9 9h.01M9 13h.01M9 17h.01"/></svg><span>2014. vlastita ordinacija – prethodno radio kod dr. Marije Bedek i kod oralnog kirurga dr. Tihomira Švajhlera.</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M9 13.8V22l3-2 3 2v-8.2"/></svg><span><b>Doktorat 12. 12. 2019.</b> – hrvatski standard za određivanje zubne dobi djece na temelju digitalnih panoramskih snimaka (OPG).</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg><span>Redovito stručno i znanstveno usavršavanje u zemlji i inozemstvu.</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg><span>Oženjen, dvoje djece.</span></li>
           </ul>
           <div class="creds">
-            <span>Implantologie</span>
-            <span>Prothetik</span>
-            <span>Wissenschaftlich fundiert</span>
+            <span>Implantologija</span>
+            <span>Protetika</span>
+            <span>Znanstveno utemeljeno</span>
           </div>
         </div>
       </div>
@@ -458,25 +458,25 @@
       <!-- Martina -->
       <div class="doc-card reveal">
         <div class="doc-photo">
-          <img src="./assets/dr-martina-laktic.png" alt="Martina Laktić, dr.med.dent.">
-          <span class="tag">Zahnärztin</span>
+          <img src="../assets/dr-martina-laktic.png" alt="Martina Laktić, dr. med. dent.">
+          <span class="tag">Doktorica dentalne medicine</span>
         </div>
         <div class="doc-body">
-          <h3>Martina Laktić, dr.med.dent.</h3>
-          <div class="doc-role">Familienzahnmedizin &amp; Endodontie</div>
-          <p>Martina Laktić betreut Patientinnen und Patienten jeden Alters – mit besonderem Gespür für Familien und einem Schwerpunkt auf Wurzelbehandlungen. Schon als Studentin war sie Teil der Praxis Bedek und bringt heute eine breite klinische Erfahrung mit.</p>
+          <h3>Martina Laktić, dr. med. dent.</h3>
+          <div class="doc-role">Obiteljska dentalna medicina i endodoncija</div>
+          <p>Martina Laktić skrbi za pacijentice i pacijente svih dobi – s posebnim osjećajem za obitelji i naglaskom na liječenje korijenskih kanala. Već je kao studentica bila dio ordinacije Bedek, a danas donosi široko kliničko iskustvo.</p>
           <ul class="vita">
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Geboren 1993 in Zagreb.</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg><span>Studium der Zahnmedizin an der Universität Zagreb, <b>Diplom 2018</b> – Abschlussthema: Zahnerosion.</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M9 13.8V22l3-2 3 2v-8.2"/></svg><span>Ausgezeichnet mit dem <b>Dekans-Preis</b>, dem <b>Rektor-Preis</b> für eine individuelle wissenschaftlich-künstlerische Arbeit sowie einem <b>Sonder-Rektor-Preis</b>.</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18"/><path d="M5 21V7l8-4 8 4v14"/></svg><span>Bereits als Studentin in der Praxis Bedek tätig – mit breiter klinischer Erfahrung über alle Altersgruppen hinweg.</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg><span>Schwerpunkte: einfühlsame Familienzahnmedizin und Endodontie (Wurzelbehandlung).</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Rođena 1993. u Zagrebu.</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg><span>Studij dentalne medicine na Sveučilištu u Zagrebu, <b>diploma 2018.</b> – tema završnog rada: erozija zuba.</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M9 13.8V22l3-2 3 2v-8.2"/></svg><span>Nagrađena <b>Dekanovom nagradom</b>, <b>Rektorovom nagradom</b> za individualni znanstveno-umjetnički rad te <b>posebnom Rektorovom nagradom</b>.</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18"/><path d="M5 21V7l8-4 8 4v14"/></svg><span>Već kao studentica radila u ordinaciji Bedek – sa širokim kliničkim iskustvom kroz sve dobne skupine.</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg><span>Specijalnosti: empatična obiteljska dentalna medicina i endodoncija (liječenje korijenskog kanala).</span></li>
           </ul>
           <div class="creds">
-            <span>Endodontie</span>
-            <span>Familienzahnmedizin</span>
-            <span>Dekans-Preis</span>
-            <span>Rektor-Preis</span>
+            <span>Endodoncija</span>
+            <span>Obiteljska dentalna medicina</span>
+            <span>Dekanova nagrada</span>
+            <span>Rektorova nagrada</span>
           </div>
         </div>
       </div>
@@ -485,7 +485,7 @@
 
     <div class="family-note reveal">
       <div class="yr">1991</div>
-      <p><b style="font-family:'Manrope';color:var(--ink)">Eine Familientradition seit über 30 Jahren.</b> Was 1991 von Dr. Marija Bedek begründet wurde, wird heute mit derselben Sorgfalt und demselben Anspruch fortgeführt – Generation für Generation, Patient für Patient.</p>
+      <p><b style="font-family:'Manrope';color:var(--ink)">Obiteljska tradicija duga više od 30 godina.</b> Ono što je 1991. utemeljila dr. Marija Bedek, danas se nastavlja s jednakom pažnjom i jednakim standardom – iz generacije u generaciju, od pacijenta do pacijenta.</p>
     </div>
   </div>
 </section>
@@ -494,40 +494,40 @@
 <section class="section" style="background:var(--warm)">
   <div class="wrap">
     <div class="reveal" style="max-width:700px">
-      <span class="eyebrow">Warum Bedek Dental</span>
-      <h2>Werte, die Sie bei jedem Termin spüren</h2>
-      <p class="lead">Es sind die kleinen Dinge, die den Unterschied machen: Zeit, Ehrlichkeit und das Gefühl, in den besten Händen zu sein.</p>
+      <span class="eyebrow">Zašto Bedek Dental</span>
+      <h2>Vrijednosti koje osjetite pri svakom terminu</h2>
+      <p class="lead">Sitnice čine razliku: vrijeme, iskrenost i osjećaj da ste u najboljim rukama.</p>
     </div>
     <div class="val-grid">
       <div class="val-card reveal">
         <div class="val-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
-        <h3>Persönliche Betreuung</h3>
-        <p>Sie werden von Anfang bis Ende von vertrauten Gesichtern begleitet – mit Zeit für Ihre Fragen und ohne anonyme Massenabfertigung.</p>
+        <h3>Osobna skrb</h3>
+        <p>Od početka do kraja prate vas poznata lica – s vremenom za vaša pitanja i bez anonimnog masovnog rada.</p>
       </div>
       <div class="val-card reveal">
         <div class="val-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 8h14M5 8a2 2 0 1 1 0-4h14a2 2 0 1 1 0 4M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8"/><path d="M10 12h4"/></svg></div>
-        <h3>Beratung auf Deutsch</h3>
-        <p>Wir beraten und behandeln auf Deutsch – verständlich, klar und ohne Sprachbarriere. Für Patientinnen und Patienten aus ganz Europa.</p>
+        <h3>Savjetovanje na vašem jeziku</h3>
+        <p>Savjetujemo i liječimo na hrvatskom i njemačkom jeziku – razumljivo, jasno i bez jezične barijere. Za pacijentice i pacijente iz cijele Europe.</p>
       </div>
       <div class="val-card reveal">
         <div class="val-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18"/><path d="M5 21V7l8-4 8 4v14"/><path d="M9 9h.01M9 13h.01M9 17h.01M15 9h.01M15 13h.01M15 17h.01"/></svg></div>
-        <h3>Moderne, frisch renovierte Praxis</h3>
-        <p>Helle, neu gestaltete Räume mit aktueller Technik schaffen eine ruhige Atmosphäre, in der Sie sich vom ersten Moment an wohlfühlen.</p>
+        <h3>Moderna, svježe renovirana ordinacija</h3>
+        <p>Svijetli, nanovo uređeni prostori s aktualnom tehnikom stvaraju smirenu atmosferu u kojoj se osjećate ugodno od prvog trenutka.</p>
       </div>
       <div class="val-card reveal">
         <div class="val-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l2.5 6.5L21 9l-5 4 1.5 7L12 16l-5.5 4L8 13 3 9l6.5-.5z"/></svg></div>
-        <h3>Premium-Materialien</h3>
-        <p>Wir arbeiten ausschließlich mit hochwertigen Markensystemen wie Straumann und Nobel Biocare – für langlebige, biokompatible Ergebnisse.</p>
+        <h3>Premium materijali</h3>
+        <p>Radimo isključivo s vrhunskim markiranim sustavima poput Straumanna i Nobel Biocarea – za dugotrajne, biokompatibilne rezultate.</p>
       </div>
       <div class="val-card reveal">
         <div class="val-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
-        <h3>Ehrliche Beratung</h3>
-        <p>Gesundheit vor Ästhetik: Wir empfehlen nur, was Ihren Zähnen wirklich hilft – konservativ, substanzschonend und ohne unnötige Eingriffe.</p>
+        <h3>Iskreno savjetovanje</h3>
+        <p>Zdravlje prije estetike: preporučujemo samo ono što vašim zubima zaista pomaže – konzervativno, štedljivo i bez nepotrebnih zahvata.</p>
       </div>
       <div class="val-card reveal">
         <div class="val-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-        <h3>Familientradition seit 1991</h3>
-        <p>Über 30 Jahre Erfahrung in zweiter Generation – eine Praxis, die Vertrauen nicht verspricht, sondern täglich neu verdient.</p>
+        <h3>Obiteljska tradicija od 1991.</h3>
+        <p>Više od 30 godina iskustva u drugoj generaciji – ordinacija koja povjerenje ne obećava, nego ga svakodnevno iznova zaslužuje.</p>
       </div>
     </div>
   </div>
@@ -537,16 +537,16 @@
 <section class="section">
   <div class="wrap">
     <div class="reveal" style="max-width:700px">
-      <span class="eyebrow">Unsere Praxis</span>
-      <h2>Ein Ort zum Wohlfühlen</h2>
-      <p class="lead">Hell, modern und frisch renoviert – kommen Sie an und entspannen Sie. Ein kleiner Einblick in unsere Räume in Zagreb.</p>
+      <span class="eyebrow">Naša ordinacija</span>
+      <h2>Mjesto za ugodu</h2>
+      <p class="lead">Svijetlo, moderno i svježe renovirano – dođite i opustite se. Mali uvid u naše prostore u Zagrebu.</p>
     </div>
     <div class="praxis-grid">
-      <figure class="tall reveal"><img src="./assets/praxis-2.jpeg" alt="Behandlungsraum bei Bedek Dental" loading="lazy"></figure>
-      <figure class="reveal"><img src="./assets/praxis-3.jpeg" alt="Modernes Praxisinterieur bei Bedek Dental" loading="lazy"></figure>
-      <figure class="reveal"><img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=700&q=80" alt="Moderne Zahnarztpraxis" loading="lazy"></figure>
-      <figure class="reveal"><img src="./assets/praxis-4.jpeg" alt="Wartebereich bei Bedek Dental" loading="lazy"></figure>
-      <figure class="reveal"><img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=700&q=80" alt="Zahnärztliche Behandlung" loading="lazy"></figure>
+      <figure class="tall reveal"><img src="../assets/praxis-2.jpeg" alt="Ordinacijski prostor u Bedek Dentalu" loading="lazy"></figure>
+      <figure class="reveal"><img src="../assets/praxis-3.jpeg" alt="Moderan interijer ordinacije Bedek Dental" loading="lazy"></figure>
+      <figure class="reveal"><img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=700&q=80" alt="Moderna stomatološka ordinacija" loading="lazy"></figure>
+      <figure class="reveal"><img src="../assets/praxis-4.jpeg" alt="Čekaonica u Bedek Dentalu" loading="lazy"></figure>
+      <figure class="reveal"><img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=700&q=80" alt="Stomatološko liječenje" loading="lazy"></figure>
     </div>
   </div>
 </section>
@@ -555,11 +555,11 @@
 <section class="section" style="padding-top:0">
   <div class="wrap">
     <div class="cta-band reveal">
-      <h2>Lernen Sie uns persönlich kennen</h2>
-      <p>Ob erste Frage oder konkreter Behandlungswunsch – wir nehmen uns Zeit für Sie und beraten Sie unverbindlich auf Deutsch. Wir freuen uns auf Ihren Besuch in Zagreb.</p>
+      <h2>Upoznajte nas osobno</h2>
+      <p>Bilo da imate prvo pitanje ili konkretnu želju za liječenjem – uzimamo si vremena za vas i savjetujemo vas bez obveze. Veselimo se vašem posjetu u Zagrebu.</p>
       <div class="btns">
-        <a href="kontakt.html" class="btn btn-light">Termin anfragen</a>
-        <a href="leistungen.html" class="btn btn-out">Unsere Leistungen</a>
+        <a href="kontakt.html" class="btn btn-light">Zatražite termin</a>
+        <a href="leistungen.html" class="btn btn-out">Naše usluge</a>
       </div>
     </div>
   </div>
@@ -571,33 +571,33 @@
     <div class="foot-grid">
       <div class="foot-brand">
         <div class="wordmark" style="color:#fff"><span class="dot"></span>Bedek Dental</div>
-        <p>Ordinacija dentalne medicine dr.sc. Ivan Bedek, dr.med.dent.<br>Zatišje 6/1, 10000 Zagreb · Frisch renovierte Praxis im hinteren Hof.</p>
+        <p>Ordinacija dentalne medicine dr.sc. Ivan Bedek, dr.med.dent.<br>Zatišje 6/1, 10000 Zagreb · Svježe renovirana ordinacija u stražnjem dvorištu.</p>
         <div class="foot-langs">
-          <img src="https://flagcdn.com/de.svg" alt="Deutsch" width="26" height="18" style="border-radius:3px">
-          <img src="https://flagcdn.com/gb.svg" alt="English" width="26" height="18" style="border-radius:3px">
-          <img src="https://flagcdn.com/hr.svg" alt="Hrvatski" width="26" height="18" style="border-radius:3px">
-          <img src="https://flagcdn.com/it.svg" alt="Italiano" width="26" height="18" style="border-radius:3px">
+          <a href="../de/team.html"><img src="https://flagcdn.com/de.svg" alt="Deutsch" width="26" height="18" style="border-radius:3px"></a>
+          <a href="../en/team.html"><img src="https://flagcdn.com/gb.svg" alt="English" width="26" height="18" style="border-radius:3px"></a>
+          <a href="../hr/team.html"><img src="https://flagcdn.com/hr.svg" alt="Hrvatski" width="26" height="18" style="border-radius:3px"></a>
+          <a href="../it/team.html"><img src="https://flagcdn.com/it.svg" alt="Italiano" width="26" height="18" style="border-radius:3px"></a>
         </div>
       </div>
       <div class="foot-col">
-        <h4>Navigation</h4>
-        <a href="index.html">Start</a>
-        <a href="leistungen.html">Leistungen</a>
-        <a href="team.html">Über uns</a>
-        <a href="zahntourismus.html">Zahntourismus</a>
+        <h4>Navigacija</h4>
+        <a href="index.html">Početna</a>
+        <a href="leistungen.html">Usluge</a>
+        <a href="team.html">O nama</a>
+        <a href="zahntourismus.html">Dentalni turizam</a>
         <a href="kontakt.html">Kontakt</a>
       </div>
       <div class="foot-col">
         <h4>Kontakt</h4>
         <a href="tel:+385957299112">+385 95 729 9112</a>
         <a href="https://wa.me/385957299112">WhatsApp</a>
-        <a href="https://maps.google.com/?q=Zatišje+6,+Zagreb">Route planen</a>
-        <a href="kontakt.html">Termin anfragen</a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Zati%C5%A1je+6,+10000+Zagreb" target="_blank" rel="noopener">Isplanirajte put</a>
+        <a href="kontakt.html">Zatražite termin</a>
       </div>
     </div>
     <div class="foot-bottom">
       <span>© 2026 Bedek Dental · Ordinacija dentalne medicine dr.sc. Ivan Bedek, dr.med.dent.</span>
-      <span>Stand Juni 2026. Keine Rechts- oder Medizinberatung.</span>
+      <span>Stanje: lipanj 2026. Ne predstavlja pravni ni medicinski savjet.</span>
     </div>
   </div>
 </footer>
