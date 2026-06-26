@@ -1,6 +1,9 @@
+# Statische Multi-Page-Site – keine SPA-Redirects (sonst brechen Unterseiten)
 [build]
   publish = "."
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
