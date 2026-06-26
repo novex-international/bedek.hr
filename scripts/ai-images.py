@@ -58,21 +58,31 @@ PRAXIS_OUT = os.path.join(ROOT, "public", "images", "praxis")
 # Identity-preserving portrait edit. The pair must end up consistent: same 4:5
 # framing, similar head size, clean neutral light-grey studio background.
 PORTRAIT_PROMPT = (
-    "Professional dental-practice headshot retouch. Keep the EXACT same person, "
-    "same face, same identity, same age, same hairstyle and same expression - do "
-    "not alter facial features. Improve lighting to soft even studio light, "
-    "increase sharpness and clarity, fix color balance to natural skin tones. "
-    "Replace the background with a clean, smooth, neutral light-grey studio "
-    "backdrop. Frame as a 4:5 vertical portrait, head and shoulders, head "
-    "centered in the upper third, consistent professional medical look."
+    "Ultra-high-end professional dental-clinic headshot. CRITICAL: keep the EXACT "
+    "same person - identical face, identical bone structure, eyes, nose, mouth, "
+    "skin, age, hairstyle, glasses and the same calm friendly expression. Do NOT "
+    "beautify, slim, reshape, age or alter ANY facial feature or the identity in "
+    "any way. Only upgrade photographic quality: soft, even, flattering studio "
+    "lighting; crisp focus and high detail; natural healthy skin tones; remove "
+    "harsh shadows and the dated color cast. Replace the background with a clean, "
+    "smooth, premium cool light-grey studio gradient. Crisp modern white medical "
+    "tunic. Editorial magazine-quality, photorealistic. Vertical 4:5, head and "
+    "shoulders, head in the upper third - identical framing for a matching pair."
 )
 
+# One FIXED, detailed style so every room shares the same premium visual language.
 ROOM_PROMPT = (
-    "Photorealistic renovation of THIS dental practice room. Keep the exact same "
-    "room geometry, same camera angle, same window and door positions, same "
-    "equipment layout. Modernize the finish: fresh clean white and soft-blue "
-    "walls, new bright LED lighting, modern flooring, contemporary dental "
-    "furniture, spotless and bright. Keep it realistic, same perspective."
+    "Photorealistic architectural interior photo of THIS exact dental practice "
+    "room, shown as a freshly renovated, premium, world-class clinic. KEEP the "
+    "same room geometry, the same camera angle and perspective, the same window, "
+    "door and equipment positions. Apply this CONSISTENT visual language to every "
+    "photo: bright and airy with abundant soft natural daylight; clean matte "
+    "white walls with a single calm soft sage-teal accent; light oak and white "
+    "modern cabinetry; a seamless clean light warm-grey microcement floor (remove "
+    "all paint splashes, stains and clutter); a contemporary clean dental unit; "
+    "spotless, minimal and tidy; a few tasteful green plants. Warm-neutral "
+    "editorial real-estate color grade, balanced natural exposure, soft shadows, "
+    "high detail, photorealistic. The SAME calm modern premium mood in every image."
 )
 
 
@@ -160,13 +170,30 @@ def run_portraits(edit):
 
 
 def run_rooms(edit):
+    import time
     os.makedirs(PRAXIS_OUT, exist_ok=True)
     srcs = sorted(glob.glob(os.path.join(PRAXIS_SRC, "*.jpeg")))
+    failed = []
     for sp in srcs:
         name = os.path.splitext(os.path.basename(sp))[0]
         dp = os.path.join(PRAXIS_OUT, f"{name}-modern.jpeg")
-        print(f"  room: {os.path.basename(sp)} -> {os.path.basename(dp)}")
-        edit(sp, dp, ROOM_PROMPT)
+        if os.path.exists(dp) and os.path.getsize(dp) > 10000:
+            print(f"  skip (exists): {os.path.basename(dp)}")
+            continue
+        ok = False
+        for attempt in range(3):
+            try:
+                edit(sp, dp, ROOM_PROMPT)
+                print(f"  room OK: {os.path.basename(dp)}")
+                ok = True
+                break
+            except Exception as e:
+                print(f"  retry {attempt+1}/3 {os.path.basename(sp)}: {str(e)[:90]}")
+                time.sleep(10)
+        if not ok:
+            failed.append(name)
+    if failed:
+        print("FAILED rooms (re-run to retry):", ", ".join(failed))
 
 
 def main():
