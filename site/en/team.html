@@ -323,6 +323,16 @@
     .val-grid{grid-template-columns:1fr}
     .praxis-grid{grid-template-columns:1fr}
   }
+
+  /* mobile language flags */
+  .mobile-flags{display:none}
+  @media(max-width:980px){
+    .flags{display:none}
+    .nav-links.open .mobile-flags{display:flex;gap:12px;align-items:center;padding:16px 0 4px;margin-top:8px;border-top:1px solid var(--line)}
+    .nav-links.open .mobile-flags a{display:inline-flex;opacity:.55;padding:4px;border-radius:8px;transition:.2s}
+    .nav-links.open .mobile-flags a.active{opacity:1;background:var(--mint);box-shadow:inset 0 0 0 1.5px var(--teal)}
+    .nav-links.open .mobile-flags img{display:block;width:30px;height:21px;object-fit:cover;border-radius:4px;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+  }
 </style>
 </head>
 <body>
@@ -337,7 +347,10 @@
         <a href="leistungen.html">Services</a>
         <a href="team.html" class="active">About us</a>
         <a href="zahntourismus.html">Dental Tourism</a>
-        <a href="kontakt.html">Contact</a>
+        <a href="kontakt.html">Contact</a><div class="mobile-flags"><a href="../de/team.html" title="Deutsch"><img src="https://flagcdn.com/de.svg" alt="Deutsch"></a>
+          <a href="../en/team.html" title="English" class="active"><img src="https://flagcdn.com/gb.svg" alt="English"></a>
+          <a href="../hr/team.html" title="Hrvatski"><img src="https://flagcdn.com/hr.svg" alt="Hrvatski"></a>
+          <a href="../it/team.html" title="Italiano"><img src="https://flagcdn.com/it.svg" alt="Italiano"></a></div>
       </div>
       <div class="nav-right">
         <div class="flags" id="flags">
