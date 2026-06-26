@@ -52,6 +52,7 @@ Keiner erreicht "Luxus × Human Modern" oder kommuniziert die Krankenkassen-Erst
 ## 4. Technische Architektur
 
 - **Framework:** Astro (statische Site, Insel-Architektur, ideal für Netlify + Performance)
+- **CMS:** Visuelles **Git-basiertes CMS** (Keystatic, alt. Decap) — Kunde editiert grafisch direkt auf der Seite; KI/wir editieren denselben Inhalt parallel per Git/Dateien. Kostenlos, kein Vendor-Lock-in, Inhalte als versionierte MD/JSON. Deckt beide Wünsche ab: Kunde selbst **oder** KI-gesteuert.
 - **Styling:** Tailwind CSS mit Custom-Design-Tokens (Luxus × Human)
 - **i18n:** Astro i18n-Routing — `/de` (Default/Pitch), `/en`, `/hr`, `/it`. Content je Sprache in strukturierten Daten (JSON/MD) statt hartcodiert.
 - **Interaktivität:** minimale JS-Inseln (Multistep-Formular, Sprachwechsler, Mobile-Nav, Chatbot-Widget, Scroll-Animationen)
@@ -60,11 +61,12 @@ Keiner erreicht "Luxus × Human Modern" oder kommuniziert die Krankenkassen-Erst
 - **Analytics:** Platzhalter für Plausible/GA (datenschutzkonform)
 
 ### Komponenten-Isolation (jede Einheit ein Zweck)
-- `LanguageSwitcher` — Sprachwahl, erhält aktuellen Pfad
+- `LanguageSwitcher` — Sprachwahl **mit Landesflaggen** (🇩🇪 Deutsch · 🇬🇧 English · 🇭🇷 Hrvatski · 🇮🇹 Italiano), erhält aktuellen Pfad/Seite beim Wechsel, im Header + Mobile-Nav
 - `SiteHeader` / `MobileNav` — Sticky Multi-Channel-Header (Tel, WhatsApp, Sprachen, CTA)
 - `Hero` — sektionsweise wiederverwendbar
 - `ProblemCards` — problem-geführte Navigation ("Mir fehlt ein Zahn")
-- `CostComparison` — Tabelle DE↔HR mit Ersparnis
+- `CostComparison` — Tabelle DE↔HR mit Ersparnis; **optional als interaktive Demo/Rechner** (Besucher wählt Behandlung → sieht Preis HR vs. DE + Ersparnis %). Klein, isoliert, nur wenn gewünscht.
+- `MapSection` — Google-Maps-Einbettung + "Route planen"-Button (öffnet Maps-Navigation) + Parkhinweis
 - `InsuranceProcess` — 4-Schritt Krankenkassen-Ablauf (HKP)
 - `TestimonialCard` — länder-getaggt
 - `BeforeAfter` — Vorher/Nachher-Slider
@@ -87,7 +89,7 @@ Jede Seite in 4 Sprachen.
    - Dentaltourismus-Teaser (inkl. "Ihre Kasse zahlt mit")
    - Kostenvergleich-Kurzblock
    - Vorher/Nachher
-   - Länder-getaggte Testimonials
+   - **Google-Reviews-Highlight:** „★★★★★ auf Google"-Badge + echte Patientenstimmen als Luxus-Testimonial-Cards, Link auf das Google-Maps-Profil; zusätzlich länder-getaggte Testimonials (DE/AT/CH/Diaspora)
    - CTA-Sektion (Formular/Buchung)
 2. **Leistungen (`/de/leistungen`)** — Implantate, Kronen/Veneers, Bleaching, allg. Zahnmedizin; je Behandlung Nutzen, Ablauf, Material/Marken, Preisrahmen
 3. **Dentaltourismus (`/de/zahntourismus`)** ⭐ Kern-Funnel:
@@ -97,9 +99,14 @@ Jede Seite in 4 Sprachen.
    - **Diaspora-Block** (HR/DE): Heimat + Behandlung kombinieren
    - Anreise nach Zagreb / Ablauf einer Reise
    - FAQ
-4. **Über uns / Team (`/de/team`)** — Dr. Bedek, "old school" Qualitäts-Story, Philosophie, Ausstattung der renovierten Praxis
+4. **Über uns / Team (`/de/team`)** — 3-Generationen-Familiengeschichte als Kern-Narrativ + Behandler-Profile + Philosophie + Ausstattung der renovierten Praxis. Team:
+   - **dr.sc. Ivan Bedek, dr.med.dent.** (geb. 1979) — Inhaber, Studium Zagreb 2004, Promotion 2019 (Diss.: Zahnalter-Bestimmung bei Kindern via digitalem OPG), Übernahme der Praxis 2014. *(Logo führt "mr.sc.", korrekt seit 2019: dr.sc.)*
+   - **Martina Laktić, dr.med.dent.** (geb. 1993) — Studium Zagreb 2018, Dekans- & Rektor-Preis; Schwerpunkte Familienzahnmedizin & Endodontie. *(Genaue aktuelle Titel mit ihr bestätigen — Kunde nennt "MD, PhD".)*
+   - **Aktives Behandler-Team:** Ivan Bedek + Martina Laktić.
+   - **Marija Bedek, dr.med.dent.** (geb. 1952) — Gründerin/Legacy, **nicht mehr aktiv in der Praxis**. Erscheint nur als Teil der Gründungs-/Familiengeschichte, nicht als aktive Behandlerin.
+   - **Narrativ:** "Familientradition, über 30 Jahre Vertrauen" — Gründung durch Marija 1991 → Übernahme & Weiterführung durch Ivan 2014 (promoviert) → heutige Praxis mit Ivan & Martina. Verbindet "old school"-Qualität + Wissenschaft + familiäre Wärme = Luxus × Human.
 5. **Galerie (`/de/galerie`)** — modernisierte Praxisbilder + Cases
-6. **Kontakt (`/de/kontakt`)** — Multistep-Formular, Karte, WhatsApp/Telefon, Buchung, Öffnungszeiten
+6. **Kontakt (`/de/kontakt`)** — Multistep-Formular, **Google-Maps-Einbettung mit Direkt-Navigation** ("Route planen" öffnet Google/Apple Maps zur Praxis), **Parkhinweis** ("In 1 Min. Laufnähe findet sich immer ein Parkplatz"), WhatsApp/Telefon, Buchung, Öffnungszeiten. Adresse Zatišje 6/1 (im hinteren Hof) klar beschrieben, damit Auswärtige sie finden.
 
 ## 6. Inhaltliche Kern-Argumente (recherchiert)
 
@@ -117,6 +124,21 @@ Jede Seite in 4 Sprachen.
 - Genehmigungsfrei: Vorsorge, Füllungen, Wurzelbehandlungen.
 - Ehrliche Hinweise: Implantat-Eigenanteil & Reise selbst zahlen; 2 Jahre Gewährleistung; Nachsorge mitdenken.
 - USP: Praxis-Service "Wir erstellen Ihren HKP auf deutschem Formular" — fast kein Wettbewerber kommuniziert das.
+
+#### Rechtliche Validierung & Disclaimer (Pflicht)
+Alle Aussagen werden gegen **offizielle/autoritative Quellen** geprüft und nur belegt veröffentlicht:
+- **EU-Richtlinie 2011/24/EU** (Patientenmobilität) — Bundesgesundheitsministerium (BMG)
+- **§13 Abs. 4 & 5 SGB V** — gesetzliche Grundlage der Kostenerstattung im EU-Ausland
+- **Bundeszahnärztekammer (BZÄK)** & **KZBV** — Genehmigungspflicht & HKP-Verfahren bei Zahnersatz
+- **AOK / Verbraucherzentrale / EVZ** — Festzuschuss, Ablauf, Risiken
+- **Nationale Kontaktstelle** eu-patienten.de — offizielle Beratungsstelle
+
+**Regeln für die Texte:**
+1. Keine Garantie-Versprechen über Erstattungshöhen — immer "in der Regel ~60 % Festzuschuss der Regelversorgung; exakter Betrag je Kasse & Befund individuell".
+2. **Genehmigungspflicht vor Behandlung** klar nennen (sonst Verlust des Zuschusses).
+3. Implantate: deutlich machen, dass GKV oft nur den Festzuschuss der Regelversorgung zahlt, Eigenanteil bleibt.
+4. **Disclaimer-Box** auf der Zahntourismus-Seite: "Keine Rechts-/Steuerberatung. Erstattung vorab mit der eigenen Krankenkasse klären. Stand: Juni 2026, Quellen verlinkt." + Quellen-Links im Footer/auf der Seite.
+5. Klar trennen: was Dr. Bedek leistet (HKP auf deutschem Formular ausstellen) vs. was der Patient/seine Kasse tut.
 
 ### Diaspora-Ansprache
 - Kroatische Community DE/AT/CH: sprachliche Vertrautheit, Familie, Behandlung + Heimaturlaub.
