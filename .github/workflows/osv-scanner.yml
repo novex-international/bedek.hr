@@ -1,0 +1,35 @@
+# OSV-Scanner — prüft alle Paket-Lockfiles im Repo gegen die OSV.dev-Datenbank
+# bekannter Sicherheitslücken (Google). PRs werden auf neu eingeführte Lücken
+# geprüft, der Wochen-Scan fängt neu veröffentlichte CVEs in bestehenden Paketen.
+# upload-sarif ist aus: SARIF-Upload braucht GitHub Advanced Security.
+name: OSV-Scanner
+
+on:
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: '30 5 * * 1'
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  scan-pr:
+    if: ${{ github.event_name == 'pull_request' }}
+    uses: google/osv-scanner-action/.github/workflows/osv-scanner-reusable-pr.yml@v2.5.1
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+    with:
+      upload-sarif: false
+
+  scan-scheduled:
+    if: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
+    uses: google/osv-scanner-action/.github/workflows/osv-scanner-reusable.yml@v2.5.1
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+    with:
+      upload-sarif: false
